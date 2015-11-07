@@ -1,0 +1,16 @@
+{% if page.url != "/index.html" %}
+
+<div class="navbar-fixed">
+<nav class="header-background" role="navigation">
+  <div class="nav-wrapper valign-wrapper">
+    <a id="logo-container" href="{{ site.baseurl }}/#table-of-contents" class="brand-logo">{{site.title}}</a>
+    <div class="left valign-wrapper">
+      	<a href="{{ site.baseurl }}/#{{ page.category | downcase | replace: ' ', '-'}}">
+	    <i class="material-icons medium white-text">keyboard_arrow_left</i>
+	</a>
+    </div>
+  </div>
+</nav>
+</div>
+{% endif %}
+

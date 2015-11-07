@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="container post-container">
+<br>
+  <header class="post-header">
+    <span class="post-title">{{ page.title }}</span>
+    {% if page.author %}<p class="post-author">{{ page.author }}</p>{% endif %}
+    
+    {% if page.supervisors %}
+    <p class="post-supervisors">under the supervision of {{ page.supervisors }}</p>{% endif %}
+
+    {% if page.meta %} • {{ page.meta }}{% endif %}
+  </header>
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+</div>
