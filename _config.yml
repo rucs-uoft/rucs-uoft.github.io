@@ -1,0 +1,10 @@
+# Site settings
+title: RUCS | Review of Undergraduate Computer Science
+email: kawin@cs.toronto.edu
+description: RUCS is a non-archival publication featuring the best of undergraduate computer science research at the University of Toronto.
+baseurl: "/RUCS-Web" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+permalink: /:title.html

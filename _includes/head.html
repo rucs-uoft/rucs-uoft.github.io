@@ -1,0 +1,68 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=YES" />
+
+  {% if page.url == '/index.html' %}
+  <meta name="description" content="RUCS is a non-archival publication featuring the best of undergraduate computer science research at the University of Toronto."/>
+  {% endif %}
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/assets/siteimg/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ site.baseurl }}/assets/siteimg/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/assets/siteimg/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ site.baseurl }}/assets/siteimg/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}/assets/siteimg/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ site.baseurl }}/assets/siteimg/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}/assets/siteimg/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ site.baseurl }}/assets/siteimg/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/siteimg/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/siteimg/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/siteimg/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/siteimg/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/siteimg/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="{{ site.baseurl }}/assets/siteimg/safari-pinned-tab.svg" color="#0097a7">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="{{ site.baseurl }}/assets/siteimg/mstile-144x144.png">
+  <meta name="theme-color" content="#0097a7">
+  
+  <meta property="og:image" content="{{ site.baseurl }}/assets/siteimg/android-chrome-192x192.png" />
+
+  {% if page.url == '/index.html' %}
+  <title>RUCS | Review of Undergraduate Computer Science</title>
+  {% else %}
+  <title> {{ page.title | truncate: 60 }} | RUCS</title>
+  {% endif %}
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{ site.baseurl }}/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{ site.baseurl }}/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- For rendering custom CSS for individual pages -->
+  {% if page && (page.css != "") %}
+  <link href="{{ site.baseurl }}/css/page/{{ page.css }}" type="text/css" rel="stylesheet" media="screen,projection" />
+  {% endif %}
+  
+  {% if page.layout == "default" %}
+  <link href="{{ site.baseurl }}/css/post.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  {% endif %}
+
+  <!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    },
+
+    messageStyle: "none",
+
+    showMathMenu: false,
+  });
+</script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>

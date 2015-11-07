@@ -1,0 +1,102 @@
+---
+layout: post
+title: "An Intelligent Guidance System for People with Dementia in a Picture Description Task"
+author: "Hengwei Guo, Oscar Chen, and Hubert Lin"
+supervisors: "Alberto Camacho and Professor Sheila McIlraith"
+category: "Artificial Intelligence"
+---
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1 id="introduction" class="unnumbered">I. Introduction</h1>
+<p>Dementia is a brain disorder that affects more than 35 million people worldwide, compromising their ability to perform basic activities <span class="citation">[1]</span>. Projected increases in the number of dementia patients will strain health-care systems <span class="citation">[2]</span>. Personal assistive technologies are viewed as a promising means of supporting dementia sufferers.</p>
+<p>KASPAR is a proof-of-concept assistive technology designed to provide personal health-care services to dementia patients. KASPAR verbally guides a patient through a picture description task, a task commonly utilized in the assessment of dementia patients. KASPAR engages the user in description of the "Boston Cookie Theft" picture <span class="citation">[3]</span> depicted in Figure 1.</p>
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/HGOCHL1.jpg" alt="Boston Cookie Theft Picture" />
+    <figcaption><b>Figure 1:</b> Boston Cookie Theft Picture</figcaption>
+</figure>
+
+<h1 id="system-design" class="unnumbered">II. System Design</h1>
+<p>The components of the KASPAR system are depicted in Figure 2. KASPAR is designed to be customizable to a particular patient and task. Thus, specifics of the patient, task, and session are stored in knowledge bases which are accessed by other modules of the system. KASPAR is currently embodied in a robot augmented with an external microphone and laptop computer.</p>
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/HGOCHL2.png" />
+    <figcaption><b>Figure 2:</b> System schematic of KASPAR: <b>K</b>nowledge Base + <b>A</b>ction Presenter (AP) + <b>S</b>ensor Module (SM) + <b>Par</b>tially Observable Markov Decision Process</figcaption>
+</figure>
+
+<p>KASPAR utilizes three knowledge bases:<br />
+</p>
+<h3 id="knowledge-base---picture-picture-kb" class="unnumbered"><em>Knowledge Base - Picture</em> (Picture KB)</h3>
+<p>The Picture KB records the objects and relations in the picture. It is described in <em>OWL DL</em>, which is a language for authoring ontologies <span class="citation">[4]</span>. Two major benefits of using the ontological knowledge base are:</p>
+<ol>
+<li><p>Making the decision-making process generalizable. To change the domain of the task, just plug in a different Picture KB.</p></li>
+<li><p>Allowing connections to commonsense ontologies like OpenCyc and WordNet and conducting formal reasoning.</p></li>
+</ol>
+<h3 id="knowledge-base---patient-patient-kb" class="unnumbered"><em>Knowledge Base - Patient</em> (Patient KB)</h3>
+<p>The Patient KB stores patient information such as name or age as key-value pairs – this information is used to customize the contents of a conversation.<br />
+</p>
+<h3 id="knowledge-base---session-session-kb" class="unnumbered"><em>Knowledge Base - Session</em> (Session KB)</h3>
+<p>The Session KB stores the status of the conversation: objects and relations mentioned, expected responses from the user, emotional estimations about the user, etc. It serves as the communication medium of the system - all other modules read from and write to the session KB.<br />
+</p>
+<h3 id="sensor-module-sm" class="unnumbered"><em>Sensor Module</em> (SM)</h3>
+<p>The Sensor Module has two primary functions: i) collecting input, and ii) processing it.</p>
+<p>Audio input is collected using a microphone. We use Microsoft’s System.Speech to detect and segment audio speech into utterances.</p>
+<p>Though strong at detecting speech, System.Speech performs poorly in transcribing the audio into text, so Google’s Web Speech is used for speech recognition. We pass the audio signal to Web Speech when System.Speech indicates speech is present and collect the transcript from Web Speech when System.Speech indicates speech has ended.</p>
+<p>Order-preserving matching of keywords and phrases is used to find objects and relations in the text. Using the information in the session KB, the SM determines if new objects or relations have been mentioned, if these objects or relations are mandatory for the task, and if the user has correctly answered a question, when applicable. The SM also extracts lexical features to estimate confusion using a model built from a database of conversations with dementia patients.</p>
+</p>
+<h3 id="partially-observable-markov-decision-process-pomdp" class="unnumbered"><em>Partially Observable Markov Decision Process</em> (POMDP)</h3>
+<p>POMDPs provide a mathematical framework for modeling decision processes under uncertainty where action effects can be non-deterministic and states are partially observable; the true state of the world is mapped to observations with known probabilities <span class="citation">[5]</span>. A probability distribution over the state of the world is maintained (the belief state), and is used for choosing the optimal action to perform at each time step <span class="math inline"><em>t</em></span>.</p>
+<p>We model our problem as a POMDP since the cognitive state of the patient is not directly observable. Moreover, the audio input is noisy, which introduces further uncertainty. The goal of our POMDP module is to choose the optimal action to perform based on its belief of the current cognitive state of the patient. For this application, actions are either general classes of speech, or adjustments to the mode of speech including volume and speech rate. These action outputs are sent to the <em>Action Presenter</em> which generates the actual dialog. Termination of the conversation is reached when either:</p>
+<ol style="list-style-type: lower-roman">
+<li><p>the user has successfully described most of the pre-determined mandatory objects and relations in the picture, or</p></li>
+<li><p>the user was unsuccessful in describing the picture despite repeated prompts by KASPAR</p></li>
+</ol>
+<p>Solving a POMDP with a large state-space is computationally intractable, which poses a significant challenge. Our work focuses on developing a POMDP model that is robust in guiding the patient towards completion of the task, and yet solvable within a reasonable amount of time. We use symbolicPerseus, a point-based value iteration algorithm for solving POMDPs, as our primary POMDP solver. Implementation details of symbolicPerseus can be found in the PhD thesis of <span class="citation">[6]</span>.<br />
+</p>
+<h3 id="action-presenter-ap" class="unnumbered"><em>Action Presenter</em> (AP)</h3>
+<p>The Action Presenter carries out the actions determined by the POMDP as speech.</p>
+<p>Speech synthesis follows verbal strategies commonly used by caregivers assisting individuals with Alzheimer’s disease. Such strategies include: giving one proposition per utterance, using encouraging comments, and calling the patients by name <span class="citation">[7]</span>.</p>
+<p>When the POMDP decides on an action, the AP will search the session KB for relevant information and then generate an appropriate response. For example, when the POMDP asks the AP to prompt an open-ended question about an object and the patient has just mentioned the object "boy", the AP may generate the speech "Good job. What else can you say about the boy?" Such sentences are generated using manually-tuned templates.</p>
+
+<h1 id="future-work" class="unnumbered">III. Future Work</h1>
+<h3 id="sensor-module" class="unnumbered">Sensor Module</h3>
+<p>With video input, it may be possible to: estimate emotion from facial expressions; resolve pronoun ambiguity with eye- or hand-tracking (for example, "She is next to her&quot; may be accompanied by gestures towards the subject and object).</p>
+<p>Methods to gain semantic understanding of utterances can be used to recognize objects or relations.</p>
+<h3 id="pomdp" class="unnumbered">POMDP</h3>
+<p>Hand-coding the objectives of the POMDP module becomes infeasible with a large state-space. We are interested in techniques for automating the process.</p>
+<h3 id="knowledge-base" class="unnumbered">Knowledge Base</h3>
+<p>The patient profile can be augmented with common sense and medical ontology frameworks to generate more sophisticated dialog. Ontology learning techniques can also be utilized to enrich the profile of a given patient as the conversation progresses.</p>
+<h3 id="action-presenter" class="unnumbered">Action Presenter</h3>
+<p>Besides verbal communications, the AP should be able to perform gestures and facial expressions with guided strategies.</p>
+
+<h4 id="acknowledgements" class="unnumbered">Acknowledgements</h4>
+<p class="acknowledgements">The work reported here was a joint project with Sheila McIlraith, Frank Rudzicz, Hamidreza Chinaei, Alberto Camacho, and Hoda Zare. We also gratefully acknowledge funding from the Natural Sciences and Engineering Research Council of Canada (NSERC) Undergraduate Student Research Awards program.</p>
+
+<h4>References</h4>
+<div class="references">
+    <div id="ref-gauthier1997alzheimer">
+    <p>[1] S. Gauthier, M. Panisset, J. Nalbantoglu, and J. Poirier, "Alzheimer’s disease: Current knowledge, management and research," <em>Canadian Medical Association Journal</em>, vol. 157, no. 8, pp. 1047–1052, 1997.</p>
+    </div>
+    <div id="ref-mihailidis2008coach">
+    <p>[2] A. Mihailidis, J. N. Boger, T. Craig, and J. Hoey, "The cOACH prompting system to assist older adults with dementia through handwashing: An efficacy study," <em>BMC geriatrics</em>, vol. 8, no. 1, p. 28, 2008.</p>
+    </div>
+    <div id="ref-goodglass1983boston">
+    <p>[3] H. Goodglass and E. Kaplan, <em>Boston diagnostic aphasia examination booklet</em>. Lea &amp; Febiger Philadelphia, PA, 1983.</p>
+    </div>
+    <div id="ref-owldl">
+    <p>[4] D. L. McGuinness, F. Van Harmelen, and others, "OWL web ontology language overview," <em>W3C recommendation</em>, vol. 10, no. 10, p. 2004, 2004.</p>
+    </div>
+    <div id="ref-geffner2013concise">
+    <p>[5] H. Geffner and B. Bonet, "A concise introduction to models and methods for automated planning," <em>Synthesis Lectures on Artificial Intelligence and Machine Learning</em>, vol. 8, no. 1, pp. 1–141, 2013.</p>
+    </div>
+    <div id="ref-poupart2005exploiting">
+    <p>[6] P. Poupart, "Exploiting structure to efficiently solve large scale partially observable markov decision processes," PhD thesis, University of Toronto, 2005.</p>
+    </div>
+    <div id="ref-wilson2012examining">
+    <p>[7] R. Wilson, E. Rochon, A. Mihailidis, and C. Leonard, "Examining success of communication strategies used by formal caregivers assisting individuals with alzheimer’s disease during an activity of daily living," <em>Journal of Speech, Language, and Hearing Research</em>, vol. 55, no. 2, pp. 328–341, 2012.</p>
+    </div>
+</div>

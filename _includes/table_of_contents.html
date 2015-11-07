@@ -1,0 +1,111 @@
+{% assign chapter_titles = site.categories | sort %}
+
+<div class="height-fix">
+  <div class="row toc-container">
+    <div class="col m3 l3 hide-on-small-and-down">
+      <div class="marginless-collection collection">
+
+        <a href="#letter-from-the-editor" class="waves-light collection-item">
+          <span class="toc-title">Letter From the Editor</span>
+        </a>
+
+        {% assign i = 1 %}
+
+        {% for chapter in chapter_titles %}
+
+        {% if chapter[0] == 'profiles and interviews'%}
+            {% assign i = i | minus: 1 %}
+        {% else %}
+
+        <a href="#{{ chapter[0] | replace: ' ', '-'}}" class="waves-light collection-item">
+          <span class="toc-title">{{ chapter[0] | capitalize }}</span>
+        </a>
+
+        {% endif %}
+
+        {% assign i = i | plus: 1 %}
+
+        {% endfor %}
+
+        <a id="#profiles-and-interviews" href="#profiles-and-interviews" class="waves-light collection-item">
+          <span class="toc-title">Profiles/Interviews</span>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="col s12 m9 l9 height-fix hide-on-small-and-down" id="toc-content-wrapper">
+      <div class="toc-content height-fix" id="toc-content">
+        <div class="toc-chapter-content" id="letter-from-the-editor">
+          <div id="foreword">
+            {% include foreword.html %}
+          </div>
+        </div>
+        {% for chapter in site.categories %}
+          <div class="toc-chapter-content" id="{{ chapter[0] | replace: ' ', '-' }}">
+            {% for abstracts in chapter %}
+              {% if forloop.first == false %}
+                {% for abstract in abstracts %}
+
+                    {% include marginless_card_panel.html %}
+
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="col s12 hide-on-med-and-up show-on-small">
+      <ul class="collapsible collapsible-toc" data-collapsible="accordion">
+        <li id="letter-from-the-editor-mini">
+          <div class="collapsible-header toc-title">Letter From the Editor</div>
+          <div class="collapsible-body">
+            {% include foreword.html %}
+          </div>
+        </li>
+        {% assign i = 1 %}
+        {% for chapter in chapter_titles %}
+          {% if chapter[0] == 'profiles and interviews' %}
+              {% assign i = i | minus: 1 %}
+          {% else %}
+            <li id="{{ chapter[0] | replace: ' ', '-'}}-mini">
+              <div class="collapsible-header toc-title">{{ chapter[0] | capitalize }}</div>
+                {% for abstracts in chapter %}
+                  {% if forloop.first == false %}
+                   {% for abstract in abstracts %}
+                    <div class="collapsible-body">
+                        {% include marginless_card_panel.html %}
+                    </div>
+                    {% endfor %}
+                  {% endif %}
+                {% endfor %}
+            </li>
+          {% endif %}
+          {% assign i = i | plus: i %}
+        {% endfor %}
+            <li id="profiles-and-interviews-mini">
+              <div class="collapsible-header toc-title">Profiles/Interviews</div>
+              <div class="collapsible-body">
+                {% for chapter in chapter_titles %}
+                {% if chapter[0] == 'profiles and interviews' %}
+                {% for abstracts in chapter %}
+                  {% if forloop.first == false %}
+                    {% for abstract in abstracts %}
+                      {% include marginless_card_panel.html %}
+<!--                         <p>{{ abstract.title }}</p>
+                        <p>{{ abstract.author }}</p>
+                        <p>{{ abstract.content | strip_html | truncatewords: 20 }}
+                        </p> -->
+                    {% endfor %}
+                  {% endif %}
+                {% endfor %}
+                {% endif %}
+                {% endfor %}
+              </div>
+            </li>
+      </ul>
+    </div>
+  </div>
+</div>

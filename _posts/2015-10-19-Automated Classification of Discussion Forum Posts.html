@@ -1,0 +1,228 @@
+---
+layout: post
+title: "Automated Classification of Discussion Forum Posts"
+author: "Mohamed Abdalla"
+supervisors: "Krish Perumal and Professor Graeme Hirst"
+category: "Natural Language Processing"
+---
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<h1 id="introduction">I. Introduction</h1>
+<p>Automated identification of forum posts into categories (such as question, answer, feedback and off-topic posts) can help in summarizing threads and allows for efficient information retrieval. Previous approaches to this problem can be classified into supervised and unsupervised classes. Supervised approaches [2, 3, 5] perform this classification task adequately. However, their success comes at a great cost: a large amount of labelled data is required for that level of performance. With larger datasets and ever increasing forum-membership, labelling quickly becomes infeasible. The alternate approaches [1, 6, 7] do away with labelled data, opting for an unsupervised solution. This approach often corresponds to a decrease in performance. In this study, we explored novel statistical techniques for automatically clustering forum posts into dialogue acts using a semi-supervised approach. Our work on the unsupervised classification algorithm is discussed elsewhere.</p>
+
+<h1 id="approach">II. Approach</h1>
+<p>Our semi-supervised algorithm expands on previous work. Barzilay and colleagues [1] proposed an unsupervised approach involving a Hidden Markov Model (HMM) at the sentence level, tailored to match clusters of sentences to particular topics. Others [4] improved the model by introducing structural features, along with a Gaussian Mixture Model (GMM) for emission probabilities. Here, we propose a Hidden Markov Model that incorporates both structural and textual features. Furthermore, we explored the inclusion of emission probabilities from the HMM represented by a Gaussian Mixture Model. Both models were implemented in a semi-supervised fashion. More generally, we believe that a Hidden Markov Model is an appropriate choice when trying to represent sequential data, as it could implicitly factor in human knowledge (e.g., a solution can’t come before a question), and the GMM is said to help reduce topical clustering, which is a problem in unsupervised techniques.</p>
+<p>Here is a step-by-step description of the semi-supervised approach:</p>
+<ol>
+<li><p>Vectorize all posts by means of word n-gram frequency counts and feature occurrences.</p></li>
+<li><p>Cluster vectors that have a given gold label (semi-supervised aspect).</p></li>
+<li><p>Construct a Hidden Markov Model (each cluster obtained in step 2 corresponds to a hidden state, and each post corresponds to an observation from the given state). Run Expectation-Maximization Algorithm:</p>
+<ol type = "a">
+<li><p>Expectation Step:</p>
+<ol type = "i">
+<li><p>Construct an n-gram+Feature language model for each state or fit a GMM for each state. This will be used to calculate emission probabilities of a post.</p></li>
+<li><p>Estimate the initial state probabilities given the observed state frequency counts.</p></li>
+</ol></li>
+<li><p>Maximization Step:</p>
+<ol type = "i">
+<li><p>Run the Viterbi algorithm to obtain the most likely state sequence, and HMM parameters.</p></li>
+</ol></li>
+</ol></li>
+</ol>
+<p>In order to compare our novel semi-supervised approaches, we constructed a fully supervised approach. Following a proven approach by Catherine and colleagues [2], we implemented a fully supervised Support Vector Machine (SVM) to use as an approximation of the upper limit on dialogue act classification performance. To do this we trained a Weka SVM:SMO (Sequential Minimal Optimization) classifier on both n-grams and features.</p>
+
+<h1 id="analysis">III. Analysis</h1>
+<p>The following evaluation measures were used: <span class="math display">\[{\textit Precision:=} \frac{\text{# Actual C posts predicted as C }}{\text{# Posts predicted as
+C}}\]</span></p>
+<p><span class="math display">\[{\textit Recall :=} \frac{\text{# C posts predicted as C }}{\text{# Actual C posts}}\]</span></p>
+<p><span class="math display">\[{\text F_1 {\it measure:=} }\frac{2 \times P \times R}{P + R}\]</span></p>
+<p>The category-wise evaluation measures for the described techniques are listed in Table 1. As expected, the fully supervised technique outperforms the semi-supervised techniques. However the semi-supervised techniques perform relatively well, with the HMM performing at a similar level to the fully supervised method.</p>
+<p>The methods perform adequately in most categories with the exception of Clarification and Clarification Request, both of which suffer from a lack of training examples.</p>
+
+<figure>
+
+    <table>
+        <tr>
+            <th colspan="4"> Supervised Approach (SVM) </th>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td>Precision</td>
+            <td>Recall</td>
+            <td><span class="math inline">\(F_1\)</span></td>
+        </tr>
+        <tr>
+            <td>Problem</td>
+            <td>0.73</td> 
+            <td>0.78</td>
+            <td>0.76</td>
+        </tr>
+        <tr>
+            <td>Solution</td>
+            <td>0.65</td>
+            <td>0.75</td>
+            <td>0.69</td>
+        </tr>
+        <tr>
+            <td>Clarification</td>
+            <td>0.3</td>
+            <td>0.2</td>
+            <td>0.24</td>
+        </tr>
+        <tr>
+            <td>Clarification R</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Feedback</td>
+            <td>0.5</td>
+            <td>0.53</td>
+            <td>0.52</td>
+        </tr>
+        <tr>
+            <td>Other</td>
+            <td>0.62</td>
+            <td>0.52</td>
+            <td>0.57</td>
+        </tr>
+        <tr>
+            <td>Macro-Avg</td>
+            <td>0.47</td>
+            <td>0.46</td>
+            <td>0.46</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th colspan="4"> Semi-Supervised (HMM) </th>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td>Precision</td>
+            <td>Recall</td>
+            <td><span class="math inline">\(F_1\)</span></td>
+        </tr>
+        <tr>
+            <td>Problem</td> 
+            <td>0.63</td> 
+            <td>0.71</td>
+            <td>0.67</td>
+        </tr>
+        <tr>
+            <td>Solution</td>
+            <td>0.57</td>
+            <td>0.7</td>
+            <td>0.63</td>
+        </tr>
+        <tr>
+            <td>Clarification</td>
+            <td>0.25</td>
+            <td>0.15</td>
+            <td>0.19</td>
+        </tr>
+        <tr>
+            <td>Clarification R</td>
+            <td>0.14</td>
+            <td>0.09</td>
+            <td>0.11</td>
+        </tr>
+        <tr>
+            <td>Feedback</td>
+            <td>0.39</td>
+            <td>0.29</td>
+            <td>0.33</td>
+        </tr>
+        <tr>
+            <td>Other</td>
+            <td>0.58</td>
+            <td>0.43</td>
+            <td>0.5</td>
+        </tr>
+        <tr>
+            <td>Macro-Avg</td>
+            <td>0.43</td>
+            <td>0.40</td>
+            <td>0.41</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th colspan="4"> Semi-Supervised (HMM+GMM) </th>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td>Precision</td>
+            <td>Recall</td>
+            <td><span class="math inline">\(F_1\)</span></td>
+        </tr>
+        <tr>
+            <td>Problem</td> 
+            <td>0.91</td> 
+            <td>0.60</td>
+            <td>0.72</td>
+        </tr>
+        <tr>
+            <td>Solution</td>
+            <td>0.73</td>
+            <td>0.22</td>
+            <td>0.34</td>
+        </tr>
+        <tr>
+            <td>Clarification</td>
+            <td>0.05</td>
+            <td>0.1</td>
+            <td>0.07</td>
+        </tr>
+        <tr>
+            <td>Clarification R</td>
+            <td>0.04</td>
+            <td>0.16</td>
+            <td>0.07</td>
+        </tr>
+        <tr>
+            <td>Feedback</td>
+            <td>0.18</td>
+            <td>0.15</td>
+            <td>0.17</td>
+        </tr>
+        <tr>
+            <td>Other</td>
+            <td>0.32</td>
+            <td>0.61</td>
+            <td>0.42</td>
+        </tr>
+        <tr>
+            <td>Macro-Avg</td>
+            <td>0.37</td>
+            <td>0.31</td>
+            <td>0.34</td>
+        </tr>
+    </table>
+
+    <figcaption><b>Table 1:</b> Supervised: 10-fold cross validation experiment results for fully supervised model described in Approach. Semi-Supervised (HMM Only): 5-fold cross-validation experiment results for the semi-supervised conversation model with POS tags and features.
+    Semi-Supervised(HMM+GMM): 5-fold cross-validation experiment with semi-supervised model with GMM and features. Cross-validation involved the use of the smaller split to train the data, and testing on larger split of the data (which is opposite to the traditional supervised machine learning technique).</figcaption>
+</figure>
+
+<h1 id="conclusion">IV. Conclusion</h1>
+<p>The results of our study suggest that semi-supervised techniques are promising: they achieve a respectable middle ground between the low cost of unsupervised techniques and the high performance of fully supervised techniques. For future work, we hope to explore higher order Markov chains, incorporating the ability to learn longer-range dependencies between the categories. Our data experimentation has also emphasized another hurdle in the forum-post classification problem: posts can contain multiple dialogue acts (e.g., a given post can have both a <em>Solution</em> to a <em>Problem</em>, and contains <em>Feedback</em> to another <em>Solution</em>). The model has no intuition about this; we suggest that summarization might be an important technique to employ to retain the overall meaning of the post, while cutting out parts (dialogue acts) that are not representative.</p>
+
+<h4 id="acknowledgements">Acknowledgements</h4>
+<p class="acknowledgements">I am grateful to Krish Perumal and Professor Graeme Hirst for their help and insight during the research process, and their critical reading of the abstract. This work was completed with data provided by VerticalScope Inc. The research was supported by NSERC and VerticalScope. We thank Afsaneh Fazly for comments and insight that greatly improved the work completed.</p>
+
+<h4 id="references">References</h4>
+<div class="references">
+    <p>[1] R. Barzilay and L. Lee., "Catching the Drift: Probabilistic Content Models, with Applications to Generation and Summarization," in Proc. of HLT-NAACL, 2004, pp. 113–120.</p>
+    <p>[2] R. Catherine et al., "Does Similarity Matter? The Case of Answer Extraction from Technical Discussion Forums," in Proc. of the 24th Int. Conf. on Computational Linguistics (COLING), 2012, pp. 175–184. </p>
+    <p>[3] L. Hong and B.D. Davison., "A classification–based approach to question answering in discussion boards," in Proc. of 32nd Int. ACM SIGIR Conf. on Research and development in information retrieval, 2009, pp. 171-178.</p>
+    <p>[4] S. Joty et al., "Unsupervised Modeling of Dialog Acts in Asynchronous Conversations," in Proc. of Int. Joint Conf. on Artificial Intelligence (IJCAI), 2011, pp. 1807-1813.</p>
+    <p>[5] S. Kim et al., "Tagging and Linking Web Forum Posts," in Proc. of the 14th Conf. on Computational Natural Language Learning (CoNLL), 2010, pp. 192-202.</p>
+    <p>[6] A. Ritter et al., "Unsupervised Modeling of Twitter Conversations," in The 2010 Annual Conf. of the North American Chapter of the Association for Computational Linguistics, 2010, pp. 172-180.</p>
+    <p>[7] Z. Qu and Y. Liu., "Finding Problem Solving Threads in Online Forum," in Proc. of 5th Int. Joint Conf. on Natural Language Processing (IJCNLP), 2011, pp. 1413-1417.</p>
+</div>
