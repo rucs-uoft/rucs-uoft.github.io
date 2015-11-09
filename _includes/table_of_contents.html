@@ -18,7 +18,7 @@
         {% else %}
 
         <a onclick="window.history.pushState(null, null, '/#{{ chapter[0] | replace: ' ', '-'}}');" href="#{{ chapter[0] | replace: ' ', '-'}}" class="waves-light collection-item">
-          <span class="toc-title">{{ chapter[0] | capitalize }}</span>
+          <span class="toc-title">{{ chapter[0] | capitalize | replace:'Of', 'of' }}</span>
         </a>
 
         {% endif %}
