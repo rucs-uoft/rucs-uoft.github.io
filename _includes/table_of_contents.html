@@ -17,8 +17,8 @@
             {% assign i = i | minus: 1 %}
         {% else %}
 
-        <a onclick="window.history.pushState(null, null, '/#{{ chapter[0] | replace: ' ', '-'}}');" href="#{{ chapter[0] | replace: ' ', '-'}}" class="waves-light collection-item">
-          <span class="toc-title">{{ chapter[0] | capitalize | replace:'Of', 'of' }}</span>
+        <a onclick="window.history.replaceState(null, null, '/#{{ chapter[0] | replace: ' ', '-'}}');" href="#{{ chapter[0] | replace: ' ', '-'}}" class="waves-light collection-item">
+          <span class="toc-title">{{ chapter[0] | downcase }}</span>
         </a>
 
         {% endif %}
@@ -27,7 +27,7 @@
 
         {% endfor %}
 
-        <a onclick="window.history.pushState(null, null, '/#profiles-and-interviews');" id="#profiles-and-interviews" href="#profiles-and-interviews" class="waves-light collection-item">
+        <a onclick="window.history.replaceState(null, null, '/#profiles-and-interviews');" id="#profiles-and-interviews" href="#profiles-and-interviews" class="waves-light collection-item">
           <span class="toc-title">Profiles/Interviews</span>
         </a>
 
