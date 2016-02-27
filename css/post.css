@@ -8349,8 +8349,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   .picker--time .picker__box {
     margin-bottom: 5em; } }
 @font-face {
-  font-family: 'Code Pro Demo';
-  src: url("../font/code-pro-demo/Code_Pro_Demo.otf") format("opentype"); }
+  font-family: 'Code Pro Demo'; }
 @font-face {
   font-family: 'CMU Serif';
   src: url("../font/cmu-serif/cmunrm.ttf");
