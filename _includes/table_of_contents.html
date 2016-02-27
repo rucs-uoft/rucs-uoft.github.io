@@ -6,7 +6,7 @@
       <div class="marginless-collection collection">
 
         <a href="#letter-from-the-editor" class="waves-light collection-item">
-          <span class="toc-title">Letter From the Editor</span>
+          <span class="toc-title">Letter from the Editor</span>
         </a>
 
         {% assign i = 1 %}
@@ -17,8 +17,8 @@
             {% assign i = i | minus: 1 %}
         {% else %}
 
-        <a onclick="window.history.replaceState(null, null, '/#{{ chapter[0] | replace: ' ', '-'}}');" href="#{{ chapter[0] | replace: ' ', '-'}}" class="waves-light collection-item">
-          <span class="toc-title">{{ chapter[0] | downcase }}</span>
+        <a onclick="window.history.replaceState(null, null, '/#{{ chapter[0] | downcase | replace: ' ', '-'}}');" href="#{{ chapter[0] | downcase | replace: ' ', '-'}}" class="waves-light collection-item">
+          <span class="toc-title">{{ chapter[0] }}</span>
         </a>
 
         {% endif %}
@@ -26,10 +26,6 @@
         {% assign i = i | plus: 1 %}
 
         {% endfor %}
-
-        <a onclick="window.history.replaceState(null, null, '/#profiles-and-interviews');" id="#profiles-and-interviews" href="#profiles-and-interviews" class="waves-light collection-item">
-          <span class="toc-title">Profiles/Interviews</span>
-        </a>
 
       </div>
     </div>
@@ -42,7 +38,7 @@
           </div>
         </div>
         {% for chapter in site.categories %}
-          <div class="toc-chapter-content" id="{{ chapter[0] | replace: ' ', '-' }}">
+          <div class="toc-chapter-content" id="{{ chapter[0] | downcase | replace: ' ', '-' }}">
             {% for abstracts in chapter %}
               {% if forloop.first == false %}
                 {% for abstract in abstracts %}
@@ -60,7 +56,7 @@
     <div class="col s12 hide-on-med-and-up show-on-small">
       <ul class="collapsible collapsible-toc" data-collapsible="accordion">
         <li id="letter-from-the-editor-mini">
-          <div class="collapsible-header toc-title">Letter From the Editor</div>
+          <div class="collapsible-header toc-title">Letter from the Editor</div>
           <div class="collapsible-body">
             {% include foreword.html %}
           </div>
@@ -71,7 +67,7 @@
               {% assign i = i | minus: 1 %}
           {% else %}
             <li id="{{ chapter[0] | replace: ' ', '-'}}-mini">
-              <div class="collapsible-header toc-title">{{ chapter[0] | capitalize }}</div>
+              <div class="collapsible-header toc-title">{{ chapter[0] }}</div>
                 {% for abstracts in chapter %}
                   {% if forloop.first == false %}
                    {% for abstract in abstracts %}

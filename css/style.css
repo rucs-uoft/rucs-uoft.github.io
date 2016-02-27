@@ -8606,7 +8606,7 @@ figcaption {
 
 .toc-title {
   color: #00525a;
-  text-transform: capitalize;
+  /*text-transform: capitalize;*/
   font-weight: bold; }
 
 .toc-enum {
