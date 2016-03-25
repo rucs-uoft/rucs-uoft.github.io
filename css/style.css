@@ -8372,8 +8372,30 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   src: url("../font/cmu-serif/cmunbi.ttf");
   font-weight: bold;
   font-style: italic; }
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: url("../font/vollkorn/Vollkorn-Regular.otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Vollkorn';
+  src: url("../font/vollkorn/Vollkorn-Italic.otf");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: 'Vollkorn';
+  src: url("../font/vollkorn/Vollkorn-Medium.otf");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: 'Vollkorn';
+  src: url("../font/vollkorn/Vollkorn-MediumItalic.otf");
+  font-weight: bold;
+  font-style: italic; }
+
 html * {
-  font-family: "CMU Serif"; }
+  font-family: "Vollkorn"; }
 
 img, figure {
   max-width: 100%; }
@@ -8608,6 +8630,7 @@ figcaption {
 .toc-title {
   color: #00525a;
   /*text-transform: capitalize;*/
+  font-family: "Vollkorn";
   font-weight: bold; }
 
 .toc-enum {
