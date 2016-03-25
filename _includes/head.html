@@ -7,11 +7,7 @@
   <meta name="description" content="RUCS is a non-archival publication featuring the best of undergraduate computer science research at the University of Toronto."/>
   {% endif %}
 
-  {% if page.url == '/index.html' %}
   <title>RUCS | Review of Undergraduate Computer Science</title>
-  {% else %}
-  <title> {{ page.title | truncate: 60 }} | RUCS</title>
-  {% endif %}
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/assets/siteimg/apple-touch-icon-57x57.png">
