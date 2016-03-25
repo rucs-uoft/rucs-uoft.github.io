@@ -8396,6 +8396,10 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 html * {
   font-family: "Vollkorn"; }
 
+code { 
+  font-family: monospace;
+}
+
 img, figure {
   max-width: 100%; }
 
