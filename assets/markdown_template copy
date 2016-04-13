@@ -1,0 +1,36 @@
+---
+layout: post
+title: "Title Here"
+author: "Author Name"
+supervisors: "Supervisor 1 and Supervisor 2"
+category: "Category Here"
+permalink: /template-markdown
+---
+
+### 1 Introduction
+Define your problem clearly, provide it with factual background and a proposed solution. What was the goal of your research? Why is it important?
+
+### 2 Approach
+
+Explain how the research was conducted and what methods and techniques were used. Why were they appropriate?
+
+### 3 Analysis
+
+Discuss any major findings and successes achieved by your implementation.
+
+You extended abstract should contain no more than three diagrams. All diagrams must be in black and white, and no larger than 7.5 x 17.5 cm. All text on diagrams should be legible. Diagrams should be numbered (e.g. Figure 1) and may include a caption. Tables and graphs are considered to be diagrams.
+
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| 0        | 00000    | 0        |
+| 1        | 00001    | 1        |
+| 2        | 00010    | 4        |
+| 3        | 00011    | 5        |
+
+### 4 Conclusions
+
+What can you conclude from your research? What does your mean in the grand scheme of things?
+
+### Acknowledgement
+
+If applicable, briefly acknowledge supervisors, sources of funding, and other relevant forms of assistance.

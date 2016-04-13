@@ -1,0 +1,127 @@
+\documentclass[11pt,a4paper, final, twoside]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{natbib}
+\usepackage[colorlinks=true, urlcolor=blue,  linkcolor=black, citecolor=black]{hyperref}
+\usepackage{color}
+\usepackage{natbib}
+\usepackage{sectsty}
+\setcounter{MaxMatrixCols}{10}
+
+
+\sectionfont{\fontsize{12}{15}\selectfont}
+
+\renewcommand{\thefootnote}{}
+\setlength{\oddsidemargin}{1pt} \setlength{\evensidemargin}{1pt}
+\setlength{\hoffset}{-1in} \addtolength{\hoffset}{25mm}
+\setlength{\textwidth}{140mm} 
+\setlength{\marginparsep}{0pt} \setlength{\marginparwidth}{0pt}
+\setlength{\topmargin}{0pt}
+\setlength{\voffset}{-2in} \addtolength{\voffset}{20mm}
+\setlength{\textheight}{300mm}
+\setlength{\headsep}{20mm}
+\setlength{\footskip}{15mm}
+\pagestyle{fancy}
+\fancyhead{} \fancyfoot{} 
+
+
+
+%       Theorem environments
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{algorithm}[thm]{Algorithm}
+\newtheorem{axiom}[thm]{Axiom}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{example}[thm]{Example}
+\newtheorem{exercise}[thm]{Exercise}
+\newtheorem{notation}[thm]{Notation}
+\newtheorem{problem}[thm]{Problem}
+\theoremstyle{proposition}
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{case}[thm]{Case}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{conclusion}[thm]{Conclusion}
+\newtheorem{condition}[thm]{Condition}
+\newtheorem{conjecture}[thm]{Conjecture}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{criterion}[thm]{Criterion}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}[section]
+\newtheorem{solution}[thm]{Solution}
+\newtheorem{summary}[thm]{Summary}
+\numberwithin{equation}{section}
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+\pagenumbering{arabic} % 1, 2, 3, 4, ...
+
+\begin{document}
+\hyphenpenalty=100000
+
+
+
+\begin{center}
+
+{\Large \textbf{\\Article Title Here }}\\[5mm]
+{\large \textbf{Author1 and Author2}\\[1mm]}
+{\normalsize \emph{Under the supervision of Professor X}\\[1mm]}
+\end{center}
+
+
+\section{Introduction}\label{I1}
+Define your problem clearly, provide it with a factual background and a proposed solution. What was the goal of your research? Why is it important? \cite {01}
+
+\section{Approach}\label{I2}
+Explain how the research was conducted and what methods and techniques were used. Why were they appropriate? \cite {02}
+
+\section{Analysis}\label{I3}
+Discuss any major findings and successes achieved by your implementation. \cite {03}
+\newline \newline
+Your extended abstract should contain no more than three (3) diagrams.  All diagrams must be in black and white and no larger than 7.5 x 17.5 cm.  All text on diagrams should be legible.  Diagrams should be numbered (e.g. Figure 1) and may include a caption.  Tables and graphs are considered to be diagrams. 
+
+\begin{center}
+ \begin{tabular}{||c c c c||} 
+ \hline
+ Col1 & Col2 & Col2 & Col3 \\ [0.5ex] 
+ \hline\hline
+ Row 1 & a & b & c \\ 
+ \hline
+ Row 2 & d & e & f \\
+ \hline
+ Row 3 & g & h & i \\
+ \hline
+ Row 4 & j & k & l \\
+ \hline
+ Row 5 & m & n & o \\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+
+\section{Conclusion}
+What can you conclude from your research? What does your mean in the grand scheme of things? 
+
+\mbox{}\\
+
+\noindent \Large\textbf{Acknowledgement}\\[1mm] 
+
+\normalsize \noindent If applicable, briefly acknowledge supervisors, sources of funding, and other relevant forms of assistance.\\[3mm]
+
+\cite{reference-key-a}
+\cite{reference-key-b}
+\newline
+
+[References should be in order of appearance at the end of the manuscript. Every reference referred to in the text must also be present in the reference list and vice versa. Use the \href{http://www.ieee.org/documents/ieeecitationref.pdf}{IEEE Style} for references and citations.]
+
+\bibliography{bibfile}
+\bibliographystyle{plain}
+
+\end{document}
+
