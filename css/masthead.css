@@ -8744,3 +8744,22 @@ h1 {
   width: 100%; }
 
 /*# sourceMappingURL=masthead.css.map */
+
+.submit-container {
+    padding: 0% 20% 5% 21%;
+}
+
+.submit-container p, .submit-container li {
+    font-size: 1.1em;
+}
+
+.submit-container-li li, .submit-container-li ol {
+    padding-left: 0px;
+    margin-left: 0px;
+    font-size: 1.0em;
+}
+
+
+.strong {
+    font-weight: bolder;
+}
