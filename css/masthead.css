@@ -8759,7 +8759,12 @@ h1 {
     font-size: 1.0em;
 }
 
-
 .strong {
     font-weight: bolder;
+}
+
+@media screen and (max-width: 480px) {
+    .submit-container {
+        padding: 0% 9% 5% 9%;
+    }
 }
