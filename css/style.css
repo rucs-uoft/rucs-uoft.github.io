@@ -8468,7 +8468,8 @@ figcaption {
     height: 100vh; }
 
   .full-width {
-    width: 100%; } }
+    width: 100%;
+  height: 100%;} }
 @media only screen and (min-width: 651px) and (max-width: 992px) {
   .background {
     height: 100vh;
@@ -8579,7 +8580,8 @@ figcaption {
     font-family: "Code Pro Demo"; }
 
   .full-width {
-    width: 100%; }
+    width: 100%;
+  height: 100%;}
 
   .card {
     box-sizing: border-box;

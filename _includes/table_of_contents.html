@@ -6,39 +6,38 @@
       <div class="marginless-collection collection">
 
         <a href="#letter-from-the-editor" class="waves-light collection-item">
-          <span class="toc-title">Letter from the Editor</span>
+          <span class="toc-title">About</span>
         </a>
 
-        {% assign i = 1 %}
-
-        {% for chapter in chapter_titles %}
-
-        {% if chapter[0] == 'profiles and interviews'%}
-            {% assign i = i | minus: 1 %}
-        {% else %}
-
-        <a onclick="window.history.replaceState(null, null, '/#{{ chapter[0] | downcase | replace: ' ', '-'}}');" href="#{{ chapter[0] | downcase | replace: ' ', '-'}}" class="waves-light collection-item">
-          <span class="toc-title">{{ chapter[0] }}</span>
+        
+        {% for title in site.page-names %}
+         <a  href="{{ site.baseurl }}/{{title}}" class="waves-light collection-item">
+          <span class="toc-title">{{ title }}</span>
         </a>
-
-        {% endif %}
-
-        {% assign i = i | plus: 1 %}
-
         {% endfor %}
-
       </div>
     </div>
 
     <div class="col s12 m9 l9 height-fix hide-on-small-and-down" id="toc-content-wrapper">
       <div class="toc-content height-fix" id="toc-content">
-        <div class="toc-chapter-content" id="letter-from-the-editor">
+        
+          <!-- About page -->
+          <div class="toc-chapter-content" id="letter-from-the-editor">
           <div id="foreword">
             {% include foreword.html %}
           </div>
         </div>
+          
+          <!-- FAQ page -->   
+          <div class="toc-chapter-content" id="letter-from-the-editor2">
+          <div id="foreword">
+            {% include faq.html %}
+          </div>
+        </div>
+          
+          
         {% for chapter in site.categories %}
-          <div class="toc-chapter-content" id="{{ chapter[0] | downcase | replace: ' ', '-' }}">
+          <div class="toc-chapter-content" id="{{ title| downcase | replace: ' ', '-' }}">
             {% for abstracts in chapter %}
               {% if forloop.first == false %}
                 {% for abstract in abstracts %}

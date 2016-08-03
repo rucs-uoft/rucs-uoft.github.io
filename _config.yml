@@ -1,6 +1,6 @@
 # Site settings
 title: RUCS
-email: kawin@cs.toronto.edu
+email: julia@cs.toronto.edu
 description: "RUCS is a non-archival publication featuring the best of undergraduate computer science research at the University of Toronto."
 baseurl: ""
 url: "rucs.ca"
@@ -9,3 +9,5 @@ github_username:  rucs-uoft
 # Build settings
 markdown: kramdown
 permalink: /:title
+page-names: [Submission-Guidelines, FAQ, Archive]
+post-categories: ["Artificial Intelligence", "Computational Biology", "Computer Vision", "Natural Language Processing", "Profiles and Interviews", "Software Engineering", "Software Projects", "Theory of Computation"]

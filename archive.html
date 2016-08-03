@@ -1,0 +1,19 @@
+---
+layout: default
+css: masthead.css
+title: "Masthead"
+permalink: /Archive
+---
+<div class="submit-container">
+    <h1 style="text-align:center; padding-top:50px; ">2015</h1>
+    {% for category in site.post-categories %}
+    <h3 style="text-align:center"><em>{{category}}</em></h3>
+        <ol>
+            {% for post in site.posts %}
+                {% if post.category == category %}
+                    <li><p><a href="{{ post.permalink }}">{{post.title}}</a></p></li>
+                {% endif %}
+            {% endfor %}
+        </ol>
+    {% endfor %}
+</div>
