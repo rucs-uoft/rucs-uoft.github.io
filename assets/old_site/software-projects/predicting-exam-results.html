@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=YES" />
+  <meta name="theme-color" content="#0097A7"> 
+
+  
+
+  <title>RUCS | Review of Undergraduate Computer Science</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/siteimg/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/siteimg/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/siteimg/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/siteimg/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/siteimg/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/siteimg/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/siteimg/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/siteimg/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/siteimg/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/assets/siteimg/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/siteimg/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/assets/siteimg/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/assets/siteimg/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/assets/siteimg/safari-pinned-tab.svg" color="#0097a7">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/assets/siteimg/mstile-144x144.png">
+  <meta name="theme-color" content="#0097a7">
+  
+  <meta property="og:type"   content="website" /> 
+  <meta property="og:image" content="http://rucs.ca/assets/siteimg/share-image-200x200.jpg" />
+
+  <!-- CSS  -->
+  <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- For rendering custom CSS for individual pages -->
+  
+  
+  
+  <link href="/css/post.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  
+
+  <!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    },
+
+    messageStyle: "none",
+
+    showMathMenu: false,
+  });
+</script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69783905-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    
+
+<div class="navbar-fixed">
+<nav class="header-background" role="navigation">
+  <div class="nav-wrapper valign-wrapper">
+    <a id="logo-container" href="/#table-of-contents" class="brand-logo">RUCS</a>
+    <div class="left valign-wrapper">
+      	<a href="/#software-projects">
+	    <i class="material-icons medium white-text">keyboard_arrow_left</i>
+	</a>
+    </div>
+  </div>
+</nav>
+</div>
+
+
+
+
+    <div class="container post-container">
+<br>
+  <header class="post-header">
+    <h1 class="post-title">Predicting Exam Results in an Introductory Level Computer Science Course</h1>
+    <p class="post-author">Sihan Zheng and Emmanuel Ifemade</p>
+    
+    
+    <p class="post-supervisors">under the supervision of Associate Professor Andrew Petersen</p>
+
+    
+  </header>
+
+  <article class="post-content">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1 id="introduction">I. Introduction</h1>
+<p>In recent years, systems featuring automatically marked online programming exercises have become increasingly common. These automated systems generate large amounts of data that can be mined for insight on student programming behavior and to make predictions on student performance.</p>
+<p>Predictors of student performance based on programming exercises have become increasingly sophisticated. Jadud’s early work focused on the use of syntax errors and found correlations between term marks and programming errors. Watson et al. extended these ideas by incorporating the time spent solving problems, increasing their predictive power. Most recently, Carter et al. reported on a heuristic that accounts for some semantic correctness. They claim that a combination of programming practices and errors at the IDE level can be used to detect struggling students in introductory level computer science courses earlier on. All of these measures were applied to relatively large programming assignments.</p>
+<p>In contrast, earlier this year, Spacco et al. investigated participation and performance data from short, web-based programming exercises and reported correlations between performance on these exercises and overall performance in the course. Similarly, we investigated short, online exercises, but instead of focusing on participation, we considered the number of attempts required to complete problems successfully.</p>
+
+<h1 id="approach">II. Approach</h1>
+<p>Our data set includes exercises completed by 368 students in a first year programming course at a research-intensive university. Students who did not complete the course (including the exam) or who scored below 30% (indicating a lack of engagement in the course) were removed. The course is taught in Python and features content ranging from variable assignment to loops and module-level design. It attracts students from a wide range of ability levels, including students with no prior programming experience. While the course is a pre-requisite for many higher-level computer science courses, it also attracts students completing electives. The course features a midterm and a final exam. In addition to these assessments, students also complete 42 coding and multiple-choice questions spread across weekly problem sets and submit three longer assignments that are not completed online.</p>
+<p>We analyzed the multiple choice questions by calculating the number of questions a student completed under the average amount of attempts required. Spacco et al. reported that in the majority of computer science courses they investigated, there was a statistically significant (p-value &lt; 0.05) relationship between a student’s final exam mark and the number of questions attempted as well as the number of questions completed correctly. However, in our data set, students were allowed to retry questions until they got a correct answer, so, unlike Spacco et al.’s study, most students were able to submit a correct answer to every attempted question. As a result, we used the average number of attempts to identify students with a stronger understanding of the concepts being evaluated.</p>
+<p>We analyzed the coding exercises by using linear regression to identify the programming exercises with the strongest relationship with exam performance. Our analysis identified six exercises (of twenty) with a strong correlation to final exam marks, and a review of these six exercises confirms that they are more directly comparable to questions on the midterm and exam in terms of difficulty and content coverage.</p>
+<p>We combine these metrics to predict student performance. Our metric combines the number of multiple-choice questions completed within the average number of attempts and correctness on the six coding questions to generate a prediction score.</p>
+
+<h1 id="results-and-analysis">III. Results and Analysis</h1>
+<p>Overall, a weak correlation – comparable to those found by Watson et al. – exists between a student’s prediction score and final exam mark. The results are significant (p-value &lt; 0.001), with an adjusted R-squared value of 0.2956. The F-statistic is 21.16 on 7 and 353 degrees of freedom.</p>
+
+<figure>
+    <img src="/assets/SZ1.png" alt="" />
+    <figcaption><b>Figure 1:</b> Final exam marks vs prediction score.</figcaption>
+</figure>
+
+<p>The questions evaluated are similar in structure and content to those on the final exam. Furthermore, they are assessments, as they were evaluated after content was taught and practiced. This suggests that performance on individual, unsupervised exercises in a low-stress environment can be predictive of performance on similar problems in a summative assessment. Successfully completing these low stakes questions without guessing or needing excessive numbers of attempts indicates that a student will be able to apply similar concepts in an exam environment.</p>
+
+<h1 id="conclusion">IV. Conclusion</h1>
+<p>There is a weak but statistically significant correlation between performance on online exercises and final exam performance, showing that there is promise in using automated online assignments in predicting exam results. Spacco et al. [3] show that statistically significant relationships existed between participation in online assignments and exam performance, and we have identified that much stronger correlations – on the order of those discovered in data from larger assignments – can be found by focusing on relative performance and selecting coding exercises with a similar difficulty level to the summative assessments. Instructors may be able to assign such problems in a course and then apply similar analysis techniques while the course is ongoing to identify students at risk of failing the exam.</p>
+
+<h4 id="references">References</h4>
+<div class="references">
+    <p>[1] M. C. Jadud, "A First Look at Novice Compilation Behaviour Using BlueJ," Computer Science Education, vol. 15, 2005.</p>
+    <p>[2] C. Watson, F. W. Li and J. L. Godwin, "No Tests Required: Comparing Traditional and Dynamic Predictors of Programming Success," Proceedings of the 45th ACM technical symposium on Computer science education, 2014.</p>
+    <p>[3] A. S. Carter, C. D. Hundhausen and O. Adesope, "The Normalized Programming State Model: Predicting Student Performance in Computing Courses Based on Programming Behavior," Proceedings of the eleventh annual International Conference on International Computing Education Research, 2015.</p>
+    <p>[4] J. Spacco, P. Denny, B. Richards, D. Babcock, D. Hovemeyer and J. Moscola, "Analyzing Student Work Patterns Using Programming Exercise Data," Proceedings of the 46th ACM Technical Symposium on Computer Science Education, 2015.</p>
+</div>
+
+
+
+
+  </article>
+</div>
+
+    <footer class="page-footer">
+	<div class="container">
+		<div class="row footer-row">
+			<div class="col s12 m6 l6 footer-column">
+		  		<p class="grey-text text-lighten-4">RUCS is a non-archival publication featuring the best of undergraduate computer science research at the University of Toronto.</p>
+			</div>
+			<div class="col s12 m3 l3 footer-column" id="masthead-link">
+				<p><a href="/masthead" class="white-text"><b>Masthead</b></a><br/>
+				<a href="mailto:kawin@cs.toronto.edu" class="white-text"><b>Contact</b></a></p>
+			</div>
+			<div class="col s12 m3 l3 compsci-logo footer-column">
+				<a href="http://web.cs.toronto.edu/"><img src="/resources/compsci_knocked-out_CS4.svg" /></a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="/js/materialize.js"></script>
+    <script src="/js/init.js"></script>
+
+  </body>
+
+</html>

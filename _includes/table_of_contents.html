@@ -11,9 +11,15 @@
 
         
         {% for title in site.page-names %}
-         <a  href="{{ site.baseurl }}/{{title}}" class="waves-light collection-item">
-          <span class="toc-title">{{ title }}</span>
-        </a>
+            {% if title == "Archive" %}
+                <a href="{{site.baseurl}}/assets/old_site/index.html" class="waves-light collection-item">
+                <span class="toc-title">{{ title }}</span>
+                </a>
+            {% else %}
+                <a  href="{{site.baseurl}}/{{title}}" class="waves-light collection-item">
+                <span class="toc-title">{{ title }}</span>
+                </a>
+            {% endif %}
         {% endfor %}
       </div>
     </div>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=YES" />
+  <meta name="theme-color" content="#0097A7"> 
+
+  
+
+  <title>RUCS | Review of Undergraduate Computer Science</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/siteimg/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/siteimg/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/siteimg/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/siteimg/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/siteimg/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/siteimg/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/siteimg/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/siteimg/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/siteimg/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/assets/siteimg/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/siteimg/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/assets/siteimg/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/assets/siteimg/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/assets/siteimg/safari-pinned-tab.svg" color="#0097a7">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/assets/siteimg/mstile-144x144.png">
+  <meta name="theme-color" content="#0097a7">
+  
+  <meta property="og:type"   content="website" /> 
+  <meta property="og:image" content="http://rucs.ca/assets/siteimg/share-image-200x200.jpg" />
+
+  <!-- CSS  -->
+  <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- For rendering custom CSS for individual pages -->
+  
+  
+  
+  <link href="/css/post.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  
+
+  <!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    },
+
+    messageStyle: "none",
+
+    showMathMenu: false,
+  });
+</script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69783905-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    
+
+<div class="navbar-fixed">
+<nav class="header-background" role="navigation">
+  <div class="nav-wrapper valign-wrapper">
+    <a id="logo-container" href="/#table-of-contents" class="brand-logo">RUCS</a>
+    <div class="left valign-wrapper">
+      	<a href="/#software-engineering">
+	    <i class="material-icons medium white-text">keyboard_arrow_left</i>
+	</a>
+    </div>
+  </div>
+</nav>
+</div>
+
+
+
+
+    <div class="container post-container">
+<br>
+  <header class="post-header">
+    <h1 class="post-title">Lifting a Model Transformation Language</h1>
+    <p class="post-author">Kawin Ethayarajh</p>
+    
+    
+    <p class="post-supervisors">under the supervision of Michalis Famelis and Professor Marsha Chechik</p>
+
+    
+  </header>
+
+  <article class="post-content">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1 class="introduction">I. Introduction</h1>
+
+<h3>Model Driven Engineering (MDE)</h3>
+<p>MDE, the use of models to represent software artefacts, helps manage complexity in software engineering by raising the level of abstraction [1]. While MDE comprises many different languages, in simple terms, a model is a graph, a set of nodes and the associations between them. <em>Model transformations</em> receive one model as input and produce another as output, making the changes specified by a set of <em>transformation rules</em>. If the model fragment specified in the <em>match</em> part of a transformation rule is found in the input, the model fragment in the <em>apply</em> part of the rule is produced in the output. For instance, if an automotive company wanted to refactor its software, it would execute model transformations in which existing software models were the input and the transformations rules were based on refactoring techniques.</p>
+<p><em>Domain Specific Language for Transformations</em> (DSLTrans) is a visual language in which such transformations can be performed [4].</p>
+
+<figure>
+    <img src="/assets/KE1.png" alt="" />
+    <figcaption><b>Figure 1:</b> Features _F0, _F1 and _F2 signify some three distinct properties of possible products. The feature model specifies that all products must have the property represented by _F0 and that the properties represented by _F1 and _F2 are mutually exclusive.</figcaption>
+</figure>
+
+<h3>Software Product Lines (SPLs)</h3>
+<p>SPLs help manage complexity in software engineering by concisely representing a set of similar <em>product variants</em>, explicitly capturing product commonalities and differences [2]. For instance, the software in a car’s dashboard may differ across countries that use metric and imperial units; this necessitates the existence of a set of product variants. When product variants number in the hundreds or thousands, SPLs are particularly useful representations. Each product variant contained in an SPL corresponds to a unique combination of <em>features</em>, which signify key functionalities of products that may differ across variants. In the case of automotive dashboard software, one feature represents metric units, another, imperial units. A <em>feature model</em>, as seen in Figure 1, specifies constraints on the features. Some elements in an SPL might exist in some product variants and not others; associated with each element is a <em>presence condition</em>, a boolean expression, composed of features, that represents the circumstances under which the element is present.</p>
+
+<h3>Research Problem</h3>
+<p>Although model transformations and SPLs are individually powerful, the transformation of SPLs is traditionally inefficient and computationally expensive [3]. Each product represented by the SPL must be derived and individually transformed, after which the set of transformed product variants is arduously abstracted into a transformed SPL. This project sought to augment the DSLTrans language so that it could support the efficient transformation of entire SPLs instead of individual models.</p>
+
+<figure>
+    <img src="/assets/KE2.png" alt="" />
+    <figcaption><b>Figure 2:</b> In this lifted transformation, the input SPL has two match sites where the transformation rule applies.  Hence, two apply sites are created.  Since there are no commonalities across the apply sites, no merging is needed.  The resulting output SPL is identical to the one that would have been created using the circuitous method of deriving individual products.</figcaption>
+</figure> 
+
+<h1 class="approach">II. Approach</h1>
+<h3>Lifting </h3>
+<p><em>Lifted transformations</em>, as seen in Figure 2, operate on entire SPLs instead of individual models. In a lifted transformation, the transformation rules do not change, but the way in which they are applied to the input does [3]. <em>Match sites</em> are regions, or subgraphs, of the input SPL where a transformation rule can be applied. For each match site, a corresponding <em>apply site</em>, based on the apply part of the same rule, is produced. Identical elements across apply sites are merged to create the final output SPL.</p>
+<p>Identifying a match site is complicated by the fact that, depending on the presence conditions, different products may only have fragments of the match site. Appropriate presence conditions must then be constructed so that only products possessing the entirety of a match site can be transformed; the transformed products are then associated with these constructed presence conditions. In Figure 2, the product with <em>A<sub>1</sub></em> and <em>B<sub>1</sub></em> only exists if feature _F1 is selected, so the corresponding transformed product, <em>C<sub>1</sub></em>, has _F1 as its presence condition as well. The mutual exclusion of features _F1 and _F2 precludes <em>A<sub>1</sub></em> and <em>A<sub>2</sub></em> from coexisting.</p>
+<p>This project focused on the implementation of certain aspects of lifting in an already partially lifted version of DSLTrans, namely existential matching, negative application conditions, and indirect links. Where in <em>universal matching</em>, all of the transformed products resulting from the application of a rule can coexist, <em>existential matching</em> precludes the coexistence of the transformed products. <em>Negative application conditions</em> (NACs) are optional additions to a transformation rule that specify when the rule should not apply. Since any elements satisfying a NAC would invalidate an otherwise valid match site, the transformation must assert the absence of such elements. <em>Indirect links</em> can be added to the match part of a rule to specify that some path should or should not exist between a pair of nodes, adding further expressive power to transformation rules.</p>
+
+<h1 class="conclusion">III. Conclusion</h1>
+<p>At the conclusion of this project, the DSLTrans language engine had been lifted successfully so that it could support transformations on entire SPLs instead of just individual models. While a partial implementation of the basic aspects of lifting existed at the onset of this project, support for existential matching, negative application conditions, and indirect links were all newly added. Mechanisms for simplifying presence conditions were also introduced, reducing the size of output presence conditions by 78.6%.</p>
+<p>Lifting the language permits modelers to use the same transformations that they have already written for individual models – in the preexisting language – on SPLs. Model transformations and SPLs have applications in areas such as the automotive and telecommunications industries, and lifting has been shown to be a scalable way of performing model transformations on an industrial scale: the technique was applied to convert realistic legacy GM models – with thousands of variants – into the AUTOSAR architecture [4]. The lifted DSLTrans language thus has the potential to be used in similar contexts, where model transformations and SPLs need to be used in conjunction in an efficient manner.</p>
+<h4>Acknowledgements</h4>
+<p class="acknowledgements">I am grateful to Claudio Gomes and Levi Lúcio for their guidance in navigating the DSLTrans and lifted DSLTrans codebases respectively. This research was funded in part by the National Science and Engineering Research Council (NSERC) of Canada.</p>
+
+<h4>References</h4>
+<div class="references">
+    <p>[1] S. Sendall and W. Kozaczynski. Model Transformation: The Heart and Soul of Model-Driven Software Development. <em>IEEE Software</em>, 20(5):42–45, 2003.  </p>
+    <p>[2] P. C. Clements and L. Northrop. <em>Software Product Lines: Practices and Patterns</em>. SEI Ser. in SE. Addison-Wesley, 2001.  </p>
+    <p>[3] R. Salay, M. Famelis, J. Rubin, A. Di Sandro, and M. Chechik. Lifting Model  Transformations to Product Lines. In <em>Proc. of ICSE’14</em>, pages 117–128, 2014.  </p>
+    <p>[4] Famelis, M., Lúcio, L., Selim, G., Di Sandro, A., Salay, R., Chechik, M., Cordy, J.R., Dingel, J., Vangheluwe, H. and Ramesh S: Migrating Automotive Product Lines: a Case Study. In <em>Proc. of ICMT’15</em>, 2015.</p>
+</div>
+
+  </article>
+</div>
+
+    <footer class="page-footer">
+	<div class="container">
+		<div class="row footer-row">
+			<div class="col s12 m6 l6 footer-column">
+		  		<p class="grey-text text-lighten-4">RUCS is a non-archival publication featuring the best of undergraduate computer science research at the University of Toronto.</p>
+			</div>
+			<div class="col s12 m3 l3 footer-column" id="masthead-link">
+				<p><a href="/masthead" class="white-text"><b>Masthead</b></a><br/>
+				<a href="mailto:kawin@cs.toronto.edu" class="white-text"><b>Contact</b></a></p>
+			</div>
+			<div class="col s12 m3 l3 compsci-logo footer-column">
+				<a href="http://web.cs.toronto.edu/"><img src="/resources/compsci_knocked-out_CS4.svg" /></a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="/js/materialize.js"></script>
+    <script src="/js/init.js"></script>
+
+  </body>
+
+</html>

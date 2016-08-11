@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=YES" />
+  <meta name="theme-color" content="#0097A7"> 
+
+  
+
+  <title>RUCS | Review of Undergraduate Computer Science</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/siteimg/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/siteimg/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/siteimg/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/siteimg/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/siteimg/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/siteimg/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/siteimg/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/siteimg/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/siteimg/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/assets/siteimg/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/siteimg/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/assets/siteimg/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/assets/siteimg/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/assets/siteimg/safari-pinned-tab.svg" color="#0097a7">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/assets/siteimg/mstile-144x144.png">
+  <meta name="theme-color" content="#0097a7">
+  
+  <meta property="og:type"   content="website" /> 
+  <meta property="og:image" content="http://rucs.ca/assets/siteimg/share-image-200x200.jpg" />
+
+  <!-- CSS  -->
+  <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- For rendering custom CSS for individual pages -->
+  
+  
+  
+  <link href="/css/post.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  
+
+  <!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    },
+
+    messageStyle: "none",
+
+    showMathMenu: false,
+  });
+</script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69783905-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    
+
+<div class="navbar-fixed">
+<nav class="header-background" role="navigation">
+  <div class="nav-wrapper valign-wrapper">
+    <a id="logo-container" href="/#table-of-contents" class="brand-logo">RUCS</a>
+    <div class="left valign-wrapper">
+      	<a href="/#computational-biology">
+	    <i class="material-icons medium white-text">keyboard_arrow_left</i>
+	</a>
+    </div>
+  </div>
+</nav>
+</div>
+
+
+
+
+    <div class="container post-container">
+<br>
+  <header class="post-header">
+    <h1 class="post-title">A New Similarity Score for Rare Disease Patient Matching: Exponential Back-off SimGIC</h1>
+    <p class="post-author">Nick Frosst</p>
+    
+    
+    <p class="post-supervisors">under the supervision of Orion Buske and Associate Professor Michael Brudno</p>
+
+    
+  </header>
+
+  <article class="post-content">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<h1 id="introduction">I. Introduction</h1>
+<p>As many as 300 million people worldwide are affected by rare diseases. These diseases are characterized by a prevalence of less than 1 in 1500 people, making them difficult to diagnose and treat. Finding a cohort of similar patients is necessary to determine the cause of a disease, but this is especially challenging because these diseases are rare and frequently misdiagnosed. One new approach is to find matching patients with similar phenotypes (symptoms), and allow their respective doctors to collaborate to determine the cause of the disease. We will explore a computational approach to this matching, propose a new variant of a standard algorithm for computing the similarity between two patients, and show that it performs slightly better than the existing method.<br />
+
+<h1 id="approach">II. Approach</h1>
+<p>In order to match patients by their phenotypes, we must first establish a computable representation of a patient and these phenotypes. One approach is to use an ontology of standardized phenotype terms. In the Human Phenotype Ontology (HPO) [1], terms are organized as a directed acyclic graph (DAG), where each phenotype is a node, and each node has an "is a" relationship with each of its parents. For example, "ocular rupture" is a child of "abnormal eye morphology", which is a child of "vision/eye phenotype". We can represent a patient by looking at the phenotypes noted by their doctor and creating an equivalent set of nodes in the DAG. We can then match patients based on the semantic similarity between these sets. Many semantic similarity measures exist, but one of the most popular and accurate is simGIC [2]. The simGIC similarity score is calculated by weighting each node in the DAG by its information content (<span class="math inline">\(IC = - log\left( \frac{1}{p} \right)\)</span>, where p is the frequency of the node in a standard corpus of disease-phenotype associations) and then calculating <span class="math inline">\(\left( PA\ \cap\ PB \right)\ /\ \left( PA\ \cup\ PB \right)\)</span>, where <span class="math inline">\(PA\)</span> is the set of all of patient <span class="math inline">\(A\)</span>’s phenotypes and those phenotypes’ ancestors. Likewise for <span class="math inline">\(PB\)</span> and patient <span class="math inline">\(B\)</span>. However, this calculation faces problems with incomplete IC measurements. We are only able to calculate an IC value for ~70% of nodes. Exponential back-off is a common approach to &quot;smoothing&quot; in situations where frequencies are needed but annotations are incomplete. Furthermore, exponential back-off weighting gives a higher weighting to nodes which were specifically annotated by a doctor than the parents of such nodes. This was the motivating factor behind Exponential Back-Off SimGIC (ebosimgic). In ebosimgic, we weight each observed node and subsequent ancestors by <span class="math inline">\(\frac{1}{k^{d}}\)</span> where d is the minimum distance between the observed node and the ancestor and k is a constant (in this experiment, we found that <span class="math inline">\(k = 2\)</span> seemed to work best). This means that the weight of an observed node is 1, its parent’s is 0.5, its grandparent’s is 0.25, and so on.</p>
+
+<h1 id="analysis">III. Analysis</h1>
+
+<figure>
+    <table> 
+        <tr>
+            <td></td>
+            <td>accuracy at top 1</td>
+            <td>accuracy at top 5</td>
+        </tr>
+        <tr>
+            <td>simGIC</td>
+            <td>0.58</td>
+            <td>0.74</td>
+        </tr>
+        <tr>
+            <td>ebosimgic</td>
+            <td>0.62</td>
+            <td>0.75</td>
+        </tr>
+    </table>
+    <figcaption><b>Table 1:</b> simGIC/ebosimgic comparison, where accuracy is defined as the percentage of patients for whom at least one true match was found in the top n other patients, ordered by (score / the total number of patients with true matches)</figcaption>
+</figure> 
+
+<p>As shown in Table 1, exponential back-off weighting improves the performance among the most similar patients. It increases the percentage of patients for whom the most similar patient was a true match, while resulting in only a marginal increase in the percentage of patients for whom a true match was found in the top 5 most similar patients. At top 20 or more, simGIC and ebosimgic perform comparably.</p>
+<p>We also found that ebosimgic and simGIC behave slightly differently when the HPO is pruned. We reduced the HPO by pruning nodes with high informational content. Since each node has an IC greater than its parents, this pruning operation can be done easily and still results in a DAG.</p>
+
+<figure>
+    <img src="/assets/NF1.png" alt="" />
+    <figcaption><b>Figure 1:</b> simGIC/ebosimgic comparison, where accuracy is defined as the fraction of patients for whom we found a true match in the top n most similar patients, ordered by ebosimgic/simGIC score. Scores were calculated after pruning the HPO to only nodes with IC less than a threshold.</figcaption>
+</figure>
+
+<p>As illustrated in Figure 1, we find that removing up to 80% of the nodes in the DAG has almost no effect on the performance. This may partly be due to our relatively small sample size compared to the large number of phenotypes in the DAG, but it is apparent that both simGIC and ebosimgic are not taking full advantage of the level of detail provided in the DAG. The top 1 performance of simGIC is actually highest when 85% of the DAG is pruned, suggesting that high-IC nodes may contribute to false matches. Ebosimgic does not have this behavior.</p>
+
+<h1 id="conclusion">IV. Conclusion</h1>
+<p>In summary, we find that we can improve the performance of rare disease-patient matching by weighting each node with an exponential back-off. We find that this modification of simGIC improves the results, increasing performance when evaluating based on top 1 similar patients, and slightly increasing performance on top 5. We also find that the vast majority of the nodes in the DAG do not affect performance, implying that current similarity measures are not taking full advantage of the level of complexity in the phenotype DAG. Furthermore, simGIC actually performs worse with all nodes included, while ebosimgic does not, suggesting that ebosimgic is making better use of the information available in the DAG.</p>
+
+<h4>References</h4>
+<div class="references">
+    <p>[1] Robinson, P. N., Köhler, S., Bauer, S., Seelow, D., Horn, D., &amp; Mundlos, S. (2008). The human phenotype ontology: A tool for annotating and analyzing human hereditary disease. <em>The American Journal of Human Genetics, 83</em>(5), 610-615. doi:10.1016/j.ajhg.2008.09.017 C.</p>
+    <p>[2] Pesquita, D. Faria, H. Bastos, A. E. N. Ferreira, A. O. Falcao, and F. M. Couto, &quot;Metrics for GO based protein semantic similarity: a systematic evaluation,&quot; BMC Bioinformatics, vol. 9, supplement 5, article S4, 2008.</p>
+</div>
+
+  </article>
+</div>
+
+    <footer class="page-footer">
+	<div class="container">
+		<div class="row footer-row">
+			<div class="col s12 m6 l6 footer-column">
+		  		<p class="grey-text text-lighten-4">RUCS is a non-archival publication featuring the best of undergraduate computer science research at the University of Toronto.</p>
+			</div>
+			<div class="col s12 m3 l3 footer-column" id="masthead-link">
+				<p><a href="/masthead" class="white-text"><b>Masthead</b></a><br/>
+				<a href="mailto:kawin@cs.toronto.edu" class="white-text"><b>Contact</b></a></p>
+			</div>
+			<div class="col s12 m3 l3 compsci-logo footer-column">
+				<a href="http://web.cs.toronto.edu/"><img src="/resources/compsci_knocked-out_CS4.svg" /></a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="/js/materialize.js"></script>
+    <script src="/js/init.js"></script>
+
+  </body>
+
+</html>

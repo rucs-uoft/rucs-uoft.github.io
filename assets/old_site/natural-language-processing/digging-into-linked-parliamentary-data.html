@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=YES" />
+  <meta name="theme-color" content="#0097A7"> 
+
+  
+
+  <title>RUCS | Review of Undergraduate Computer Science</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/siteimg/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/siteimg/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/siteimg/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/siteimg/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/siteimg/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/siteimg/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/siteimg/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/siteimg/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/siteimg/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/assets/siteimg/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/siteimg/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/assets/siteimg/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/assets/siteimg/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/assets/siteimg/safari-pinned-tab.svg" color="#0097a7">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/assets/siteimg/mstile-144x144.png">
+  <meta name="theme-color" content="#0097a7">
+  
+  <meta property="og:type"   content="website" /> 
+  <meta property="og:image" content="http://rucs.ca/assets/siteimg/share-image-200x200.jpg" />
+
+  <!-- CSS  -->
+  <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- For rendering custom CSS for individual pages -->
+  
+  
+  
+  <link href="/css/post.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  
+
+  <!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    },
+
+    messageStyle: "none",
+
+    showMathMenu: false,
+  });
+</script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69783905-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    
+
+<div class="navbar-fixed">
+<nav class="header-background" role="navigation">
+  <div class="nav-wrapper valign-wrapper">
+    <a id="logo-container" href="/#table-of-contents" class="brand-logo">RUCS</a>
+    <div class="left valign-wrapper">
+      	<a href="/#natural-language-processing">
+	    <i class="material-icons medium white-text">keyboard_arrow_left</i>
+	</a>
+    </div>
+  </div>
+</nav>
+</div>
+
+
+
+
+    <div class="container post-container">
+<br>
+  <header class="post-header">
+    <h1 class="post-title">Digging into Linked Parliamentary Data: Corpus Refinement and Structural Topic Modelling</h1>
+    <p class="post-author">Tim Alberdingk Thijm</p>
+    
+    
+    <p class="post-supervisors">under the supervision of Kaspar Beelen and Professor Graeme Hirst</p>
+
+    
+  </header>
+
+  <article class="post-content">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1 id="introduction">I. Introduction</h1>
+<p>A recent trend within the realm of political science is the reliance on computational methods to extract frames or ideological perspectives from political text. Frames can be communicated using a particular vocabulary or by the repetition of certain phrases [1]. By strategically framing a discussion, politicians and journalists try to influence the way an audience perceives the discussion at hand. Within parliament, frames often differ across parties, each of which aim to convince voters of their perspective on certain issues. In our research, we singled out immigration as the main topic and investigated what frames exist, how they differ between parties, and how they evolve over time.</p>
+<p>Approaches developed within computational linguistics allow us to identify frames through topic modelling [2]. This method treats each document as a mixture of latent topics and tries to recover those topics by identifying covariant terms within the document. The Structural Topic Models (STM) of Lucas et al. take advantage of document-level metadata to better classify and analyze trends between topics [3]. By adding party and date information as metadata, we can examine their effects on the topics created by the STM package.</p>
+<p>Using an XML database of parliamentary proceedings from the British House of Commons that covers all the debates in Westminster between 1935 and 2015, we took on two tasks: the addition of party information to the proceedings and, based on the party information added to the XML corpus, the construction of a Structural Topic Model that will allow us to extract the various framing techniques used by left- and right-wing parties in the British House of Commons.</p>
+
+<h1 id="approach">II. Approach</h1>
+<p>As two distinct tasks were involved in creating the final data, both shall be discussed. First, party metadata was collected from an authority list of British parliamentarians and stored in an associative array. The array stored each parliamentarian’s unique identifier, along with all parties a parliamentarian was affiliated with and the years of membership. Using the associative array, each speech in the proceedings could have its speaker’s party identified using the unique member identifiers tag of the speech. The correct party was determined using the party-membership date boundaries: a member of party A from 1990 to 1993 and party B from 1994 to 1996 would be correctly identified using the year the speech was given. This information was then added to the XML elements that represent speeches, i.e. uninterrupted strings of words.</p>
+<p>Once this metadata was added, an unsupervised approach was used to extract frames on the immigration issue. More specifically, we applied the STM package for R to our data, a tool that allows us to study topics in relation to the metadata, i.e. the date and party information added to the parliamentary speeches. As the first step, we selected all speeches containing immigration terms, and represented these texts as a "bag of words" by calculating the frequency of each word. Secondly, we restricted the corpus to only those words that fall within a certain document frequency range, thus excluding tokens that are too general or too rare to be useful. We then generated a number of topics based on the remaining corpus and labelled these topics based on which terms were most meaningful or indicative for the topic at hand, rejecting any remaining topics which lacked meaningful party or date differences.</p>
+<p>The effects of party and time on the occurrence of a topic were then estimated. Twentieth-century politics in the UK has been dominated by two parties, Labour and Conservative, which were hence compared for differences in word usage. Following this, debate on each topic was examined over time.</p>
+
+<h1 id="analysis">III. Analysis</h1>
+<p>The estimation process successfully yielded examples of topic framing between parties within particular discussions, demonstrating which words were more commonly used by each party. In the final model, of the twenty-three topics used, while topics like immigration’s effects on health care or industry showed no split between Labour and Conservative, nine topics, including racism towards immigrants and immigration of sponsored families, were preferred by Labour. The remaining eight, including immigration’s effects on budgets and urban planning, were preferred by Conservatives. Within particular topics, rhetoric would often be noticeably different: when discussing immigration of sponsored families, words such as "woman," "wife," and "join" were used more often by Labour politicians, while Conservatives preferred words like "citizenship," "settle" and "entitle." An example of these distinctions in context can be found in the included appendix.</p>
+<p>Estimation over time was somewhat less successful due to the nature of immigration discussion over time: most immigration debates were concentrated during particular periods characterized by increased immigration legislation, such as during the late sixties and early seventies. Topics that were only discussed at length for a few years simply accompanied historical events that prompted a reaction in British parliament. Cases like this include illegal Jewish immigration to Palestine during the 1930s and 1940s and Hong Kong emigration following the Sino-British Joint Declaration in 1984. Later analysis should be conducted to examine the interaction of speaker party membership and speech date.</p>
+
+<h1 id="conclusion">IV. Conclusion</h1>
+<p>The use of framing in parliamentary immigration debate is shown by the notable distinctions between Labour and Conservative discussion of numerous immigration issues, such as families, border control and crime. These topics are connected to broader discussions of "Britishness" and identity within the UK, which continue today in debates on the value of multiculturalism [4]. In this way, the metadata’s substantial effect on the language of immigration debate is preserved by structural topic modelling, allowing us to analyse the effects that party framing strategies exert on the discussion.</p>
+<p>As analysis of these findings continues, questions of the interaction between party and time can be examined along with other potential modifications, such as a larger number of topics or a more restricted corpus. Having done so, our findings can then be compared to qualitative efforts within comparative politics, potentially leading to new discoveries in how immigration debate is framed where quantitative results differ from established qualitative solutions. This new methodology provides justification for further studies of political science inspired by the text-as-data approach.</p>
+
+<h4>References</h4>
+<div class="references">
+    <p>[1] R. M. Entman. "Framing: Towards Clarification of a Fractured Paradigm," <em>Journal of Communication</em>, vol. 43, no. 4, pp. 51-58, 1993.</p></li>
+    <p>[2] D. M. Blei. "Probabilistic Topic Models," <em>Communications of the ACM</em>, vol. 55, no. 4, pp. 77-84, Apr. 2012.</p></li>
+    <p>[3] C. Lucas, R. Nielsen, M. E. Roberts, B. M. Stewart, A. Storer, D. Tingley. "Computer assisted text analysis for comparative politics," <em>Political Analysis</em>, vol. 23, no. 2, pp. 254-277, 2015.</p></li>
+    <p>[4] A. Heath, N. Demireva. "Has multiculturalism failed in Britain?" <em>Ethnic and Racial Studies</em>, vol. 31, no. 1, pp. 161-180, 2014.</p></li>
+</div>
+
+<h4>Appendix</h4>
+<div class="appendix">
+    <p><em>The following are speeches on the issue of husband-wife reunification through immigration. Punctuation was</em> <em>re-added after it was removed by the STM package. Words correlated with the speaker’s party are bolded.</em></p>
+    <p>Mr. Raison, Conservative:</p>
+    <blockquote>"The British Nationality Act created for the first time a <strong>status</strong> of British <strong>citizenship</strong> for those who belong most clearly to this country. That <strong>citizenship</strong> is tightly but fairly drawn; it is distinct, as we all know, from the British Dependent Territories <strong>Citizenship</strong> and the British Overseas <strong>Citizenship</strong>, neither of which give the <strong>right</strong> to live here in general. It is for those who are committed to this country and it is a symbol of our unity in this country. That is why we believe so strongly that the women who hold it should all be on the same footing when it comes to deciding whether they wish to bring a husband to Britain—whether they were <strong>born</strong> here or not, that is the crucial point in the debate. We have created a British <strong>citizenship</strong> for those people and the women who hold it must all be in the same position."</blockquote>
+    <p>Mrs. Slater, Labour:</p>
+    <blockquote>"A debate like this shows how little we have progressed on the question of the equality of <strong>women</strong>. Men still regard <strong>women</strong> almost as chattels. The minister said that the term ‘<strong>wife</strong>’ rather than ‘spouse’ might protect a <strong>wife</strong> who had come here, but could not it also protect a <strong>husband</strong> whose <strong>wife</strong> might want to come here and land herself if he had a good job? We are looking at it not from that point of view but from the point of view of a <strong>woman</strong> in my constituency who is doing a fulltime teaching job and doing it very well. Her <strong>husband</strong> wants to <strong>join</strong> her – should not the immigration officer be able to protect her, by asking her whether she wants her <strong>husband</strong> to <strong>join</strong> her?"</blockquote>
+</div>
+
+  </article>
+</div>
+
+    <footer class="page-footer">
+	<div class="container">
+		<div class="row footer-row">
+			<div class="col s12 m6 l6 footer-column">
+		  		<p class="grey-text text-lighten-4">RUCS is a non-archival publication featuring the best of undergraduate computer science research at the University of Toronto.</p>
+			</div>
+			<div class="col s12 m3 l3 footer-column" id="masthead-link">
+				<p><a href="/masthead" class="white-text"><b>Masthead</b></a><br/>
+				<a href="mailto:kawin@cs.toronto.edu" class="white-text"><b>Contact</b></a></p>
+			</div>
+			<div class="col s12 m3 l3 compsci-logo footer-column">
+				<a href="http://web.cs.toronto.edu/"><img src="/resources/compsci_knocked-out_CS4.svg" /></a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="/js/materialize.js"></script>
+    <script src="/js/init.js"></script>
+
+  </body>
+
+</html>

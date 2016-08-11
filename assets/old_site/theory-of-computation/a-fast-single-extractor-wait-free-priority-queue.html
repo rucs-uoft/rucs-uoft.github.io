@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=YES" />
+  <meta name="theme-color" content="#0097A7"> 
+
+  
+
+  <title>RUCS | Review of Undergraduate Computer Science</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/siteimg/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/siteimg/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/siteimg/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/siteimg/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/siteimg/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/siteimg/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/siteimg/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/siteimg/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/siteimg/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/assets/siteimg/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/siteimg/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/assets/siteimg/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/assets/siteimg/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/assets/siteimg/safari-pinned-tab.svg" color="#0097a7">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/assets/siteimg/mstile-144x144.png">
+  <meta name="theme-color" content="#0097a7">
+  
+  <meta property="og:type"   content="website" /> 
+  <meta property="og:image" content="http://rucs.ca/assets/siteimg/share-image-200x200.jpg" />
+
+  <!-- CSS  -->
+  <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- For rendering custom CSS for individual pages -->
+  
+  
+  
+  <link href="/css/post.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  
+
+  <!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    },
+
+    messageStyle: "none",
+
+    showMathMenu: false,
+  });
+</script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69783905-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    
+
+<div class="navbar-fixed">
+<nav class="header-background" role="navigation">
+  <div class="nav-wrapper valign-wrapper">
+    <a id="logo-container" href="/#table-of-contents" class="brand-logo">RUCS</a>
+    <div class="left valign-wrapper">
+      	<a href="/#theory-of-computation">
+	    <i class="material-icons medium white-text">keyboard_arrow_left</i>
+	</a>
+    </div>
+  </div>
+</nav>
+</div>
+
+
+
+
+    <div class="container post-container">
+<br>
+  <header class="post-header">
+    <h1 class="post-title">A Fast Single-Extractor Wait-Free Priority Queue</h1>
+    <p class="post-author">Yuanhao Wei and Kenneth D. Hoover</p>
+    
+    
+    <p class="post-supervisors">under the supervision of Professor Faith Ellen</p>
+
+    
+  </header>
+
+  <article class="post-content">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1 id="introduction">I. Introduction</h1>
+<p>A priority queue is a fundamental abstract data type that supports two operations: <span><span style="font-variant: small-caps;">Insert</span></span><span class="math inline">\((k)\)</span> and <span><span style="font-variant: small-caps;">Extract-Max</span></span>. Priority queues have many practical applications, especially in areas such as scheduling and event driven simulations. Some examples of applications of priority queues in distributed environments appear in <span class="citation">[1]</span>. One example where there are multiple inserters, but only a single extractor, is the priority queue for a shared printer.</p>
+<p>Efforts to build faster computers have shifted towards increasing the number of cores on a single computer. As a result, scalable and highly concurrent data structures in the asynchronous shared memory model are becoming increasingly important. In this model, each process can take an arbitrary amount of time between steps and may crash. Processes communicate by reading from and writing to shared registers, and by accessing LL/SC objects. If <span class="math inline">\(x\)</span> is an <span><span style="font-variant: small-caps;">LL</span></span>/<span><span style="font-variant: small-caps;">SC</span></span> object, then <span><span style="font-variant: small-caps;">LL</span></span>(x) reads <span class="math inline">\(x\)</span>. <span><span style="font-variant: small-caps;">SC</span></span><span class="math inline">\((x, v)\)</span> by process <span class="math inline">\(p\)</span> writes <span class="math inline">\(v\)</span> to <span class="math inline">\(x\)</span> if <span class="math inline">\(x\)</span> has not been written to by an <span><span style="font-variant: small-caps;">SC</span></span> operation since the last time <span class="math inline">\(p\)</span> performed <span><span style="font-variant: small-caps;">LL</span></span>(x). If <span><span style="font-variant: small-caps;">SC</span></span><span class="math inline">\((x, v)\)</span> writes <span class="math inline">\(v\)</span> to <span class="math inline">\(x\)</span> then it returns <span><span style="font-variant: small-caps;">True</span></span>. Otherwise it returns <span><span style="font-variant: small-caps;">False</span></span>.</p>
+<p>Lock-freedom is a property that guarantees that, while operations are in progress and processes take steps, some operation will finish within a finite number of steps. Wait-freedom is a stronger property that guarantees that every operation performed by a non-faulty process finishes within a finite number of steps by that process.</p>
+<p>Israeli and Rappoport <span class="citation">[2]</span> present a lock-free priority queue based on a heap, using LL/SC variables, with <span class="math inline">\(O(n\log{m})\)</span> amortized step complexity for both <span><span style="font-variant: small-caps;">Insert</span></span> and <span><span style="font-variant: small-caps;">Extract-Max</span></span>, where <span class="math inline">\(n\)</span> is the number of processes and <span class="math inline">\(m\)</span> is the maximum number of elements in the priority queue during the operation. They outline how to extend it to a wait-free implementation using 2-word LL/SC, but with step complexity. This is the best wait-free implementation known.</p>
+<p>In 2005, Jayanti and Petrovic <span class="citation">[3]</span> showed how to implement single-dequeuer queues with step complexity <span class="math inline">\(\Theta(\log{}n)\)</span> for both <span><span style="font-variant: small-caps;">Enqueue</span></span> and <span><span style="font-variant: small-caps;">Dequeue</span></span>.</p>
+<p>Inspired by this queue implementation, we consider a priority queue where only one process is allowed to perform <span><span style="font-variant: small-caps;">Extract-Max</span></span>. Our single-extractor priority queue implementation uses single word <span><span style="font-variant: small-caps;">LL</span></span>/<span><span style="font-variant: small-caps;">SC</span></span> objects. It is wait-free and has step complexity for both <span><span style="font-variant: small-caps;">Insert</span></span> and <span><span style="font-variant: small-caps;">Extract-Max</span></span>, where <span class="math inline">\(n\)</span> is the number of inserters and <span class="math inline">\(m\)</span> is the maximum number of elements in the priority queue during the operation.</p>
+<p>Our implementation uses a single-inserter single-deleter (SISD) ordered multiset, which supports insertion (<span><span style="font-variant: small-caps;">SISD-Insert</span></span>) and deletion (<span><span style="font-variant: small-caps;">SISD-Delete</span></span>) with <span class="math inline">\(O(\log{r})\)</span> step complexity, where <span class="math inline">\(r\)</span> is the maximum number of elements in the multiset during the operation. Finding the maximum element (<span><span style="font-variant: small-caps;">SISD-FindMax</span></span>) can be done with constant step complexity. Both the inserter and the deleter can perform <span><span style="font-variant: small-caps;">SISD-FindMax</span></span>.</p>
+
+<h1 id="the-construction">II. The Construction</h1>
+<p>Suppose, for simplicity, that the number of inserters, <span class="math inline">\(n\)</span>, is a power of 2. Our single-extractor priority queue implementation uses a complete binary tree with <span class="math inline">\(n\)</span> leaves. Each leaf corresponds to one inserting process. At each leaf, there is a single-inserter single-deleter (SISD) ordered multiset. Each internal node stores the largest key in its subtree as well as the index of the leaf that the key came from. An <span><span style="font-variant: small-caps;">Insert</span></span> operation first inserts into its own SISD multiset and then helps propagate the largest key up the complete binary tree. An <span><span style="font-variant: small-caps;">Extract-Max</span></span> operation reads the largest key from the root of the binary tree, deletes it from the SISD multiset of the appropriate leaf, and propagates the new maximum up the binary tree. We use an SISD multiset rather than an SISD priority queue because, by the time an <span><span style="font-variant: small-caps;">Extract-Max</span></span> tries to delete a key from the SISD multiset of a leaf, it might no longer be the largest key in the leaf. Our single-extractor priority queue implementation is wait-free, and has step complexity for both <span><span style="font-variant: small-caps;">Insert</span></span> and <span><span style="font-variant: small-caps;">Extract-Max</span></span>, in addition to the time it takes to perform the SISD multiset insert and delete operations. Note that any process can perform <span><span style="font-variant: small-caps;">Extract-Max</span></span> as long as there is some way of guaranteeing that two or more <span><span style="font-variant: small-caps;">Extract-Max</span></span> operations are not performed concurrently.</p>
+<p>The SISD multiset is implemented using a persistent AVL tree. Each process announces the operation it wishes to perform, and the processes alternate between helping each other when there is contention. We use a novel adaptation of handshaking to ensure all operations are performed without duplication. The step complexity of insertion and deletion is <span class="math inline">\(O(\log{r})\)</span>, where <span class="math inline">\(r\)</span> is the maximum size of the multiset during the operation, while finding the maximum element can be implemented in constant time.</p>
+
+<h1 id="future-work">III. Future Work</h1>
+<p>It would be interesting to obtain either a <span class="math inline">\(\Omega(\log{n} + \log{m})\)</span> lower bound or a faster implmentation of <span><span style="font-variant: small-caps;">Insert</span></span> or <span><span style="font-variant: small-caps;">Extract-Max</span></span>. Improvements to the step complexities of <span><span style="font-variant: small-caps;">SISD-Insert</span></span> or <span><span style="font-variant: small-caps;">SISD-Delete</span></span> will reduce the <span class="math inline">\(\log{}m\)</span> term in the step complexities of <span><span style="font-variant: small-caps;">Insert</span></span> or <span><span style="font-variant: small-caps;">Extract-Max</span></span>, respectively.</p>
+
+<h4 id="acknowledgements" class="unnumbered">Acknowledgements</h4>
+<p class="acknowledgements">We would like to thank our supervisor, Professor Faith Ellen, for the advice she gave us while writing this paper, and for the numerous hours she put into editing our work. This work was supported by NSERC Undergraduate Student Research Awards.</p>
+
+<h4 id="references">References</h4>
+<div class="references">
+    <div id="ref-LJ">
+    <p>[1] J. Lindén and B. Jonsson, "A skiplist-based concurrent priority queue with minimal memory contention," in <em>Proceedings of the 17th International Conference on Principles of Distributed Systems (OPODIS)</em>, 2013, pp. 206–220.</p>
+    </div>
+    <div id="ref-IR">
+    <p>[2] A. Israeli and L. Rappoport, "Efficient wait-free implementation of a concurrent priority queue," in <em>Proceedings of the 7th International Workshop on Distributed Algorithms (WDAG)</em>, 1993, pp. 1–17.</p>
+    </div>
+    <div id="ref-JP">
+    <p>[3] P. Jayanti and S. Petrovic, "Logarithmic-time single deleter, multiple inserter wait-free queues and stacks," in <em>Proceedings of the 25th International Conference on Foundations of Software Technology and Theoretical Computer Science (FSTTCS)</em>, 2005, pp. 408–419.</p>
+    </div>
+</div>
+
+  </article>
+</div>
+
+    <footer class="page-footer">
+	<div class="container">
+		<div class="row footer-row">
+			<div class="col s12 m6 l6 footer-column">
+		  		<p class="grey-text text-lighten-4">RUCS is a non-archival publication featuring the best of undergraduate computer science research at the University of Toronto.</p>
+			</div>
+			<div class="col s12 m3 l3 footer-column" id="masthead-link">
+				<p><a href="/masthead" class="white-text"><b>Masthead</b></a><br/>
+				<a href="mailto:kawin@cs.toronto.edu" class="white-text"><b>Contact</b></a></p>
+			</div>
+			<div class="col s12 m3 l3 compsci-logo footer-column">
+				<a href="http://web.cs.toronto.edu/"><img src="/resources/compsci_knocked-out_CS4.svg" /></a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="/js/materialize.js"></script>
+    <script src="/js/init.js"></script>
+
+  </body>
+
+</html>

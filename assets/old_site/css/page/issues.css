@@ -1,0 +1,8 @@
+ul {
+	padding: 20px;
+	list-style-type: disc !important;
+}
+
+ul li {
+	list-style-type: disc !important;
+}

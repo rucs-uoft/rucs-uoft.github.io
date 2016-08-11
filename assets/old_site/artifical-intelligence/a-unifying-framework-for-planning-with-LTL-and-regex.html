@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=YES" />
+  <meta name="theme-color" content="#0097A7"> 
+
+  
+
+  <title>RUCS | Review of Undergraduate Computer Science</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/siteimg/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/siteimg/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/siteimg/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/siteimg/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/siteimg/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/siteimg/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/siteimg/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/siteimg/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/siteimg/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/assets/siteimg/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/siteimg/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/assets/siteimg/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/assets/siteimg/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/assets/siteimg/safari-pinned-tab.svg" color="#0097a7">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/assets/siteimg/mstile-144x144.png">
+  <meta name="theme-color" content="#0097a7">
+  
+  <meta property="og:type"   content="website" /> 
+  <meta property="og:image" content="http://rucs.ca/assets/siteimg/share-image-200x200.jpg" />
+
+  <!-- CSS  -->
+  <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- For rendering custom CSS for individual pages -->
+  
+  
+  
+  <link href="/css/post.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  
+
+  <!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    },
+
+    messageStyle: "none",
+
+    showMathMenu: false,
+  });
+</script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69783905-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+  <body>
+
+    
+
+<div class="navbar-fixed">
+<nav class="header-background" role="navigation">
+  <div class="nav-wrapper valign-wrapper">
+    <a id="logo-container" href="/#table-of-contents" class="brand-logo">RUCS</a>
+    <div class="left valign-wrapper">
+      	<a href="/#artificial-intelligence">
+	    <i class="material-icons medium white-text">keyboard_arrow_left</i>
+	</a>
+    </div>
+  </div>
+</nav>
+</div>
+
+
+
+
+    <div class="container post-container">
+<br>
+  <header class="post-header">
+    <h1 class="post-title">A Unifying Framework for Planning with LTL and Regular Expressions</h1>
+    <p class="post-author">Eleni Triantafillou</p>
+    
+    
+    <p class="post-supervisors">under the supervision of Jorge A. Baier and Professor Sheila A. McIlraith</p>
+
+    
+  </header>
+
+  <article class="post-content">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1 id="introduction">I. Motivation</h1>
+<p>Automated planning is a subfield of Artificial Intelligence that concerns the generation of a set of actions and orderings – a plan – for execution by agents to realize a goal. While significant advances have been made in automated planning involving final-state goals, most real-world planning problems involve complex goals that are temporally extended, necessitate the optimization of preferences or other quality measures, require adherence to safety constraints and directives, and/or may require or benefit from following a prescribed high-level script that specifies how the task is to be realized. By way of illustration, consider a logistics company that transports packages. Package delivery may be governed by the following types of (possibly inconsistent) goals:
+    <ul>
+        <li>Always ship frozen food in a refrigerated truck.</li>
+        <li>Prefer to deliver priority packages before regular packages.</li>
+        <li>If the customer is a preferred customer, then always apply a 15% discount to the final bill.</li>
+        <li>Prefer to deliver domestic packages within 24 hours of receipt.</li>
+        <li>While a truck is at a location and not full, load all packages bound for a different destination on the truck; drive to the next destination; unload all packages to be delivered to this destination.</li>
+    </ul>
+Such goals are typically specified in the subset of Linear Temporal Logic (LTL) found in the Planning Domain Description Language, PDDL3.0 [3].
+</p>
+
+<p>In a series of well-received lectures between 2011 and 2013, Moshe Vardi advocated convincingly for the benefits of LTL, but also discussed its limitations in the context of industry-driven verification tasks (e.g., [5]). In response to LTL’s limitations, Vardi advocated Linear Dynamic Logic (LDL)), a temporal logic that combines LTL and Regular Expressions (REs) in a manner that avoids the exponential increase in size that typically plagues REs in such a context. Subsequently, De Giacomo and Vardi [2], proposed LDLf, which defines LDL over finite traces, citing automated planning among the applications for the logic.</p>
+
+<p>In brief, LDL is semantically a very powerful language that can serve as a goal specification vehicle for a myriad of applications in automated planning and beyond, ranging from business process management/monitoring and Internet of Things, to high-level robot control. However, we believe that despite the great mathematical power of LDL, its syntax is not very intuitive. To mend this, we propose LTL-RE: a language with a user-friendly syntax whose expressive power is no less than that of LDL. We also propose a means of efficiently planning with LTL-RE, and thus LDL, by exploiting highly optimized classical planning technology. The critical question of how to efficiently generate plans with goals specified in LDL (or LTL-RE) has not yet been explored in the literature.</p>
+
+<h1 id="approach">II. Contributions</h1>
+<p>We propose LTL-RE, a high-level language that supports the specification of a wide variety of temporal goals, not only using LTL but also using REs. LTL- RE derives its formal foundation from finite Linear Dynamic Logic (LDLf), and its expressive power is no less than that of regular expressions. LTL- RE augments LDLf with planning-friendly syntax including LTL and typical programming language constructs. It is also designed for use with AI automated planning transition systems, supporting state-, action-, and path-oriented temporal goal specification. Further, we propose a translation of LTL-RE goals into classical planning domains for use with state-of-the-art classical planners. Unlike previous reformulation approaches that exploited Non-deterministic Finite State Automata (NFAs) (e.g., [1]), we exploit an approach based on Alternating Automata following Torres and Baier [4] that avoids the worst-case exponential increase in size inherent to NFAs. We evaluated the behavior of our translator and the resultant planning problems, with comparison to alternative LTL translators.</p>
+
+<h1 id="analysis">III. Analysis</h1>
+<p>We have implemented the translator for LTL-RE. Since realistic benchmarks exist only in limited ways and only for the LTL fragment of LTL- RE, the comparative experimental analysis reported here is solely for the LTL fragment of LTL-RE.</p>
+
+<p>We compared the performance of our LTL-RE translator both to a Non-Deterministic Finite state Automata (NFA)-based LTL translator initially introduced in [1], and to an Alternating Automata (AA)-based LTL translator [4], similar to ours. The NFA-based LTL translator is highly optimized to avoid, in most cases, the exponential increase in the size of the automata characteristic of NFA-based representations of LTL. The AA translator exists in two versions: a naive one without engineering optimizations, and an optimized version. In order to fairly compare against our LTL-RE translator, which currently lacks the implementation of analogous optimizations, we compared against the similarly unoptimized AA-based LTL translator. Even this comparison is not entirely appropriate. The LTL-RE translator is designed to translate all of LDLf, including REs, LTL, and additional programming language constructors. We expected that a special-purpose translator that is tuned exclusively to LTL would be more efficient than the LTL portion of a more general LTL-RE translator at least before implementation of optimizations.</p>
+
+<figure class="large-table">
+    <table>
+        <tr>
+            <th></th>
+            <th colspan="4">NFA translator</th>
+            <th colspan="5">AA-LTL</th>
+            <th colspan="5">LTL-RE</th>
+        </tr>
+        <tr>
+            <td></td><td> TT </td><td> PL </td><td> PT </td><td> PS </td><td> TT </td><td> PL </td><td> WPL </td><td> PT </td><td> PS </td><td> TT </td><td> PL </td><td> WPL </td><td> PT </td><td> PS</td>
+        </tr>
+        <tr>
+            <td>p01 </td><td> 0.051 </td><td> 2 </td><td> 0.00 </td><td> 3 </td><td> 0.108 </td><td> 15 </td><td> 2 </td><td> 0.00 </td><td> 73 </td><td> 0.112 </td><td> 15 </td><td> 2 </td><td> 0.00 </td><td> 48</td>
+        </tr>
+        <tr>
+            <td>p02 </td><td> 0.044 </td><td> 3 </td><td> 0.00 </td><td> 4 </td><td> 0.093 </td><td> 22 </td><td> 3 </td><td> 0.00 </td><td> 139 </td><td> 0.110 </td><td> 22 </td><td> 3 </td><td> 0.00 </td><td> 96</td>
+        </tr>
+        <tr>
+            <td>p03 </td><td> 0.051 </td><td> 7 </td><td> 0.00 </td><td> 16 </td><td> 0.113 </td><td> 50 </td><td> 7 </td><td> 0.00 </td><td> 719 </td><td> 0.113 </td><td> 53 </td><td> 7 </td><td> 0.00 </td><td> 547 </td>
+        </tr>
+        <tr>
+            <td>p04 </td><td> 0.058 </td><td> 10 </td><td> 0.00 </td><td> 27 </td><td> 0.112 </td><td> 75 </td><td> 10 </td><td> 0.01 </td><td> 3351 </td><td> 0.115 </td><td> 83 </td><td> 10 </td><td> 0.01</td><td> 2959 </td>
+        </tr>
+        <tr>
+            <td>p05 </td><td> 0.049 </td><td> 14 </td><td> 0.00 </td><td> 43 </td><td> 0.115 </td><td> 104 </td><td> 13 </td><td> 0.03 </td><td> 15575 </td><td> 0.139 </td><td> 121 </td><td> 13 </td><td> 0.04 </td><td> 16672 </td>
+        </tr>
+        <tr>
+            <td>p06 </td><td> 0.303 </td><td> 14 </td><td> 0.00 </td><td> 43 </td><td> 0.117 </td><td> 99 </td><td> 13 </td><td> 0.04 </td><td> 16213 </td><td> 0.135 </td><td> 110 </td><td> 13 </td><td> 0.04 </td><td> 17153 </td>
+        </tr>
+        <tr>
+            <td>p07 </td><td> 0.077 </td><td> 4 </td><td> 0.00 </td><td> 6 </td><td> 0.095 </td><td> 32 </td><td> 4 </td><td> 0.00 </td><td> 1555 </td><td> 0.115 </td><td> 32 </td><td> 4 </td><td> 0.00 </td><td> 1454</td>
+        </tr>
+        <tr>
+            <td>p08 </td><td> 3.568 </td><td> 7 </td><td> 0.00 </td><td> 11 </td><td> 0.116 </td><td> 55 </td><td> 6 </td><td> 0.04 </td><td> 20920 </td><td> 0.125 </td><td> 62 </td><td> 6 </td><td> 0.09 </td><td> 33262</td>
+        </tr>
+        <tr>
+            <td>p09 </td><td> 72.556 </td><td> 9 </td><td> 0.02 </td><td> 20 </td><td> 0.113 </td><td> 67 </td><td> 7 </td><td> 0.18 </td><td> 74360 </td><td> 0.133 </td><td> 78 </td><td> 7 </td><td> 0.57 </td><td> 156892</td>
+        </tr>
+        <tr>
+            <td>p10 </td><td> 72.614 </td><td> 9 </td><td> 0.02 </td><td> 20 </td><td> 0.119 </td><td> 68 </td><td> 7 </td><td> 0.22 </td><td> 89464 </td><td> 0.144 </td><td> 79 </td><td> 7 </td><td> 1.01 </td><td> 227686</td>
+        </tr>
+    </table>
+
+    <figcaption><b>Table 1:</b> Results for domain <em>Blocksworld</em>, depicting translation time (TT), plan length (PL), total planning time (PT), number of planning states that were evaluated before the goal was reached (PS), and world plan length (WPL), which denotes the number of planning actions in PL (excluding the actions that are responsible for the automaton synchronization).</figcaption>
+</figure>
+
+<h4 id="references">References</h4>
+<div class="references">
+    <p>[1] Baier, J., and McIlraith, S. 2006. Planning with first-order temporally extended goals using heuristic search. In Proceedings of the 21st National Conference on Artificial Intelligence (AAAI06), 788–795.</p>
+    <p>[2] De Giacomo, G., and Vardi, M. Y. 2013. Linear temporal logic and linear dynamic logic on finite traces. In Proceedings of the 23rd International Joint Conference on Artificial Intelligence (IJCAI). </p>
+    <p>[3] Gerevini, A.; Haslum, P.; Long, D.; Saetti, A.; and Dimopoulos, Y. 2009. Deterministic planning in the fifth international planning competition: PDDL3 and experimental evaluation of the planners. Artificial Intelligence 173(5-6):619–668.</p>
+    <p>[4] Torres, J., and Baier, J. A. 2015. Polynomial-time reformulations of ltl temporally extended goals into final-state goals. In Proceedings of the Workshop on Model-Checking and Automated Planning (MOCHAP) at ICAPS-2015.</p>
+    <p>[5] Vardi, M. Y. 2012. The rise and fall of temporal logic. Keynote, 13th International Conference on Principles of Knowledge Representation and Reasoning.</p>
+</div>
+
+  </article>
+</div>
+
+    <footer class="page-footer">
+	<div class="container">
+		<div class="row footer-row">
+			<div class="col s12 m6 l6 footer-column">
+		  		<p class="grey-text text-lighten-4">RUCS is a non-archival publication featuring the best of undergraduate computer science research at the University of Toronto.</p>
+			</div>
+			<div class="col s12 m3 l3 footer-column" id="masthead-link">
+				<p><a href="/masthead" class="white-text"><b>Masthead</b></a><br/>
+				<a href="mailto:kawin@cs.toronto.edu" class="white-text"><b>Contact</b></a></p>
+			</div>
+			<div class="col s12 m3 l3 compsci-logo footer-column">
+				<a href="http://web.cs.toronto.edu/"><img src="/resources/compsci_knocked-out_CS4.svg" /></a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="/js/materialize.js"></script>
+    <script src="/js/init.js"></script>
+
+  </body>
+
+</html>
