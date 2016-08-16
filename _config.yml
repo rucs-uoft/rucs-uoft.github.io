@@ -9,5 +9,5 @@ github_username:  rucs-uoft
 # Build settings
 markdown: kramdown
 permalink: /:title
-page-names: [Submission-Guidelines, FAQ, Archive]
+page-names: ["Submission Guidelines", "FAQ"]
 post-categories: ["Artificial Intelligence", "Computational Biology", "Computer Vision", "Natural Language Processing", "Profiles and Interviews", "Software Engineering", "Software Projects", "Theory of Computation"]

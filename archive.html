@@ -5,15 +5,59 @@ title: "Masthead"
 permalink: /Archive
 ---
 <div class="submit-container">
-    <h1 style="text-align:center; padding-top:50px; ">2015</h1>
+    <br><br>
+    <h1 class='archive-title'>F a l l </h1> <h1 class='archive-title' style="padding-left:0.5em"> 2 0 1 5</h1>
+    
+    <!-- Foreword -->
+    <p>Within these pages, we lay bare the best of undergraduate computer science research at the University of Toronto. For the budding researcher, we hope this will inspire and impel you to pursue the path of those published here; for the curious reader, we seek to clarify and distill, to further your interest in this varied and dynamic discipline.</p>
+    
+    <p>This inaugural issue was made possible by dint of a tremendous effort from faculty and students alike. It was completed with great haste - its release coming barely four months after its humble beginnings - and its success is a testament to the quality of its contributors' work and its fastidious staff.</p>
+    
+    <p>In particular, this review would not have materialized if not for these following individuals. They have my deepest thanks and eternal gratitude. Leanne Dawkins: for answering my incessant questions with indefatigable enthusiasm. Paul Gries and Marsha Chechik: for breathing life into a fledgling idea. Diane Horton: for bolstering this project during its tremulous start. Nina Haikara: for promoting this review like none other could have. Courtney Mogavero: for the amazing event at Google Toronto.</p>
+    
+    <p>Sam Toueg: for your sage advice, your unwavering support, and your humor - I could not have asked for more. Jaren, Julia, Muhammad, and Sara: for the passion you brought during even the most difficult of times, and for your brilliance and infinite patience, of which I am in awe. It has been a pleasure.</p>
+
+    <p id="signature" style="font-size:1.15em">Kawin Ethayarajh<br/><em>Editor-in-Chief</em>, RUCS</p>
+
     {% for category in site.post-categories %}
-    <h3 style="text-align:center"><em>{{category}}</em></h3>
+    <h3 style="font-family: Helvetica">{{category}}</h3>
         <ol>
             {% for post in site.posts %}
                 {% if post.category == category %}
-                    <li><p><a href="{{ post.permalink }}">{{post.title}}</a></p></li>
+                    <p><em><a href="{{ post.permalink }}">{{post.title}}</a></p></em>
+                    <p>{{post.author}}</p>
+                    <br>
                 {% endif %}
             {% endfor %}
         </ol>
     {% endfor %}
+
+    <h3 style="font-family: Helvetica">Masthead</h3>
+
+<table>
+    <tr>
+        <th><em>Editor-in-Chief</em></th><th>Kawin Ethayarajh</th>
+    </tr>
+    <tr>
+        <th><em>Faculty Supervisor</em></th><th>Sam Toueg</th>
+    </tr>
+    <tr>
+        <th><em>Undergraduate Editors</em></th>
+        <th>Julia Gilenko</th>
+        <tr><th></th><th>Jaren Kerr</th></tr>
+    </tr>
+    <tr>
+        <th><em>Design & Layout Director</em></th>
+        <th>Sara Tang</th>
+    </tr>
+    <tr>
+        <th><em>Layout Associate</em></th>
+        <th>Mohana Sarmiento</th>
+    </tr>
+    <tr>
+        <th><em>Webmaster</em></th>
+        <th>Muhammad Osama</th>
+    </tr>
+			
+</table>
 </div>

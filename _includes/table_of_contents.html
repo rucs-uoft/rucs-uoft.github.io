@@ -8,18 +8,22 @@
         <a href="#letter-from-the-editor" class="waves-light collection-item">
           <span class="toc-title">About</span>
         </a>
+          
+        <a href="#archive" class="waves-light collection-item">
+          <span class="toc-title">Archive</span>
+        </a>
 
         
         {% for title in site.page-names %}
-            {% if title == "Archive" %}
-                <a href="{{site.baseurl}}/assets/old_site/index.html" class="waves-light collection-item">
+          {% if title == "Submission Guidelines" %}
+            <a  href="{{ site.baseurl }}/Submission-Guidelines" class="waves-light collection-item">
+              <span class="toc-title">{{ title }}</span>
+            </a>
+          {% else %}
+            <a  href="{{ site.baseurl }}/{{title}}" class="waves-light collection-item">
                 <span class="toc-title">{{ title }}</span>
-                </a>
-            {% else %}
-                <a  href="{{site.baseurl}}/{{title}}" class="waves-light collection-item">
-                <span class="toc-title">{{ title }}</span>
-                </a>
-            {% endif %}
+            </a>
+        {% endif %}
         {% endfor %}
       </div>
     </div>
@@ -31,6 +35,12 @@
           <div class="toc-chapter-content" id="letter-from-the-editor">
           <div id="foreword">
             {% include foreword.html %}
+          </div>
+        </div>
+          
+          <div class="toc-chapter-content" id="archive">
+          <div id="foreword">
+            {% include archive.html %}
           </div>
         </div>
           
