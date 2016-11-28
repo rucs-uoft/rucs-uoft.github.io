@@ -1,4 +1,16 @@
-{% assign chapter_titles = site.categories | sort %}
+
+{% assign goodCats = ',' | split: ',' %}
+
+{% for item in site.posts %}
+    {% if item.year != "2015" %}
+        {% unless goodCats contains item.category %} 
+            {% assign goodCats = goodCats | push: item.category %}
+        {% endunless %}
+    {% endif %}
+{% endfor %}
+
+{% assign chapter_titles = goodCats | sort %}
+
 
 <div class="height-fix">
   <div class="row toc-container">
@@ -6,64 +18,65 @@
       <div class="marginless-collection collection">
 
         <a href="#letter-from-the-editor" class="waves-light collection-item">
-          <span class="toc-title">About</span>
-        </a>
-          
-        <a href="#archive" class="waves-light collection-item">
-          <span class="toc-title">Archive</span>
+          <span class="toc-title">Letter from the Editor</span>
         </a>
 
-        
-        {% for title in site.page-names %}
-          {% if title == "Submission Guidelines" %}
-            <a  href="{{ site.baseurl }}/Submission-Guidelines" class="waves-light collection-item">
-              <span class="toc-title">{{ title }}</span>
+        {% assign i = 1 %}
+
+        {% for chapter in chapter_titles %}
+
+            
+            {% if chapter[0] == 'profiles and interviews'%}
+                {% assign i = i | minus: 1 %}
+            {% else %}
+
+            <a onclick="window.history.replaceState(null, null, '/#{{ chapter | downcase | replace: ' ', '-'}}');" href="#{{ chapter | downcase | replace: ' ', '-'}}" class="waves-light collection-item">
+              <span class="toc-title">  {{ chapter }}</span>
             </a>
-          {% else %}
-            <a  href="{{ site.baseurl }}/{{title}}" class="waves-light collection-item">
-                <span class="toc-title">{{ title }}</span>
-            </a>
-        {% endif %}
+
+            {% endif %}
+
+            {% assign i = i | plus: 1 %}
+
         {% endfor %}
+
       </div>
     </div>
 
     <div class="col s12 m9 l9 height-fix hide-on-small-and-down" id="toc-content-wrapper">
       <div class="toc-content height-fix" id="toc-content">
-        
-          <!-- About page -->
-          <div class="toc-chapter-content" id="letter-from-the-editor">
+        <div class="toc-chapter-content" id="letter-from-the-editor">
           <div id="foreword">
             {% include foreword.html %}
           </div>
         </div>
           
-          <div class="toc-chapter-content" id="archive">
-          <div id="foreword">
-            {% include archive.html %}
-          </div>
-        </div>
-          
-          <!-- FAQ page -->   
-          <div class="toc-chapter-content" id="letter-from-the-editor2">
-          <div id="foreword">
-            {% include faq.html %}
-          </div>
-        </div>
-          
-          
         {% for chapter in site.categories %}
-          <div class="toc-chapter-content" id="{{ title| downcase | replace: ' ', '-' }}">
-            {% for abstracts in chapter %}
-              {% if forloop.first == false %}
+          {% for abstracts in chapter %}
+                    {% assign counter = 0 %}
+
                 {% for abstract in abstracts %}
-
-                    {% include marginless_card_panel.html %}
-
+                    {% if abstract.year != "2015" %}
+                        {% assign counter= 1 %}
+                    {% endif %}
                 {% endfor %}
-              {% endif %}
-            {% endfor %}
-          </div>
+          
+          {% endfor %}
+
+          {% if counter != 0 %}
+
+              <div class="toc-chapter-content" id="{{ chapter[0] | downcase | replace: ' ', '-' }}">
+                {% for abstracts in chapter %}
+                  {% if forloop.first == false %}
+                    {% for abstract in abstracts %}
+                        {% if abstract.year != "2015" %}
+                            {% include marginless_card_panel.html %}
+                        {% endif %}
+                    {% endfor %}
+                  {% endif %}
+                {% endfor %}
+              </div>
+          {% endif %}
         {% endfor %}
       </div>
     </div>

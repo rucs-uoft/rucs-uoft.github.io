@@ -1,0 +1,51 @@
+---
+layout: post
+title: "N-way Model Merging Game"
+author: "Christina Chung"
+supervisors: "Julia Rubin and Professor Marsha Chechik"
+category: "Software Engineering"
+permalink: /software-engineering/n-way-model-merging-game
+year: "2015"
+---
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1 class="introduction">I. Introduction</h1>
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/CC1.png" alt="" />
+    <figcaption><b>Figure 1:</b> Models <span class="math inline">\(M_{1},M_{2},M_{3}\)</span> are combined into a single model <span class="math inline">\(M_{1} + M_{2} + M_{3}\)</span> through the process of NwM.</figcaption>
+</figure>
+
+<p>N-way model merging (NwM) [1] is the process of merging sets of software models into one by grouping classes that have similar attributes. Class names, names of class attributes, and relationships with other classes are considered to be model attributes. An optimal solution to NwM produces a result in which the chosen groupings have the highest degree of similarity. An example of NwM is depicted in Figure 1, in which models <span class="math inline">\(M_{1},M_{2},M_{3}\)</span> are combined into a single model<span class="math inline">\(\ M_{1} + M_{2} + M_{3}\)</span>.</p>
+<p>NwM is an NP-hard problem; that is, it’s in the class of problems that have no known polynomial run time algorithm, making it impossible to automate. This is unfortunate, as NwM has a variety of useful applications in software engineering, such as combining related products in a product line and consolidating the views of multiple stakeholders. As a result, previous studies run, such as the one conducted by Julia Rubin and Marsha Chechik [1], attempted to devise heuristic algorithms that approximate NwM. Although these algorithms run in polynomial time, they are not guaranteed to compute the optimal solution. This paper explores an alternative approach that may perform better than these heuristic algorithms.</p>
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/CC2.png" alt="" />
+    <figcaption><b>Figure 2:</b> In the “serious game”, players will group sets of objects encoded as software models. This diagram shows the process of merging two models of fruits and vegetables.</figcaption>
+</figure>
+
+<h1 class="approach">II. Approach</h1>
+<p>Our approach utilizes the human ability of detecting visual similarities and differences and involves creating a “serious game” that will require players to perform NwM. Instead of making users merge UML models such as the ones in Figure 1, players will be merging sets of objects, such as the fruits and vegetables shown in Figure 2. These objects will be encoded as software models.</p>
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/CC3.png" alt="" />
+    <figcaption><b>Figure 3:</b> Objects created.</figcaption>
+</figure>
+
+<p>We experimented with a variety of objects but narrowed it down to bacteria sets (1), aliens (2), and alien families (3). These are shown in Figure 3. For example, one alien would represent a single class, and each feature of the alien would represent an attribute. A set of bacteria would represent a single class, and each individual bacterium would represent an attribute.</p>
+<p>We wanted to determine whether humans would perform differently if objects were presented as a set of items, as in the case of bacteria, or if they were presented as a single entity with superimposed items, as in the case of aliens. The software models in the game have a total of 162 attributes. Alien families were created because it was hard to fit 162 attributes on a single alien and thus the alien attributes had to be made small in order to fit all of them. This made it difficult for players to notice all attributes on the aliens. With alien families, the 162 attributes could be spread out over 4 aliens, making them bigger and easier to notice.</p>
+
+<h1 class="analysis">III. Analysis</h1>
+<p>We conducted a University of Toronto ethics-approved user study to determine which of the object types would be most useful for the game. The study aimed to determine whether participants would correctly guess the most similar pair when presented with multiple game objects on the screen. In total, 164 participants successfully completed the study (each taking about an hour), and the results suggest that players perform the best on aliens, with bacteria sets following closely behind. We believe that participants may not have done as well as they could have on bacteria sets due to the “tiring effect”, as these objects were presented last in the questionnaire. Therefore, we are considering both aliens and bacteria as our final game objects.</p>
+
+<h1>IV. Future Work</h1>
+<p>We are currently developing an actual game with the objects we created. A challenge that we face is getting the game to scale for large software models, as it will become increasingly difficult for players to keep track of all the objects on the screen. This necessitates a design that will prevent players from feeling overwhelmed with information when playing the game. The design will also need to account for the fact that it becomes harder to fit all objects on the screen as models increase in size. Since NvM is not an inherently interesting task, the gameplay must also be made enticing for players.</p>
+
+<h4>References</h4>
+<div class="references">
+    <p>[1] J. Rubin and M. Chechik. N-way Model Merging. <em>In Proc. of ESEC/FSE’13</em>, pages 301-311, 2013.</p>
+</div>

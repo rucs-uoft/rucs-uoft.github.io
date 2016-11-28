@@ -8471,8 +8471,7 @@ figcaption {
     height: 100vh; }
 
   .full-width {
-    height: 100%;
-      width: 100%; } }
+    width: 100%; } }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
   .background {
     height: 100vh;

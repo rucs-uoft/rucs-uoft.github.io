@@ -2,7 +2,7 @@
 layout: default
 css: masthead.css
 title: "Masthead"
-permalink: /Archive-2015
+permalink: /archive
 ---
 <div class="submit-container">
     <br><br>
@@ -19,16 +19,11 @@ permalink: /Archive-2015
 
     <p id="signature" style="font-size:1.15em">Kawin Ethayarajh<br/><em>Editor-in-Chief</em>, RUCS</p>
 
-    {% for category in site.post-categories %}
-    <h3 style="font-family: Helvetica">{{category}}</h3>
-        <ol>
-            {% for post in site.posts %}
-                {% if post.category == category %}
-                    <p><em><a href="{{ post.permalink }}">{{post.title}}</a></p></em>
-                    <p>{{post.author}}</p>
-                {% endif %}
-            {% endfor %}
-        </ol>
+    <h3 style="font-family: Helvetica">Papers</h3>
+    {% for post in site.posts %}
+            {% if post.year == "2015" %}
+                <p>{{post.author}} in {{post.category}} : <a href="{{ post.permalink }}">{{post.title}}</a></p>
+            {% endif %}
     {% endfor %}
 
     <h3 style="font-family: Helvetica">Masthead</h3>

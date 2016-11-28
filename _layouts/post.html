@@ -8,7 +8,7 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     {% if page.author %}<p class="post-author">{{ page.author }}</p>{% endif %}
     
-    {% if page.supervisors %}
+    {% if page.supervisors != '' %}
     <p class="post-supervisors">under the supervision of {{ page.supervisors }}</p>{% endif %}
 
     {% if page.meta %} • {{ page.meta }}{% endif %}

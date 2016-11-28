@@ -1,0 +1,38 @@
+---
+layout: post
+title: "Using Android Wear to Detect Early Onset of Acute COPD Exacerbations"
+author: "Ishan Thukral"
+supervisors: "Daniyal Liaqat and Professor Eyal de Lara"
+category: "Computational Biology"
+permalink: /computational-biology/using-android-wear-to-detect-early-onset-of-acute-COPD-exacerbations
+year: "2015"
+---
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<h1 id="introduction">I. Introduction</h1>
+<p>Chronic obstructive pulmonary disease (COPD) is a chronic inflammatory lung disease that causes obstructed airflow from the lungs, primarily caused by smoking tobacco. The disease affects over 329 million people globally <span class="citation">[2]</span>. In 2013, COPD was responsible for 6% of total deaths worldwide, which amounted to over three million <span class="citation">[3]</span>. The total economic loss due to COPD was estimated to be 2.1 trillion USD in 2010. This number is expected to rise to 4.8 trillion USD in 2030 <span class="citation">[1]</span>.</p>
+<p>An acute COPD exacerbation is characterized by shortness of breath, coughing and sputum. An exacerbation episode can last several days and is the primary cause for hospitalization in COPD patients. During these episodes, the patient is often unable to walk even a few feet without repeated rests.</p>
+<p>Acute exacerbations take time to manifest and often exhibit predictable symptoms <span class="citation">[4]</span>. Our aim is to use modern mobile technology to assist in detecting the onset of exacerbation early enough to prevent the patient’s health from deteriorating further and avoid hospitalization. This helps achieve a better lifestyle for the patient and dramatically decreases costs for the healthcare system.</p>
+
+<h1 id="approach">II. Approach</h1>
+<p>Our approach involves using an Android wearable application coupled with machine learning to accurately predict an oncoming exacerbation episode. The patient is provided with an Android watch and phone. The watch continually records audio, accelerometer data and heart rate. Patients are also surveyed daily, using an application on the phone, for any change in symptoms. These changes could include: increase in sputum, changes in sputum color, breathless- ness, an onset of a fever, etc.</p>
+<p>In the interest of privacy, the application on the phone provides an easy-to-use interface for patients to delete any recordings they may not want us to use. The data is initially stored locally on the phone where we analyze the audio and other data to extract the essential portions required for our study. This could include portions of audio with coughs, other symptom-related characteristics, and time intervals with elevated heart rate. The extracted data is encrypted and sent to our servers where it is further analyzed by the classifier to detect any signs of exacerbation.</p>
+<p>Wearable devices are often battery constrained. A typical modern smartwatch would last 12-16 hours on a full charge. In earlier tests we found that recording data continuously from the microphone and sensors would deplete the battery in as little as 3-4 hours. Since users typically only charge the device once a day at night, this approach would lead us to losing incredibly important data. To counter this, we set our application to record for two minutes and then put it to sleep for four minutes. This allowed us to reach our target battery goal of 10-12 hours and provided us with a regular, albeit non-continuous, stream of data throughout the day.</p>
+<p>The first phase of our deployment targets a small set of patients in a hospital. This enables us to have easy access to them to supervise the tests and continually improve the application with their feedback. The data we collect here would be used to initially train the classifier. Afterwards, we plan to expand the application to a much wider audience for use in their homes.</p>
+<p>Our initial batch of patients will test the application in Fall 2015.</p>
+
+<h1 id="conclusion">III. Conclusion</h1>
+<p>Though we are still in the early stages of the project, we are extremely optimistic about future outcomes. A similar experiment which used just a survey as its primary method showed a significant decrease in hospitalizations during the trial. Our use of smart but ubiquitous devices, a watch and smartphone, allows us to remain noninvasive, all the while providing us the ability to collect most of the data automatically and without the need for continuous input. This should increase both the input’s accuracy and regularity.</p>
+
+<h4>References</h4>
+<div class="references">
+    <p>[1] Lomborg, Bjørn <span><em>Global problems, smart solutions: costs and benefits.</em></span> 2013.</p>
+    <p>[2] Salvi, Sundeep <span><em>The silent epidemic of COPD in Africa.</em></span> 2015</p>
+    <p>[3] World Health Organization <span><em>Chronic obstructive pulmonary disease (COPD).</em></span> 2015</p>
+    <p>[4] Wise, A. Robert <span><em>Chronic Obstructive Pulmonary Disease (COPD).</em></span></p>
+</div>
