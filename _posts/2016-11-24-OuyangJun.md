@@ -98,6 +98,8 @@ European put options, as we have a closed form of solution, the
 to compute. Figure 1 is generated from **Implicit LU Method** as an
 example (the plots for other methods are omitted here).
 
+<img style="margin:50" src="{{ site.baseurl }}/assets/jun-1.png"/>
+
 ![Parameters of the European put option:
 $E = 10, r = 0.1, \sigma = 0.4, T-t = 1$. The left is the estimated
 value of the option while the right is the absolute value of the error
@@ -119,15 +121,18 @@ error around $S = 10$.
 Also, for the **Implicit Method**, the error is of order
 $O(\delta \tau) + O((\delta x)^2)$(proven in \[1\]). To better check
 this important behavior, we can plot error versus $(\delta \tau)$ and
-$(\delta x)^2$ respectively(Figure 2).
+$(\delta x)^2$ respectively (Figure 2).
 
-![Parameters of the European put option:
+<img style="margin:50" src="{{ site.baseurl }}/assets/jun-2.png"/>
+
+<p style="text-align:center">Figure 2: parameters of the European put option:
 $E = 10, r = 0.1, \sigma = 0.4, T-t = 1$. The left is plotted by error
 versus dt while the right is by error versus
-$dx^2$.](2.png)
+$dx^2$.</p>
 
 American Put Options
 --------------------
+
 
 ![Parameters of the American put option:
 $E = 10, r = 0.1, \sigma = 0.4, T-t = 1$. The left is the estimated
@@ -158,10 +163,16 @@ $$P_3 \approx P + a (\delta \tau_3)^2 + b(\delta x_3)^2 = P + {1\over 16}(a (\de
 Then, subtracting,
 $$P_1 - P_2 = {3\over 4}(a (\delta \tau_1)^2 + b(\delta x_1)^2)$$
 $$P_2 - P_3 = {3\over 16}(a (\delta \tau_1)^2 + b(\delta x_1)^2).$$
+
+<img style="margin:50" src="{{ site.baseurl }}/assets/jun-2.png"/>
+<p style="text-align:center">Figure 3: Parameters of the American put option:
+$E = 10, r = 0.1, \sigma = 0.4, T-t = 1$. The left is the estimated
+value of the option before maturity(in blue) where the right is the
+error ratio plotted with respect to S. $S_f(t)$ is calculated to be approximately 7.408.</p>
+
 Therefore we should have the following relationship:
 $$P_1 - P_2 \approx 4 (P_2 - P_3).$$
 
-![](fig3.png)
 
 The ratio of ${P_1 - P_2} \over P_2 - P_3$ is plotted in Figure
 3 (right).
