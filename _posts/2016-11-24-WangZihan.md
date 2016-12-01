@@ -51,6 +51,7 @@ combined with the unlabeled disease-author associations from OMIM to
 form the complete data set.
 
 <img style="margin:50" src="{{ site.baseurl }}/assets/wz-fig1.png"/>
+<p style="text-align:center">Figure 1: Data analysis workflow. </p>
 
 To combine these data sets, author names needed to be extracted from
 both OMIM references and GeneReviews articles and then merged, and
@@ -93,11 +94,10 @@ Analysis
 
 The SVM classifier outperformed the other methods in accuracy,
 precision, and F1 measure, with both precision and recall of 76% (see
-Table \[tab:performance\]). The Random Forest and naive Bayes models
+Table 1). The Random Forest and naive Bayes models
 performed slightly worse, though the naive Bayes model achieved higher
 recall than the SVM (78%).
 
-<img style="margin:50" src="{{ site.baseurl }}/assets/wz-fig1.png"/>
 
 Most disease-author associations were confidently classified by the SVM,
 and misclassified cases were often confidently misclassified (see
@@ -113,7 +113,7 @@ author has simply not published in GeneReviews. The classifier predicted
 
 <img style="margin:50" src="{{ site.baseurl }}/assets/wz-figure2.png"/>
 
-Figure 2: Distributions of the posterior probability from the SVM classifier for positive (left) and negative (right) test data during one iteration of cross-validation. 
+<p style="text-align:center">Figure 2: Distributions of the posterior probability from the SVM classifier for positive (left) and negative (right) test data during one iteration of cross-validation. </p>
 
 Conclusion
 ==========

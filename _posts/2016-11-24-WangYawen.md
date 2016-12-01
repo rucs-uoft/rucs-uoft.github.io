@@ -118,8 +118,8 @@ iPhones, and 0.136 for Android.
 
 
 
-<img style="margin:50" src="{{ site.baseurl }}/assets/batter-drain.pdf"/>
-Battery Drain Across Phones (full discharge cycle)
+<img style="margin:50" src="{{ site.baseurl }}/assets/battery_drain.png"/>
+<p style="text-align:center">Battery Drain Across Phones (full discharge cycle)</p>
 
 
 We also measured voltage and current naively for a Galaxy Nexus device
@@ -130,7 +130,7 @@ average battery drain rate from the sw-reported SoC was found to be
 fairly accurate with a small % error of 4.27%.
 
 <img style="margin:50" src="{{ site.baseurl }}/assets/wy-sw_hw.png"/>
-SW vs HW Measured State of Charge
+<p style="text-align:center">SW vs HW Measured State of Charge</p>
 
 We ran battery monitoring at various frequencies on identical phones and
 compared with a baseline phone. We observed that periods longer than 30m
@@ -154,7 +154,7 @@ configurable settings allowing easier adoption of this technique.
 
 
 Acknowledgement
-===
+----
 
 This work was funded by the NSF SUPERB Program. I would like to thank my
 mentor K. Shankari, Jonathan F<span>ü</span>rst, and Professor David

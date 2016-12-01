@@ -177,7 +177,7 @@ proposes this announced value to $\textit{CONS}[k-x]$, and returns the
 decision.
 
 Acknowledgement
-=======
+----
 
 I would like to thank my supervisor Faith Ellen for her constant support
 and encouragement and the Natural Sciences and Engineering Research

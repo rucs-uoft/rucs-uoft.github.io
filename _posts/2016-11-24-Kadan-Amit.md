@@ -11,8 +11,8 @@ permalink: /software-engineering/amit-kadan
 Introduction
 ============
 
-<img style="margin:50" src="{{ site.baseurl }}/assets/k-figA.png"/>
-<img style="margin:50" src="{{ site.baseurl }}/assets/k-figB.png"/>
+<img style="margin:50" src="{{ site.baseurl }}/assets/kadan1.png"/>
+<img style="margin:50" src="{{ site.baseurl }}/assets/kadan2.png"/>
 
 **Figure 1:** Sample inputs $N_{1}, N_{2}$ and $N_{3}$.
  
@@ -42,8 +42,8 @@ computationally expensive problem by encoding it into a game for people
 to play [8].
 
 
-<img style="margin:50" src="{{ site.baseurl }}/assets/k-figC.png"/>
-
+<img style="margin:50" src="{{ site.baseurl }}/assets/kadan3.png"/>
+<p style="text-align:center">Main screen fo the Matchmakers game.</p>
 
 Approach
 ========
@@ -129,7 +129,8 @@ significant improvement over the solutions found by the best heuristic
 algorithm.
 
 
-<img style="margin:50" src="{{ site.baseurl }}/assets/k-alg1.png"/>
+<img style="margin:50" src="{{ site.baseurl }}/assets/kadan4.png"/>
+<p style="text-align:center">Algorithm 1: Conceptual steps of HSim.</p>
 
 
 Conclusion
@@ -155,7 +156,7 @@ intelligent strategies for finding an n-way match in hopes of improving
 its performance.
 
 Acknowledgments 
-===============
+----
 
 We thank Christina Chung, Asako Matsuoka, Yueti Yang, Si Hua Cao Liu,
 Lionheart Xiong, and Angel You for developing the game and Nicole

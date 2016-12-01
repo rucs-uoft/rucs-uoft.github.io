@@ -103,7 +103,8 @@ explain the success of IDA\*-based approaches seen in the literature, in
 which random sampling is the standard way to generate test sets
 [4, 6].
 
-<img style="margin:50" src="{{ site.baseurl }}/assets/yd-table1.png"/>
+<img style="justify-content: center" src="{{ site.baseurl }}/assets/yangDaniel1.png"/>
+<p style='text-align:center'>Table  1:  Heuristic  accuracy  on  all  stacks  of  10  pancakes.   The  entries  are  thenumber of problems with the corresponding heuristic error.</p>
 
 Table 1 also displays heuristic error information for our new
 heuristic functions. It shows that these functions are increasingly
@@ -120,7 +121,8 @@ relative to the gap heuristic function, where a larger value indicates a
 greater speedup. Clearly, the new heuristics lead to substantial
 speedups on both test sets.
 
-<img style="margin:50" src="{{ site.baseurl }}/assets/yd-table2.png"/>
+<img style="margin:50" src="{{ site.baseurl }}/assets/yangDaniel2.png"/>
+<p style='text-align:center'>Table 2:  The relative performance of IDA* when using different heuristic functionson two problem sets. The table shows the speedup seen relative to the gap heuristicfunction.</p>
 
 Conclusion
 ==========

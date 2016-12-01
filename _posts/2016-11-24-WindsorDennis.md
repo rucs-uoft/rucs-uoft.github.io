@@ -45,6 +45,7 @@ a number of discrete pieces of code while only making a single
 submission.
 
 <img style="margin:50" src="{{ site.baseurl }}/assets/dw-table1.png"/>
+<p style="text-align:center">Table 1: categories used in query-building analysis</p>
 
 Approach
 ========
@@ -123,7 +124,11 @@ this course as assignment was in RA. This could mean that instead of
 identifying students who are using a technique taught in the course, we
 have identified students who had previous knowledge of SQL.
 
-<img style="margin:50" src="{{ site.baseurl }}/assets/dw-table23.png"/>
+<img style="margin:50" src="{{ site.baseurl }}/assets/dw-table2.png"/>
+<p style="text-align:center">Table 2: Influence of using query-building techniques on course grades (Welch two sample t-test)</p>
+
+<img style="margin:50" src="{{ site.baseurl }}/assets/dw-table3.png"/>
+<p style="text-align:center">Table 3: Influence of using assginment in a single query on course grades (Welch two sample t-test)</p>
 
 
 Conclusion
@@ -143,11 +148,12 @@ building techniques and/or use of views and assignment.
 
 
 Acknowledgements
-===
+----
+
 I would to like to thank Diane Horton, Bogdan Simion, and Andrew
 Petersen for their invaluable guidance. I would also like to thank
 Alireza Ahadi of the University of Technology Sydney for his input on my
-research.\
+research.
 
 References
 ---------

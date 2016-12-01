@@ -112,15 +112,17 @@ otherwise genetically and geographically diverse.
 
 <img style="margin:50" src="{{ site.baseurl }}/assets/jw-figure1.jpg"/>
 
-Figure 1: Map manually created by Haspelmath for his data.This diagram is labelled with the groupings for English
+<p style='text-align:center'>Figure 1: Map manually created by Haspelmath for his data.This diagram is labelled with the groupings for English</p>
 
 <img style="margin:50" src="{{ site.baseurl }}/assets/jw-figure2.jpg"/>
+<p style='text-align:center'>Figure 2: Connectedness  map  automatically  constructed  using  Haspelmath  data  andconnectedness objective function.
+</p>
 
-Figure  2:  Connectedness  map  automatically  constructed  using  Haspelmath  data  andconnectedness objective function.
 
 <img style="margin:50" src="{{ site.baseurl }}/assets/jw-figure3.jpg"/>
+<p style='text-align:center'>Figure 3: Combined  map  automatically  constructed  using  Haspelmath  data  andcombined objective function
+</p>
 
-Figure  3:Combined  map  automatically  constructed  using  Haspelmath  data  andcombined objective function
 
 Results
 =======

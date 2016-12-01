@@ -100,11 +100,11 @@ example (the plots for other methods are omitted here).
 
 <img style="margin:50" src="{{ site.baseurl }}/assets/jun-1.png"/>
 
-![Parameters of the European put option:
+<p style="text-align:center">Parameters of the European put option:
 $E = 10, r = 0.1, \sigma = 0.4, T-t = 1$. The left is the estimated
 value of the option while the right is the absolute value of the error
 from estimating this option using the Crank-Nicolson LU
-Method.](1.png) 
+Method.</p>
 
 Note that in general, the magnitude of error compared to the
 <span>*Black-Scholes*</span> formula is less than 4e-3, which is
@@ -125,7 +125,8 @@ $(\delta x)^2$ respectively (Figure 2).
 
 <img style="margin:50" src="{{ site.baseurl }}/assets/jun-2.png"/>
 
-<p style="text-align:center">Figure 2: parameters of the European put option:
+
+<p style="text-align:center"> Figure 2: parameters of the European put option:
 $E = 10, r = 0.1, \sigma = 0.4, T-t = 1$. The left is plotted by error
 versus dt while the right is by error versus
 $dx^2$.</p>

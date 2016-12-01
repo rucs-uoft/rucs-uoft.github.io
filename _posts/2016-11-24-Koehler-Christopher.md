@@ -61,7 +61,7 @@ quickly create grammar definitions to yield solutions.
 
 
 Acknowledgement
-=====
+----
 
 A thank you to my supervisors Danny Heap and Daniel Zingaro for
 assistance throughout the project.

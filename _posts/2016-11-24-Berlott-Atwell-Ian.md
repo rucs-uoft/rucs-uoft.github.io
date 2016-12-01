@@ -132,7 +132,7 @@ and allows for a modular approach while providing a simple interface
 that conceals the underlying complexity.
 
 Acknowledgement
-===
+----
 
 I would like to acknowledge the support and encouragement received by
 Professor Dr. M. Chechik and Dr. R. Salay in this project.
