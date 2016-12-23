@@ -5,7 +5,7 @@ author: "Christopher Koehler"
 supervisors: "Professor Danny Heap and Daniel
 Zingaro"
 category: "Software Projects"
-permalink: /software-projects/chris-koehler
+permalink: /software-projects/voice-to-code-software
 ---
 
 Introduction

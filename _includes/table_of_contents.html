@@ -94,7 +94,7 @@
           {% if chapter[0] == 'profiles and interviews' %}
               {% assign i = i | minus: 1 %}
           {% else %}
-            <li id="{{ chapter[0] | replace: ' ', '-'}}-mini">
+            <li id="{{ chapter[0] | downcase | replace: ' ', '-' }}-mini">
               <div class="collapsible-header toc-title">{{ chapter[0] }}</div>
                 {% for abstracts in chapter %}
                   {% if forloop.first == false %}

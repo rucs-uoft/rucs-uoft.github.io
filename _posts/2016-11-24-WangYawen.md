@@ -4,7 +4,7 @@ title: "Software-Based Power Monitoring for Smartphones in the Wild"
 author: "Yawen Wang, K. Shankari and Jonathan Fürst"
 supervisors: "Professor David Culler"
 category: "Software Engineering"
-permalink: /software-engineering/yawen-wang
+permalink: /software-engineering/software-based-power-monitoring-for-smartphones
 ---
 
 Introduction 
@@ -36,11 +36,11 @@ sensing and reported power evaluation of their applications. The
 different techniques are summarized in Table \[tab:summary-techniques\].
 
 | Mobile Sensing Applications                                                                                     | Power Evaluation Technique                                    |
-|-----------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| Caloric expenditure of bicyclists [1] Automatic labeling of transit stations semantics [2]                      | PowerTutor: model-based power estimation app                   |
-| Indoor/outdoor detection [3] Bus arrival time estimation [4]                                                     | Exhaustive battery run-down tests                             |
-| Transportation mode detection [5] Indoor/outdoor detection [6] Driving routes detection [7]                       | Simple power model: built offline fordifferent components     |
-| Device interaction [8] Transportation mode detection [9] Hotword detection [10] Meeting membership detection [11] | External power monitor: power measurement of the whole design. |
+|----------------------------------------------------------------------------------------------------------------:|---------------------------------------------------------------|
+| Caloric expenditure of bicyclists [1] <br/> Automatic labeling of transit stations semantics [2]                      | PowerTutor: model-based power estimation app                   |
+| Indoor/outdoor detection [3] <br/> Bus arrival time estimation [4]                                                     | Exhaustive battery run-down tests                             |
+| Transportation mode detection [5] <br/> Indoor/outdoor detection [6] <br/> Driving routes detection [7]                       | Simple power model: built offline fordifferent components     |
+| Device interaction [8] <br/> Transportation mode detection [9] <br/> Hotword detection [10] <br/> Meeting membership detection [11] | External power monitor: power measurement of the whole design. |
 
 PowerTutor [12] is a standalone power profiling
 application that was developed at the University of Michigan back in
@@ -117,9 +117,11 @@ consistency across phones with a small standard deviation: 0.126 for
 iPhones, and 0.136 for Android.
 
 
-
+<p style="text-align: center;">
 <img style="margin:50" src="{{ site.baseurl }}/assets/battery_drain.png"/>
-<p style="text-align:center">Battery Drain Across Phones (full discharge cycle)</p>
+</p>
+
+<p style="text-align:center;font-size:0.95rem"><b>Figure 1:</b> Battery drain across phones (full discharge cycle)</p>
 
 
 We also measured voltage and current naively for a Galaxy Nexus device
@@ -129,8 +131,11 @@ shows the comparison between hardware-based and software-based SoC. The
 average battery drain rate from the sw-reported SoC was found to be
 fairly accurate with a small % error of 4.27%.
 
+<p style="text-align: center;">
 <img style="margin:50" src="{{ site.baseurl }}/assets/wy-sw_hw.png"/>
-<p style="text-align:center">SW vs HW Measured State of Charge</p>
+</p>
+
+<p style="text-align:center;font-size:0.95rem"><b>Figure 2:</b> SW vs HW Measured state of charge</p>
 
 We ran battery monitoring at various frequencies on identical phones and
 compared with a baseline phone. We observed that periods longer than 30m
@@ -153,16 +158,14 @@ to build a standalone battery percentage monitoring app with
 configurable settings allowing easier adoption of this technique.
 
 
-Acknowledgement
-----
+### Acknowledgement
 
 This work was funded by the NSF SUPERB Program. I would like to thank my
 mentor K. Shankari, Jonathan F<span>ü</span>rst, and Professor David
 Culler for the tremendous amount of support and guidance that went into
 making this project possible.
 
-References
----------
+### References
 
 1. Andong Zhan, Marcus Chang, Yin Chen, and Andreas Terzis. Accurate caloricexpenditure  of  bicyclists  using  cellphones.   In Proceedings of the 10th ACMConference on Embedded Network Sensor Systems, pages 71–84. ACM, 2012.
 

@@ -6,7 +6,7 @@ author: "Zihan Wang"
 supervisors: "Orion Buske and Professor
 Michael Brudno"
 category: "Artificial Intelligence"
-permalink: /ai/zihan-wang
+permalink: /artificial-intelligence/predicting-expertise-from-publication-history
 ---
 
 Introduction 
@@ -50,8 +50,11 @@ positive disease-expert associations from GeneReviews publications were
 combined with the unlabeled disease-author associations from OMIM to
 form the complete data set.
 
-<img style="margin:50" src="{{ site.baseurl }}/assets/wz-fig1.png"/>
-<p style="text-align:center">Figure 1: Data analysis workflow. </p>
+<p style="text-align: center;">
+	<img style="margin:50" src="{{ site.baseurl }}/assets/wz-fig1.png"/>
+</p>
+
+<p style="text-align:center;font-size:0.95rem"><b>Figure 1:</b> Data analysis workflow. </p>
 
 To combine these data sets, author names needed to be extracted from
 both OMIM references and GeneReviews articles and then merged, and
@@ -70,7 +73,13 @@ at least one associated GeneReview article. OMIM records can correspond
 to either diseases or disease-associated genes, but we did not
 distinguish these cases.
 
-<img style="margin:50" src="{{ site.baseurl }}/assets/wz-table1.png"/>
+|Model         |Precision   |Recall      |Accuracy    |F1          |
+|:------------:|:----------:|:----------:|:----------:|:----------:|
+|<b>SVM</b>    |<b>0.76</b> |0.76        |<b>0.76</b> |<b>0.76</b> |
+|Random Forest |0.72        |<b>0.78</b> |0.74        |0.75        |
+|Naive Bayes   |0.75        |0.65        |0.72        |0.70        |
+
+<p style="text-align:center;font-size:0.95rem"><b>Table 1:</b> The classification performance of different learning algorithms</p>
 
 We designed 8 features to discriminate the disease-author associations
 of experts from non-experts: 1) number of publications by the author on
@@ -111,9 +120,10 @@ author has simply not published in GeneReviews. The classifier predicted
 21,224 disease-expert associations out of 206,950 unlabeled associations
 (10%).
 
-<img style="margin:50" src="{{ site.baseurl }}/assets/wz-figure2.png"/>
-
-<p style="text-align:center">Figure 2: Distributions of the posterior probability from the SVM classifier for positive (left) and negative (right) test data during one iteration of cross-validation. </p>
+<p style="text-align: center;">
+	<img style="margin:50" src="{{ site.baseurl }}/assets/wz-figure2.png"/>
+</p>
+<p style="text-align:center;font-size:0.95rem"><b>Figure 2:</b> Distributions of the posterior probability from the SVM classifier for positive (left) and negative (right) test data during one iteration of cross-validation. </p>
 
 Conclusion
 ==========
@@ -130,8 +140,7 @@ also depends on the accuracy and completeness of OMIM’s curated
 references, which could be augmented by using text mining to
 automatically identify publications associated with rare diseases.
 
-References
----------
+### References
 
 1. Rare Disease Day 2016 - 29 Feb - Article.http://www.rarediseaseday.org/article/what-is-a-rare-disease. Accessed: 2016-08-22. 
 

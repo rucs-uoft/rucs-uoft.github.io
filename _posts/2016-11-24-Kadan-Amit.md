@@ -5,16 +5,18 @@ author: "Amit Kadan"
 supervisors: "Professor Marsha Chechik and
 Professor Julia Rubin"
 category: "Software Engineering"
-permalink: /software-engineering/amit-kadan
+permalink: /software-engineering/designing-a-serious-game
 ---
 
 Introduction
 ============
 
+<p style="text-align: center;">
 <img style="margin:50" src="{{ site.baseurl }}/assets/kadan1.png"/>
 <img style="margin:50" src="{{ site.baseurl }}/assets/kadan2.png"/>
+</p>
 
-**Figure 1:** Sample inputs $N_{1}, N_{2}$ and $N_{3}$.
+<p style="text-align:center;font-size:0.95rem"><b>Figure 1:</b> Sample inputs $N_{1}, N_{2}$ and $N_{3}$</p>
  
 N-way matching consists of finding correspondences between elements of
 multiple inputs. It is useful in many software engineering practices
@@ -41,9 +43,11 @@ the idea of *games with a purpose*, which crowd-source a solution to a
 computationally expensive problem by encoding it into a game for people
 to play [8].
 
-
+<p style="text-align: center;">
 <img style="margin:50" src="{{ site.baseurl }}/assets/kadan3.png"/>
-<p style="text-align:center">Main screen fo the Matchmakers game.</p>
+</p>
+
+<p style="text-align:center;font-size:0.95rem"><b>Figure 2:</b> Main screen for the Matchmakers game.</p>
 
 Approach
 ========
@@ -124,13 +128,15 @@ different cases. The null hypothesis for the t-test was that the two
 data sets for the different algorithms came from the same underlying
 distribution. The t-test returned a p-value of 0.0019, which is less
 than 0.05, rejecting the null hypothesis and signifying that <span><span
-style="font-variant:small-caps;">HSim</span></span>was able to make a
+style="font-variant:small-caps;">HSim</span></span> was able to make a
 significant improvement over the solutions found by the best heuristic
 algorithm.
 
-
+<p style="text-align: center;">
 <img style="margin:50" src="{{ site.baseurl }}/assets/kadan4.png"/>
-<p style="text-align:center">Algorithm 1: Conceptual steps of HSim.</p>
+</p>
+
+<p style="text-align:center;font-size:0.95rem"><b>Figure 3:</b> Algorithm 1: Conceptual steps of HSim.</p>
 
 
 Conclusion
@@ -155,16 +161,14 @@ player. We also hope to redesign the human simulator to employ more
 intelligent strategies for finding an n-way match in hopes of improving
 its performance.
 
-Acknowledgments 
-----
+### Acknowledgments 
 
 We thank Christina Chung, Asako Matsuoka, Yueti Yang, Si Hua Cao Liu,
 Lionheart Xiong, and Angel You for developing the game and Nicole
 Sultanam on her guidance on usability-related issues. We also thank the
 very gifted Fei Huang for drawing the game images.
 
-References
----------
+### References
 
 1. SAS Analytics Software
 

@@ -5,7 +5,7 @@ American Put Options"
 author: "Jun Ouyang"
 supervisors: "Professor Kenneth Jackson"
 category: "Scientific Computing"
-permalink: /scientific-computings/jun-ouyang
+permalink: /scientific-computings/methods-for-pricing-and-hedging
 ---
 
 Introduction
@@ -89,8 +89,7 @@ maturity is always larger or equal to the value at maturity.
 Analysis
 ========
 
-European Put Options 
---------------------
+### European Put Options 
 
 In this project, we mainly focus on the accuracy of each method. For
 European put options, as we have a closed form of solution, the
@@ -98,9 +97,11 @@ European put options, as we have a closed form of solution, the
 to compute. Figure 1 is generated from **Implicit LU Method** as an
 example (the plots for other methods are omitted here).
 
+<p style="text-align: center;">
 <img style="margin:50" src="{{ site.baseurl }}/assets/jun-1.png"/>
+</p>
 
-<p style="text-align:center">Parameters of the European put option:
+<p style="text-align:center;font-size:0.95rem"><b>Figure 1:</b> Parameters of the European put option:
 $E = 10, r = 0.1, \sigma = 0.4, T-t = 1$. The left is the estimated
 value of the option while the right is the absolute value of the error
 from estimating this option using the Crank-Nicolson LU
@@ -123,17 +124,16 @@ $O(\delta \tau) + O((\delta x)^2)$(proven in \[1\]). To better check
 this important behavior, we can plot error versus $(\delta \tau)$ and
 $(\delta x)^2$ respectively (Figure 2).
 
+<p style="text-align: center;">
 <img style="margin:50" src="{{ site.baseurl }}/assets/jun-2.png"/>
+</p>
 
-
-<p style="text-align:center"> Figure 2: parameters of the European put option:
+<p style="text-align:center;font-size:0.95rem"><b>Figure 2:</b> Parameters of the European put option:
 $E = 10, r = 0.1, \sigma = 0.4, T-t = 1$. The left is plotted by error
 versus dt while the right is by error versus
 $dx^2$.</p>
 
-American Put Options
---------------------
-
+### American Put Options
 
 ![Parameters of the American put option:
 $E = 10, r = 0.1, \sigma = 0.4, T-t = 1$. The left is the estimated
@@ -165,8 +165,11 @@ Then, subtracting,
 $$P_1 - P_2 = {3\over 4}(a (\delta \tau_1)^2 + b(\delta x_1)^2)$$
 $$P_2 - P_3 = {3\over 16}(a (\delta \tau_1)^2 + b(\delta x_1)^2).$$
 
+<p style="text-align: center;">
 <img style="margin:50" src="{{ site.baseurl }}/assets/jun-2.png"/>
-<p style="text-align:center">Figure 3: Parameters of the American put option:
+</p>
+
+<p style="text-align:center;font-size:0.95rem"><b>Figure 3:</b> Parameters of the American put option:
 $E = 10, r = 0.1, \sigma = 0.4, T-t = 1$. The left is the estimated
 value of the option before maturity(in blue) where the right is the
 error ratio plotted with respect to S. $S_f(t)$ is calculated to be approximately 7.408.</p>
@@ -212,7 +215,6 @@ believe the value of this idea is beyond just pricing options. This
 project may inspire me in the future whenever I need to apply numerical
 approaches to the encountered problem.
 
-References
----------
+### References
 
 1. Howison, S., Dewynne, J., Wilmoot, P. *The mathematicas of financial derivatives: A student introduction.* 1995

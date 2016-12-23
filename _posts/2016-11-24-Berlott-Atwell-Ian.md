@@ -5,7 +5,7 @@ Framework"
 author: "Ian Berlot-Attwell"
 supervisors: "Dr. Rick Salay"
 category: "Artificial Intelligence"
-permalink: /artificial-intelligence/integrating-ml-into-contribution-implementation
+permalink: /artificial-intelligence/integrating-ml-into-contributional-implementation
 ---
 
 Introduction
@@ -131,15 +131,13 @@ requirements. The CI Framework in its current state is fully operational
 and allows for a modular approach while providing a simple interface
 that conceals the underlying complexity.
 
-Acknowledgement
-----
+### Acknowledgement
 
 I would like to acknowledge the support and encouragement received by
 Professor Dr. M. Chechik and Dr. R. Salay in this project.
 
 
-References
----------
+### References
 
 1. Chechik M, Dalpiaz F, Salay R "Integrating Crowd Intelligence into
 Sofware" Proceeding CSI-SE '15 Proceedings of the Second International Workshop

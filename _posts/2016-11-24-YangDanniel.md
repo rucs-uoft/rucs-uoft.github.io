@@ -4,7 +4,7 @@ title: "Improved Heuristics for Solving the Pancake Problem"
 author: "Danniel Yang"
 supervisors: "Dr. Rick Valenzano and Professor Sheila McIlraith"
 category: "Artificial Intelligence"
-permalink: /artificial-intelligence/danniel-yang
+permalink: /artificial-intelligence/heuristics-for-solving-the-pancake-problem
 ---
 
 Introduction
@@ -91,7 +91,7 @@ To better understand the gap heuristic function, we analyzed its
 accuracy on all $10!$ possible $10$-pancake stacks by calculating the
 **heuristic error** on each. This metric is defined as the difference
 between the heuristic estimate and the optimal cost of that problem. The
-first column of Table 1  shows a count of the number of states
+first column of Table 1 shows a count of the number of states
 with each amount of heuristic error. The table shows that the gap
 heuristic function is off by no more than one on the majority of
 problems, though there are stacks where it is much more inaccurate.
@@ -103,8 +103,15 @@ explain the success of IDA\*-based approaches seen in the literature, in
 which random sampling is the standard way to generate test sets
 [4, 6].
 
-<img style="justify-content: center" src="{{ site.baseurl }}/assets/yangDaniel1.png"/>
-<p style='text-align:center'>Table  1:  Heuristic  accuracy  on  all  stacks  of  10  pancakes.   The  entries  are  thenumber of problems with the corresponding heuristic error.</p>
+| Heuristic Error | Gap      | Top      | Top'     | L-Top'   |
+|:---------------:|:--------:|:--------:|:--------:|:--------:|
+|0                |1,717,763 |1,839,701 |1,924,425 |1,992,492 |
+|1                |1,710,742 |1,644,853 |1,593,637 |1,547,761 |
+|2                |194,280   |141,609   |109,304   |87,645    |
+|3                |5,924     |2,620     |1,430     |898       |
+|4                |91        |17        |4         |4         |
+
+<p style="text-align:center;font-size:0.95rem"><b>Table 1:</b> Heuristic  accuracy  on  all  stacks  of  10  pancakes.   The  entries  are  thenumber of problems with the corresponding heuristic error.</p>
 
 Table 1 also displays heuristic error information for our new
 heuristic functions. It shows that these functions are increasingly
@@ -121,8 +128,12 @@ relative to the gap heuristic function, where a larger value indicates a
 greater speedup. Clearly, the new heuristics lead to substantial
 speedups on both test sets.
 
-<img style="margin:50" src="{{ site.baseurl }}/assets/yangDaniel2.png"/>
-<p style='text-align:center'>Table 2:  The relative performance of IDA* when using different heuristic functionson two problem sets. The table shows the speedup seen relative to the gap heuristicfunction.</p>
+| Problem       | Gap | Top | Top' | L-Top'|
+|:-------------:|:---:|:---:|:----:|:-----:|
+|random 50      |1.0  |1.28 |1.74  |2.51   |
+|constructed 32 |1.0  |1.95 |4.31  |6.94   |
+
+<p style="text-align:center;font-size:0.95rem"><b>Table 2:</b> The relative performance of IDA* when using different heuristic functions on two problem sets. The table shows the speedup seen relative to the gap heuristic function.</p>
 
 Conclusion
 ==========
@@ -134,8 +145,7 @@ functions that are more accurate and greatly improved search
 performance. Our work both improves our ability to solve pancake
 problems, and increases our understanding of this well-studied problem.
 
-References
----------
+### References
 
 1. Laurent Bulteau, Guillaume Fertin, and Irena Rusu.  Pancake flipping is hard.Journal of Computer and System Sciences, 81(8):1556–1574, 2015.
 

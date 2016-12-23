@@ -4,7 +4,7 @@ title: "m-Consensus Objects Are Pretty Powerful"
 author: "Ammar Qadri"
 supervisors: "Professor Faith Ellen"
 category: "Theory of Computation"
-permalink: /theory-of-computation/ammar-qadri
+permalink: /theory-of-computation/m-consensus-objects-are-pretty-powerful
 ---
 
 Introduction
@@ -176,16 +176,14 @@ operation belonging to this group. It reads $\textit{announce}_j[i']$,
 proposes this announced value to $\textit{CONS}[k-x]$, and returns the
 decision.
 
-Acknowledgement
-----
+### Acknowledgement
 
 I would like to thank my supervisor Faith Ellen for her constant support
 and encouragement and the Natural Sciences and Engineering Research
 Council of Canada (NSERC) for funding this research.
 
 
-References
----------
+### References
 
 1. Maurice Herlihy. Wait-free Synchronization. In ACM Trans Program Language Systems, pages 124-149, 1991.
 

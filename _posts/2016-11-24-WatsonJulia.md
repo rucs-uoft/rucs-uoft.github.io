@@ -5,7 +5,7 @@ understanding cross-linguistic variation"
 author: "Julia Watson"
 supervisors: "Barend Beekhuizen and Professor Suzanne Stevenson"
 category: "Natural Language Processing"
-permalink: /nlp/julia-watson
+permalink: /natural-language-processing/automatically-constructing-semantic-maps
 ---
 
 Introduction: semantic maps and case study
@@ -109,18 +109,24 @@ languages, and the auto data set has data on 23 languages. Both data
 sets have a higher proportion of Indo-European languages but are
 otherwise genetically and geographically diverse.
 
-
+<p style="text-align: center;">
 <img style="margin:50" src="{{ site.baseurl }}/assets/jw-figure1.jpg"/>
-
-<p style='text-align:center'>Figure 1: Map manually created by Haspelmath for his data.This diagram is labelled with the groupings for English</p>
-
-<img style="margin:50" src="{{ site.baseurl }}/assets/jw-figure2.jpg"/>
-<p style='text-align:center'>Figure 2: Connectedness  map  automatically  constructed  using  Haspelmath  data  andconnectedness objective function.
 </p>
 
+<p style="text-align:center;font-size:0.95rem"><b>Figure 1:</b> Map manually created by Haspelmath for his data.This diagram is labelled with the groupings for English. </p>
 
+<p style="text-align: center;">
+<img style="margin:50" src="{{ site.baseurl }}/assets/jw-figure2.jpg"/>
+</p>
+
+<p style="text-align:center;font-size:0.95rem"><b>Figure 2:</b> Connectedness  map  automatically  constructed  using  Haspelmath  data  andconnectedness objective function.
+</p>
+
+<p style="text-align: center;">
 <img style="margin:50" src="{{ site.baseurl }}/assets/jw-figure3.jpg"/>
-<p style='text-align:center'>Figure 3: Combined  map  automatically  constructed  using  Haspelmath  data  andcombined objective function
+</p>
+
+<p style="text-align:center;font-size:0.95rem"><b>Figure 3:</b> Combined  map  automatically  constructed  using  Haspelmath  data  andcombined objective function.
 </p>
 
 
@@ -142,8 +148,7 @@ different, interesting perspective by producing a much simpler
 visualization while minimizing the amount of non-predicted but attested
 cases.
 
-References
----------
+### References
 
 1. M. Haspelmath. From Space to Time: Temporal Adverbials in the World’s Languages. Lincom Europa, Munich and Newcastle, 1997.
 

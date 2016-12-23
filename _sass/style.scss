@@ -1,0 +1,494 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+@import 'materialize';
+
+@font-face {
+	font-family: 'Code Pro Demo';
+	src: url('../font/code-pro-demo/Code_Pro_Demo.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'CMU Serif';
+	src: url('../font/cmu-serif/cmunrm.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CMU Serif';
+	src: url('../font/cmu-serif/cmunti.ttf');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'CMU Serif';
+	src: url('../font/cmu-serif/cmunbx.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CMU Serif';
+	src: url('../font/cmu-serif/cmunbi.ttf');
+	font-weight: bold;
+	font-style: italic;
+}
+
+$web-title: "Code Pro Demo";
+$post-title-font: "Calibri";
+$post-font: "CMU Serif";
+$background: url("../resources/backgroundweb2016.svg");
+$toc-height: 570px;
+$toc-width: 896px;
+
+html * {
+	font-family: $post-font;
+}
+
+img, figure {
+	max-width: 100%;
+}
+
+figcaption {
+	font-size: 1rem;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.marginless-collection .collection-item {
+	border-bottom: 0;
+	border-left: 4px solid white;
+	margin-right: 2px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.chapter-active {
+	border-left: 4px solid $primary-color-dark !important;
+}
+
+.header-background {
+	background: $background;
+	background-position: center;
+}
+
+.review-subtitle {
+	font-family: $web-title;
+	letter-spacing: 0.2em;
+	line-height: 2em;
+}
+
+.padless {
+	padding: 0 !important;
+}
+
+.page-footer {
+	background: $background;
+	margin: 0px !important;
+	min-height: 100px;
+	padding: 30px 0 30px 0 !important;
+}
+
+@media #{$large-and-up} {
+    // styles for large screens and up
+    .toc-container {
+    	display: flex;
+    	align-items: stretch;
+	    #toc-content-wrapper {
+	    	display: flex;
+	    	align-items: stretch;
+
+	    	.toc-content {
+	    		display: flex;
+	    		align-items: stretch;
+	    		width: 100%;
+	    		.toc-chapter-content {
+	    			height: inherit;
+	    		}
+	    	}
+	    }
+    }
+
+	.background {
+		height: 100vh;
+		background: $background;
+		background-size: cover;
+		width: 100vw;
+	}    
+
+	.marginless-row {
+		width: 100%;
+	}
+
+	.post-container {
+		width: 50%;
+		padding: 20px;
+	}
+
+	.full-height {
+		height: 100vh;
+	}
+
+	.full-width {
+		width: 100%;
+	}
+}
+
+@media#{$medium-only} {
+	// styles for medium screens and down
+	.background {
+		height: 100vh;
+		background: $background;
+		background-size: cover;
+		width: 100%;
+
+		.container {
+			.review-title-container, .review-subtitle-container, .bottom {
+//				width: 1020px;
+			}
+		}
+	}
+
+	.post-container {
+		width: 70%;
+		padding: 20px;
+	}
+
+//	.full-width {
+//		width: 100%;
+//	}
+
+	.fixed-height {
+		height: $toc-height;
+		width: $toc-width;
+	}
+}
+
+@media#{$medium-and-up} {
+
+	// .height-fix, #toc-content, #toc-content-wrapper {
+	// max-height: $toc-height !important;
+	// height: $toc-height;
+	// }
+
+	.toc-container {
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+	h1 {font-size: 2.92rem;
+		margin-top: 4.5rem !important;}
+
+	h2 {
+		font-size: 2.28rem;
+	}
+	h3 {
+	  	font-size: 1.64rem;
+	  	margin-top: 3rem !important; }
+
+	h4 {
+		font-size: 1.4rem;
+		margin-top: 4.5rem !important; }
+
+	h5 {
+		font-size: 1rem; }
+
+	h6 {
+		font-size: 1rem; }
+
+	.review-title {
+		font-size: 10em;
+		font-family: $web-title;
+	}
+
+	#masthead-link {
+		padding-left: 6%;
+		align-self: flex-start;
+		p {
+		text-align: left;
+		}
+	}
+
+	.card {
+	    // -webkit-box-shadow:inset 0px 0px 0px 4px white;
+	    // -moz-box-shadow:inset 0px 0px 0px 4px white;
+	    // box-shadow:inset 0px 0px 0px 4px white;
+	    box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		border: 0;
+		width: 45%;
+		height: 250px;
+		margin: 0.5rem !important;
+		background-color: $primary-color;
+	}
+}
+
+@media#{$small-and-down} {
+	.background {
+		height: 100vh;
+		background: $background;
+		background-size: cover;
+	}
+
+	.collapsible-toc {
+		height: 100%;
+		min-width: 100%;
+	}
+	.title {
+		font-weight: bold;
+		font-size: 1.5em;
+		color: white;
+		line-height: 2rem;
+	}
+	.author {
+		color: white;
+	}
+	.preview {
+		color: white;
+	}
+
+	h1 { font-size: 2.28rem;
+	     margin-top: 4.5rem !important; }
+	h2 { font-size: 1.64rem; }
+	h3 { font-size: 1.5rem;
+	      margin-top: 3rem !important;}
+	h4 { font-size: 1.4rem;
+		 margin-top: 4.5rem !important; }
+	h5 { font-size: 1rem; }
+	h6 { font-size: 1rem; }
+
+	.post-container {
+		width: 90%;
+	}
+
+	.review-title {
+	font-size: 8em;
+	font-family: $web-title;
+	}
+
+	.full-width {
+		width: 100%;
+	}
+
+	.card {
+	    // -webkit-box-shadow:inset 0px 0px 0px 4px white;
+	    // -moz-box-shadow:inset 0px 0px 0px 4px white;
+	    // box-shadow:inset 0px 0px 0px 4px white;
+	    box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		border: 0;
+		width: inherit;
+		min-height: 200px;
+		margin: 0.5rem !important;
+		background-color: $primary-color;
+	}
+}
+
+.marginless-card-panel {
+	padding: 20px;
+	background-color: $primary-color;
+	border-radius: 0;
+}
+
+.card-content {
+	.card-title {
+		font-family: $post-title-font;
+		font-weight: 500;
+		font-size: 1.5em;
+		color: white;
+		line-height: 1.5rem !important;
+	}
+	.card-author {
+		color: white;
+	}
+	.preview {
+		color: white;
+	}
+	height: 100%;
+}
+
+.marginless-card {
+	margin: 0 !important;
+	box-shadow: 0 !important;
+}
+
+.marginless-collection {
+	margin: 0 !important;
+	border: 0;
+	// height: $toc-height;
+	background-color: white;
+	border-radius: 0;
+}
+
+.no-shadow {
+	box-shadow: 0 !important;
+}
+
+.brand-logo {
+	font-family: $web-title;
+}
+
+.toc-title{
+	color: $primary-color-dark;
+	text-transform: none;
+	font-weight: bold;
+}
+
+.toc-enum {
+	color: $primary-color-dark;
+	font-weight: 300;
+}
+
+.toc-chapter-content {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+// .height-fix, #toc-content, #toc-content-wrapper {
+// 	max-height: $toc-height !important;
+// 	height: $toc-height;
+// 	overflow: hidden !important;
+// }
+
+.parallax-container {
+	height: 200px !important;
+}
+
+.toc-chapter-content {
+	position: relative;
+}
+
+
+// #title-info {
+// // 	display: flex;
+// // 	flex-direction: column;
+// // 	align-items: center;
+// // 	justify-content: space-around;
+// // 	padding: auto;
+// 	position: relative;
+// 	bottom: 5%;
+//     margin: 0 auto;
+// }
+
+.bottom {
+	position: absolute;
+	bottom: 0;
+	width: inherit;
+	margin: 0 auto 5% auto;
+}
+
+.collapsible-header {
+	border-bottom: 0 !important;
+	border-top: 1px solid #ddd;
+}
+
+.collapsible-body {
+	border: 0 !important;
+	padding: 0px 10px;
+}
+
+.transparent-section {
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.review-title-container {
+	position: absolute;
+	bottom: 40%;
+	width: inherit;
+	margin: auto;
+}
+
+.review-subtitle-container {
+	position: absolute;
+	top: 55%;
+	width: inherit;
+	margin: auto;
+}
+
+#foreword p {
+	margin: 0.7em 0 0.7em 0;
+}
+
+#signature {
+	margin: 2em 0 2em 0 !important;
+}
+
+#down-arrow, .cyan-hover {
+	-webkit-transition: text-shadow 0.2s linear;
+    -moz-transition: text-shadow 0.2s linear;
+    -ms-transition: text-shadow 0.2s linear;
+    -o-transition: text-shadow 0.2s linear;
+    transition: text-shadow 0.2s linear;
+}
+
+#down-arrow:hover {
+	text-shadow: 0 0 10px white;
+}
+
+#down-arrow-row {
+	margin-top: 225px;
+}
+
+.cyan-hover:hover {
+	text-shadow: 0 0 10px $primary-color;
+}
+
+.footer-row {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.navbar-fixed {
+	.header-background {
+		.nav-wrapper {
+			div {
+				height: 100%;
+				width: 60px;
+				padding-left: 14px;
+				text-align: center;
+				-webkit-transition: background 0.15s linear;
+        			-moz-transition: background 0.15s linear;
+        			-ms-transition: background 0.15s linear;
+        			-o-transition: background 0.15s linear;
+        			transition: background 0.15s linear;
+				transition-property: background-color; 
+			}
+
+			div:hover {
+				background-color: $primary-color;
+			}
+
+			.brand-logo {
+				left: 50%;
+				top: 7%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+}
+
+#issue-title {
+	margin-left: 0.75rem;
+}

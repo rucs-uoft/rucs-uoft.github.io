@@ -5,7 +5,7 @@ author: "Dennis Windsor"
 supervisors: "Professors Diane Horton, Bogdan
 Simion, and Andrew Petersen"
 category: "Software Projects"
-permalink: /software-projects/dennis-windsor
+permalink: /software-projects/database-query-building-strategies
 ---
 
 Introduction 
@@ -39,13 +39,18 @@ who built and submitted their query in a series of systematic steps
 would have greater success in the course. Throughout this paper, the
 strategy of incrementally building queries is referred to as
 “query-building.” More information on how we defined query-building can
-be found in table 1. A separate strategy for decomposing
+be found in Table 1. A separate strategy for decomposing
 queries is the use of views. This allows students to build a query from
 a number of discrete pieces of code while only making a single
 submission.
 
-<img style="margin:50" src="{{ site.baseurl }}/assets/dw-table1.png"/>
-<p style="text-align:center">Table 1: categories used in query-building analysis</p>
+|Strategy |<center>Definition</center> |
+|:-------:|:-----------|
+|using query-building techniques | - code used in a modular fashion <br/> - subquery added to previous code <br/> - previous code put into a subquery <br/> - previous code used in assignment or to be used later <br/> - conditions systematically added to query |
+|not using query-building techniques | - large sections of code added or deleted between submissions <br/> - little reuse of code <br/> - many small edits made to code with no clear goal <br/> - repeated changing of join type or (in)equalities <br/> |
+|unclear if query-building techniques were used | - only a single submission was made <br/> - solution was reached too quickly for query-building techniques to be observed <br/> - initial submission was essentially correct, but required minor edits <br/> |
+
+<p style="text-align:center;font-size:0.95rem"><b>Table 1:</b> Categories used in query-building analysis</p>
 
 Approach
 ========
@@ -79,8 +84,7 @@ were also ignored. This left 512 RA submissions from 208 students, and
 We examined each student’s submissions in order of submission time and
 then placed the student into one of the following three categories:
 using query-building techniques, not using query-building techniques, or
-unclear if query building techniques were used (see table
-\[table:groups\]). Based on this, 152 students were omitted from RA
+unclear if query building techniques were used (see Table 1). Based on this, 152 students were omitted from RA
 analysis and 74 students were omitted from SQL analysis because we could
 not determine if they were using query-building techniques. Students
 appear to have found the RA question easier; the number of students who
@@ -109,7 +113,7 @@ students who did not use it in either. The analogous comparisons were
 made based on use of assignments/views.
 
 Although the groups that used query-building techniques achieved higher
-mean grades in all three comparisons (table 2), only one of the tests shows a
+mean grades in all three comparisons (Table 2), only one of the tests shows a
 statistically significant ($ p<0.05$) result. In section 2 it is
 noted that students likely found the SQL question more challenging than
 the RA question and may have only needed to rely on query-building
@@ -118,17 +122,28 @@ results on the other two tests.
 
 In each comparison, the group that used assignment/views achieved a
 significantly higher mean grade than the groups that did not use this
-feature (table 3). One possible issue with
+feature (Table 3). One possible issue with
 these results is that views in SQL were not focused on as heavily in
 this course as assignment was in RA. This could mean that instead of
 identifying students who are using a technique taught in the course, we
 have identified students who had previous knowledge of SQL.
 
-<img style="margin:50" src="{{ site.baseurl }}/assets/dw-table2.png"/>
-<p style="text-align:center">Table 2: Influence of using query-building techniques on course grades (Welch two sample t-test)</p>
+|Strategy | N | Mean | Median | Difference in Mean | 
+|:-------:|:-:|:----:|:------:|:-------------:|
+|query-building in RA |(23, 26) | (78.5, 75.0) | (80.0, 80.0) | 0.5 (0.87) |
+|query-building in SQL|(81, 40) | (80.8, 76.9)| (81.0, 79.5)| 3.9 (0.043) |
+|query-building in RA and SQL|(12, 5)|(81.3, 70.8)| (79.0, 80.0)| 10.45 (0.16)|
 
-<img style="margin:50" src="{{ site.baseurl }}/assets/dw-table3.png"/>
-<p style="text-align:center">Table 3: Influence of using assginment in a single query on course grades (Welch two sample t-test)</p>
+<p style="text-align:center;font-size:0.95rem"><b>Table 2:</b> Influence of using query-building techniques on course grades (Welch two sample t-test). Each tuple is of the form <em>(value for strategy users, value for strategy non-users)</em>.</p>   
+
+
+|Strategy | N | Mean | Median | Difference in Mean | 
+|:-------:|:-:|:----:|:------:|:-------------:|
+|assignment in RA |(171, 64) | (78.8, 74.0) | (81.0, 76.0) | 4.8 (0.0065) | 
+|assignment in SQL|(52, 183) | (80.6, 76.7)| (82.0, 78.0)| 3.9 (0.043) |
+|assignment in RA and SQL|(12, 5)|(80.1, 73.0)| (81.5, 74.0)| 7.1 (0.0012)|
+
+<p style="text-align:center;font-size:0.95rem"><b>Table 3:</b> Influence of using assginment in a single query on course grades (Welch two sample t-test). Each tuple is of the form <em>(value for strategy users, value for strategy non-users)</em>.</p>
 
 
 Conclusion
@@ -147,16 +162,14 @@ present them with an alternative question to practice the use of query
 building techniques and/or use of views and assignment.
 
 
-Acknowledgements
-----
+### Acknowledgements
 
 I would to like to thank Diane Horton, Bogdan Simion, and Andrew
 Petersen for their invaluable guidance. I would also like to thank
 Alireza Ahadi of the University of Technology Sydney for his input on my
 research.
 
-References
----------
+### References
 
 1. A. Ahadi, J. Prior, V. Behbood, and R. Lister, “A quantitative study of the relative difficulty for novices of writing seven different types of sql queries” in Proceedings of the 2015 ACM Conference on Innovationand Technology in Computer Science Education, pp. 201–206, 2015.
 

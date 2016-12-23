@@ -1,0 +1,34 @@
+@import '../style';
+
+table {
+	margin-top: 20px !important;
+	border-top: 1px solid gray !important;
+	
+	tr {
+		border: 0px !important;
+
+		td {
+			text-align: left !important;
+			width: 50%;
+			padding: 15px 10px 15px 10px;
+		}
+
+		td:first-child {
+			font-weight: bold;
+			text-align: right !important;
+			vertical-align: top;
+		}
+	}
+}
+
+h1 {
+	margin-top: auto !important;
+}
+.masthead-title {
+	margin-bottom: 0em;
+	margin-top: 1em !important;
+}
+
+.valign, .valign-wrapper {
+	width: 100%;
+}

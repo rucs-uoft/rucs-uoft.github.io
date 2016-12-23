@@ -25,12 +25,12 @@
 		function() {
 			$(this).addClass('z-depth-2');
 			$(this).animate({
-				backgroundColor: "#00838f"
+				backgroundColor: "#8c4642"
 			}, 250);
 		}, function() {
 			$(this).removeClass('z-depth-2');
 			$(this).animate({
-				backgroundColor: "#0097a7"
+				backgroundColor: "#be4e5a"
 			}, 250);
 		}
 	);

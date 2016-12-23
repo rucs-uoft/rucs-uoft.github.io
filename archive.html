@@ -4,9 +4,9 @@ css: masthead.css
 title: "Masthead"
 permalink: /archive
 ---
-<div class="submit-container">
+<div style="padding: 0% 20% 5% 21%;font-size: 1rem;">
     <br><br>
-    <h1 class='archive-title'>F a l l </h1> <h1 class='archive-title' style="padding-left:0.5em"> 2 0 1 5</h1>
+    <h1 class='archive-title'>Fall 2015</h1>
     
     <!-- Foreword -->
     <p>Within these pages, we lay bare the best of undergraduate computer science research at the University of Toronto. For the budding researcher, we hope this will inspire and impel you to pursue the path of those published here; for the curious reader, we seek to clarify and distill, to further your interest in this varied and dynamic discipline.</p>
@@ -17,16 +17,16 @@ permalink: /archive
     
     <p>Sam Toueg: for your sage advice, your unwavering support, and your humor - I could not have asked for more. Jaren, Julia, Muhammad, and Sara: for the passion you brought during even the most difficult of times, and for your brilliance and infinite patience, of which I am in awe. It has been a pleasure.</p>
 
-    <p id="signature" style="font-size:1.15em">Kawin Ethayarajh<br/><em>Editor-in-Chief</em>, RUCS</p>
+    <p id="signature">Kawin Ethayarajh<br/><em>Editor-in-Chief</em>, RUCS</p>
 
-    <h3 style="font-family: Helvetica">Papers</h3>
+    <h3 style="font-family: Calibri">Papers</h3>
     {% for post in site.posts %}
             {% if post.year == "2015" %}
                 <p>{{post.author}} in {{post.category}} : <a href="{{ post.permalink }}">{{post.title}}</a></p>
             {% endif %}
     {% endfor %}
 
-    <h3 style="font-family: Helvetica">Masthead</h3>
+    <h3 style="font-family: Calibri">Masthead</h3>
 
 <table>
     <tr>
