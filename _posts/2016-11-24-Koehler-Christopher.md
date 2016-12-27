@@ -60,8 +60,7 @@ able to effectively utilize the program with very little instruction and
 quickly create grammar definitions to yield solutions.
 
 
-Acknowledgement
-----
+### Acknowledgement
 
 A thank you to my supervisors Danny Heap and Daniel Zingaro for
 assistance throughout the project.
