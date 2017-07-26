@@ -11,17 +11,25 @@
 
 {% assign chapter_titles = goodCats | sort %}
 
-
 <div class="height-fix">
   <div class="row toc-container">
     <div class="col m3 l3 hide-on-small-and-down">
       <div class="marginless-collection collection">
 
-        <a href="#letter-from-the-editor" class="waves-light collection-item">
-          <span class="toc-title">Letter from the Editor</span>
+        <a href="#announcements" class="collection-item">
+          <span class="toc-title">Announcements</span>
         </a>
 
-        {% assign i = 1 %}
+        <a href="#about-rucs" class="collection-item">
+          <span class="toc-title">About-RUCS</span>
+        </a>
+
+        <!--<a href="#letter-from-the-editor" class="waves-light collection-item">
+          <span class="toc-title">Letter from the Editor</span>
+        </a>-->
+
+
+        <!--{% assign i = 1 %}
 
         {% for chapter in chapter_titles %}
 
@@ -38,7 +46,7 @@
 
             {% assign i = i | plus: 1 %}
 
-        {% endfor %}
+        {% endfor %}-->
 
       </div>
     </div>
@@ -50,8 +58,16 @@
             {% include foreword.html %}
           </div>
         </div>
+
+        <div class="toc-chapter-content" id="announcements">
+            <p>Content Here 'announcements'</p>
+        </div>
           
-        {% for chapter in site.categories %}
+        
+        <div class="toc-chapter-content" id="about-rucs">
+            <p>Content Here 'about-rucs'</p>
+        </div>  
+        <!--{% for chapter in site.categories %}
           {% for abstracts in chapter %}
                     {% assign counter = 0 %}
 
@@ -77,18 +93,40 @@
                 {% endfor %}
               </div>
           {% endif %}
-        {% endfor %}
+        {% endfor %}-->
       </div>
     </div>
 
+
+<!--Small screen sizes-->
     <div class="col s12 hide-on-med-and-up show-on-small">
       <ul class="collapsible collapsible-toc" data-collapsible="accordion">
-        <li id="letter-from-the-editor-mini">
+        <!--<li id="letter-from-the-editor-mini">
           <div class="collapsible-header toc-title">Letter from the Editor</div>
           <div class="collapsible-body">
             {% include foreword.html %}
           </div>
+        </li>-->
+        <li id="announcements-mini">
+          <div class="collapsible-header toc-title">Annoucements</div>
+          <div class="collapsible-body">
+            <!--content-->
+            <p>Content Here 'announcements-mini'</p>
+            <!--{% include foreword.html %}-->
+          </div>
         </li>
+        <li id="about-rucs-mini">
+          <div class="collapsible-header toc-title">About-RUCS</div>
+          <div class="collapsible-body">
+            <!--content-->
+            <p>Content Here 'about-rucs-mini'</p>
+            <!--{% include foreword.html %}-->
+          </div>
+        </li>
+
+
+
+
         {% assign i = 1 %}
         {% for chapter in chapter_titles %}
           {% if chapter[0] == 'profiles and interviews' %}
