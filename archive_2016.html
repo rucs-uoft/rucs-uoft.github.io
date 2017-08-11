@@ -1,0 +1,62 @@
+---
+layout: default
+css: masthead.css
+title: "Masthead"
+permalink: /archive_2016
+---
+<div style="padding: 0% 20% 5% 21%;font-size: 1rem;">
+    <br><br>
+    <h1 class='archive-title'>Fall 2016</h1>
+    
+    <!-- Foreword -->
+    <p>In the same way that everything a small child does is special, so too are all issues of a publication as young as RUCS. This one, however, is even more so. Though based at the University of Toronto, RUCS – for the first time – has opened its doors to undergraduate students at Cornell University. As a result, we have broadened our scope and our community has expanded. From n-way matching, to face identification in movies, to energy efficient sensing algorithms and beyond, we hope you enjoy reading about the work conducted by these talented researchers as much as we did.<br /><br />
+    There are many without whom this issue would not have been possible. My thanks, first and foremost, are directed to Sam Toueg and Kawin Ethayarajh, for offering their invaluable guidance every step of the way. I am also indebted to Leanne Dawkins, Marina Haloulos, and Francois Pitt for their administrative and financial support and, in particular, their prompt replies to my many emails over the last several months.<br /><br />
+    I would like to thank Helen Kontozopoulos for all the time she devoted to this project and for her unwavering optimism; David Gries and Claire Cardie, for helping two great schools come together; Nima Yasrebi, for a fantastic tour; and Caitlin McDonough, for hosting RUCS a second time at Google Toronto. I am certain we’ll be back for a third.<br /><br />
+    Finally, a special thanks goes out to the team of RUCS staff I have had the pleasure of getting to know. Jaren, Chris, and Taamannae: the result of your hard work is remarkable. You have consistently delivered more than I asked without the slightest hesitation, and I am very grateful.<br /><br />
+    Julia Gilenko<br />
+    <em>Editor-in-Chief</em>, RUCS</p>
+
+    <h3 style="font-family: Calibri">Papers</h3>
+    {% for post in site.posts %}
+    {% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
+
+            {% if post.year == "2016" %}
+                <p>{{post.author}} in {{post.category}} : <a href="{{ post.permalink }}">{{post.title}}</a></p>
+            {% endif %}
+    {% endfor %}
+
+    <h3 style="font-family: Calibri">Masthead</h3>
+
+<div class="masthead">
+<table>
+    <tbody>
+        <tr></tr>
+        <tr>
+            <td><br/><br/>Editor-in-Chief</td>
+            <td><br/><br/>Julia Gilenko</td>
+        </tr>
+        <tr>
+                        <td>Founder</td>
+                        <td>Kawin Ethayarajh</td>
+                </tr>
+        <tr>
+            <td>Faculty Supervisor</td>
+            <td>Sam Toueg</td>
+        </tr>
+        <tr>
+            <td>Undergraduate Editors</td>
+            <td>Jaren Kerr</br>
+                Christian Lessard</td>
+        </tr>
+        <tr>
+            <td>Design And Layout Director</td>
+            <td>Taamannae Taabassum</td>
+        </tr>
+        <tr>
+            <td>Webmaster</td>
+            <td>Christian Lessard</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
