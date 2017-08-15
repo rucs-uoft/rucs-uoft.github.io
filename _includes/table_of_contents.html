@@ -21,7 +21,7 @@
         </a>
 
         <a href="#about-rucs" class="waves-light collection-item">
-          <span class="toc-title">About-RUCS</span>
+          <div class="toc-title">About-RUCS</div>
         </a>
 
         <!--<a href="#letter-from-the-editor" class="waves-light collection-item">
@@ -61,12 +61,15 @@
         </div>-->
 
         <div class="toc-chapter-content" id="announcements">
-            <p>Content Here 'announcements'</p>
+          <div id="news">
+            {% include news.html %}
+          </div>
         </div>
           
         
         <div class="toc-chapter-content" id="about-rucs">
-            <p>Content Here 'about-rucs'</p>
+            <p>Coming soon!</p>
+
         </div>  
         <!--{% for chapter in site.categories %}
           {% for abstracts in chapter %}
@@ -99,7 +102,7 @@
     </div>
 
 
-<!--Small screen sizes-->
+<!--Small screen sizes (responsive design)-->
     <div class="col s12 hide-on-med-and-up show-on-small">
       <ul class="collapsible collapsible-toc" data-collapsible="accordion">
         <!--<li id="letter-from-the-editor-mini">
@@ -112,7 +115,9 @@
           <div class="collapsible-header toc-title">Annoucements</div>
           <div class="collapsible-body">
             <!--content-->
-            <p>Content Here 'announcements-mini'</p>
+            <div id="news-mini">
+              {% include news.html %}
+            </div>
             <!--{% include foreword.html %}-->
           </div>
         </li>
@@ -120,7 +125,7 @@
           <div class="collapsible-header toc-title">About-RUCS</div>
           <div class="collapsible-body">
             <!--content-->
-            <p>Content Here 'about-rucs-mini'</p>
+            <p>Coming soon!</p>
             <!--{% include foreword.html %}-->
           </div>
         </li>
