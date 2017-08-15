@@ -15,14 +15,14 @@ if ((pathArray.length > 3) && (pathArray[plast].indexOf("#") == 0) && (pathArray
 	$('link[type*=icon]').detach().appendTo('head');
 
 	if (pathArray[plast] == "#table-of-contents") {
-		pathArray[plast] = "#letter-from-the-editor";
+		pathArray[plast] = "#announcements";
 	} 
 
 	$(pathArray[plast]).show();
 	$('a[href=' + pathArray[plast] + ']').addClass("chapter-active");
 	$('a[href=' + pathArray[plast] + ']').addClass("disabled");
 	
-	if(pathArray[plast] != "#letter-from-the-editor") {
+	if(pathArray[plast] != "#announcements") {
 		var mini_name = pathArray[plast] + "-mini";
 		$(mini_name).addClass("active");
 		$(mini_name).children().first().addClass("active");
@@ -32,9 +32,9 @@ if ((pathArray.length > 3) && (pathArray[plast].indexOf("#") == 0) && (pathArray
 		}
 	}
 } else {
-	$("#letter-from-the-editor").show();
-	$('a[href=' + "#letter-from-the-editor" + ']').addClass("chapter-active");
-        $('a[href=' + "#letter-from-the-editor" + ']').addClass("disabled");
+	$("#announcements").show();
+	$('a[href=' + "#announcements" + ']').addClass("chapter-active");
+        $('a[href=' + "#announcements" + ']').addClass("disabled");
 	// if mobile, no need to expand letter from the editor
 } 
 
