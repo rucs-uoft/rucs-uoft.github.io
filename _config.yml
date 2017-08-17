@@ -1,6 +1,6 @@
 # Site settings
 title: RUCS
-email: kawin@cs.toronto.edu
+email: rucs@cs.toronto.edu
 description: "RUCS is a non-archival publication featuring the best of undergraduate computer science research at the University of Toronto."
 baseurl: ""
 url: "rucs.ca"
