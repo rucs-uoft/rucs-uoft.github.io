@@ -63,41 +63,81 @@
         <div class="toc-chapter-content" id="announcements">
           <div id="news">
             {% include news.html %}
+
+            <div class="section center" id="submit-button">
+                <a class="waves-effect waves-light btn-large" href="mailto:rucs@cs.toronto.edu">Submit Now!</a>
+            </div>
           </div>
         </div>
           
         
         <div class="toc-chapter-content" id="about-rucs">
-            <p>Coming soon!</p>
+            <div class="container">
+              <div class="row center">
+                <h3>Meet the RUCS team</h3>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="row">
+                <div class="team-member col s6" style="text-align: center;">
+                  <img class="responsive-img" src="/resources/team_photos/nana_photo.jpg">
+                  <h4>Nana</h4>
+                  <p>Nana is a third-year computer science student at the University of Toronto, focusing in AI. In her spare time, Nana enjoys reading French literature and playing the piano.</p>
+                </div>
+
+                <div class="team-member col s6" style="text-align: center;">
+                  <img class="responsive-img" src="/resources/team_photos/osama_photo.jpg">
+                  <h4>Osama</h4>
+                  <p>Osama is a Math Specialist Bachelor's degree graduate from the University of Toronto. 
+
+He enjoys writing, programming, mathematics, and thinking creatively to develop new and useful ideas. He also enjoy meeting new people to form friendships. 
+</p>
+                </div>
+              </div>
+
+              <div class="row">
+              <div class="team-member col s6" style="text-align: center;">
+                <img class="responsive-img" src="/resources/team_photos/nana_photo.jpg">
+                <h4>John</h4>
+                <p>John is a 4th year CS student at the University of Toronto, St. George Campus. He is a big fan of undergrad research, and educational outreach in CS. He enjoys the twin branches of CS: the theory and the practice; the research conference and the hackathon; the NP reduction and the multithreading software engineering, and dichotomies in general. Outside of CS, his hobbies include chess, military history and board games. </p>
+              </div>
+
+              <div class="team-member col s6" style="text-align: center;">
+                <img class="responsive-img" src="/resources/team_photos/samir_photo.jpg">
+                <h4>Samir</h4>
+                <p>Samir is in his fourth year at the University of Toronto, majoring in Computer Science and English. He enjoys good grammar and listening to Kanye West.</p>
+              </div>   
+              </div>
+
+              <div class="row">
+
+              <div class="team-member col s6" style="text-align: center;">
+                <img class="responsive-img" src="/resources/team_photos/tyler_photo.jpg">
+                <h4>Tyler</h4>
+                <p>Tyler is a 4th year student at UofT, specializing in computer science. He loves to stay active; whether it be in the gym, on the water paddling, or taking a hike to who knows where.</p>
+              </div>
+
+              <div class="team-member col s6" style="text-align: center;">
+                <img class="responsive-img" src="/resources/team_photos/tyler_photo.jpg">
+                <h4>Lynn</h4>
+                <p>Lynn is a third year student pursuing a double major in Computer Science and European Studies, and a minor in Russian. She hopes to learn many more languages - both computer and human ones - in the future.</p>    
+              </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
 
         </div>  
-        <!--{% for chapter in site.categories %}
-          {% for abstracts in chapter %}
-                    {% assign counter = 0 %}
-
-                {% for abstract in abstracts %}
-                    {% if abstract.year != "2015" %}
-                        {% assign counter= 1 %}
-                    {% endif %}
-                {% endfor %}
-          
-          {% endfor %}
-
-          {% if counter != 0 %}
-
-              <div class="toc-chapter-content" id="{{ chapter[0] | downcase | replace: ' ', '-' }}">
-                {% for abstracts in chapter %}
-                  {% if forloop.first == false %}
-                    {% for abstract in abstracts %}
-                        {% if abstract.year != "2015" %}
-                            {% include marginless_card_panel.html %}
-                        {% endif %}
-                    {% endfor %}
-                  {% endif %}
-                {% endfor %}
-              </div>
-          {% endif %}
-        {% endfor %}-->
       </div>
     </div>
 
