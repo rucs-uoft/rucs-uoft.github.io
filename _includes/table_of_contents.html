@@ -20,33 +20,13 @@
           <span class="toc-title">Announcements</span>
         </a>
 
-        <a href="#about-rucs" class="waves-light collection-item">
-          <div class="toc-title">About-RUCS</div>
+        <a href="#about-us" class="waves-light collection-item">
+          <span class="toc-title">About Us</span>
         </a>
 
-        <!--<a href="#letter-from-the-editor" class="waves-light collection-item">
-          <span class="toc-title">Letter from the Editor</span>
-        </a>-->
-
-
-        <!--{% assign i = 1 %}
-
-        {% for chapter in chapter_titles %}
-
-            
-            {% if chapter[0] == 'profiles and interviews'%}
-                {% assign i = i | minus: 1 %}
-            {% else %}
-
-            <a onclick="window.history.replaceState(null, null, '/#{{ chapter | downcase | replace: ' ', '-'}}');" href="#{{ chapter | downcase | replace: ' ', '-'}}" class="waves-light collection-item">
-              <span class="toc-title">  {{ chapter }}</span>
-            </a>
-
-            {% endif %}
-
-            {% assign i = i | plus: 1 %}
-
-        {% endfor %}-->
+        <a href="#meet-the-team" class="waves-light collection-item">
+          <div class="toc-title">Our Team</div>
+        </a>
 
       </div>
     </div>
@@ -54,122 +34,55 @@
     <div class="col s12 m9 l9 height-fix hide-on-small-and-down" id="toc-content-wrapper">
       <div class="toc-content height-fix" id="toc-content">
        
-        <!--<div class="toc-chapter-content" id="letter-from-the-editor">
-          <div id="foreword">
-            {% include foreword.html %}
-          </div>
-        </div>-->
 
         <div class="toc-chapter-content" id="announcements">
           <div id="news">
             {% include news.html %}
-
-            <div class="section center" id="submit-button">
-                <a class="waves-effect waves-light btn-large" href="mailto:rucs@cs.toronto.edu">Submit Now!</a>
-            </div>
           </div>
+        </div>
+
+
+        <div class="toc-chapter-content" id="about-us">
+        {% include about-us.html %}
         </div>
           
         
-        <div class="toc-chapter-content" id="about-rucs">
-            <div class="container">
-              <div class="row center">
-                <h3>Meet the RUCS team</h3>
-              </div>
-            </div>
-
-            <div class="container">
-              <div class="row">
-
-              <div class="team-member col s6" style="text-align: center;">
-                <img class="responsive-img" src="/resources/team_photos/john_photo.jpg">
-                <h4>John Editor-in-Chief</h4>
-                <p>John is a 4th year CS student at the University of Toronto, St. George Campus. He is a big fan of undergrad research, and educational outreach in CS. He enjoys the twin branches of CS: the theory and the practice; the research conference and the hackathon; the NP reduction and the multithreading software engineering, and dichotomies in general. Outside of CS, his hobbies include chess, military history and board games. </p>
-              </div>
-
-                <div class="team-member col s6" style="text-align: center;">
-                  <img class="responsive-img" src="/resources/team_photos/samir_photo.jpg">
-                  <h4>Samir- Editor</h4>
-                  <p>Samir is in his fourth year at the University of Toronto, majoring in Computer Science and English. He enjoys good grammar and listening to Kanye West.</p>
-                </div>
-
-              </div>
-
-              <div class="row">
-                <div class="team-member col s6" style="text-align: center;">
-                  <img class="responsive-img" src="/resources/team_photos/nana_photo.jpg">
-                  <h4>Nana - Editor</h4>
-                  <p>Nana is a third-year computer science student at the University of Toronto, focusing in AI. In her spare time, Nana enjoys reading French literature and playing the piano.</p>
-                </div>
-
-                <div class="team-member col s6" style="text-align: center;">
-                  <img class="responsive-img" src="/resources/team_photos/osama_photo.jpg">
-                  <h4>Osama - Editor</h4>
-                  <p>Osama is a Math Specialist Bachelor's degree graduate from the University of Toronto. 
-
-He enjoys writing, programming, mathematics, and thinking creatively to develop new and useful ideas. He also enjoy meeting new people to form friendships. 
-</p>
-                </div>
-   
-              </div>
-
-              <div class="row">
-
-              <div class="team-member col s6" style="text-align: center;">
-                <img class="responsive-img" src="/resources/team_photos/tyler_photo.jpg">
-                <h4>Tyler - Webmaster</h4>
-                <p>Tyler is a 4th year student at UofT, specializing in computer science. He loves to stay active; whether it be in the gym, on the water paddling, or taking a hike to who knows where.</p>
-              </div>
-
-              <div class="team-member col s6" style="text-align: center;">
-                <img class="responsive-img" src="/resources/team_photos/lynn_photo.jpg">
-                <h4>Lynn - Graphic Artist</h4>
-                <p>Lynn is a third year student pursuing a double major in Computer Science and European Studies, and a minor in Russian. She hopes to learn many more languages - both computer and human ones - in the future.</p>    
-              </div>
-            </div>
-
-
+        <div class="toc-chapter-content" id="meet-the-team">
+        {% include meet-the-team.html %}
         </div>
 
 
-
-
-
-
-
-
-
-
-        </div>  
       </div>
     </div>
 
 
-<!--Small screen sizes (responsive design)-->
+<!--Small screen sizes (RESPONSIVE DESIGN))-->
     <div class="col s12 hide-on-med-and-up show-on-small">
       <ul class="collapsible collapsible-toc" data-collapsible="accordion">
-        <!--<li id="letter-from-the-editor-mini">
-          <div class="collapsible-header toc-title">Letter from the Editor</div>
-          <div class="collapsible-body">
-            {% include foreword.html %}
-          </div>
-        </li>-->
+
         <li id="announcements-mini">
-          <div class="collapsible-header toc-title">Annoucements</div>
+          <div class="collapsible-header toc-title">Announcements</div>
           <div class="collapsible-body">
             <!--content-->
             <div id="news-mini">
               {% include news.html %}
             </div>
-            <!--{% include foreword.html %}-->
           </div>
         </li>
-        <li id="about-rucs-mini">
-          <div class="collapsible-header toc-title">About-RUCS</div>
+
+        <li id="about-us-mini">
+          <div class="collapsible-header toc-title">About Us</div>
           <div class="collapsible-body">
             <!--content-->
-            <p>Coming soon!</p>
-            <!--{% include foreword.html %}-->
+            {% include about-us.html %}
+          </div>
+        </li>
+
+        <li id="meet-the-team-mini">
+          <div class="collapsible-header toc-title">Our Team</div>
+          <div class="collapsible-body">
+            <!--content-->
+            {% include meet-the-team.html %}
           </div>
         </li>
 
