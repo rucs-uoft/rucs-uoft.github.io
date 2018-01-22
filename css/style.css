@@ -8397,7 +8397,7 @@ figcaption {
   border-left: 4px solid #8c333d !important; }
 
 .header-background {
-  background: url("../resources/backgroundweb2016.svg");
+  background: url("../resources/backgroundweb2017.png");
   background-position: center; }
 
 .review-subtitle {
@@ -8409,7 +8409,7 @@ figcaption {
   padding: 0 !important; }
 
 .page-footer {
-  background: url("../resources/backgroundweb2016.svg");
+  background: url("../resources/backgroundweb2017.png");
   margin: 0px !important;
   min-height: 100px;
   padding: 30px 0 30px 0 !important; }
@@ -8430,7 +8430,7 @@ figcaption {
 
   .background {
     height: 100vh;
-    background: url("../resources/backgroundweb2016.svg");
+    background: url("../resources/backgroundweb2017.png");
     background-size: cover;
     width: 100vw; }
 
@@ -8449,7 +8449,7 @@ figcaption {
 @media only screen and (min-width: 651px) and (max-width: 992px) {
   .background {
     height: 100vh;
-    background: url("../resources/backgroundweb2016.svg");
+    background: url("../resources/backgroundweb2017.png");
     background-size: cover;
     width: 100%; }
 
@@ -8508,7 +8508,7 @@ figcaption {
 @media only screen and (max-width: 650px) {
   .background {
     height: 100vh;
-    background: url("../resources/backgroundweb2016.svg");
+    background: url("../resources/backgroundweb2017.png");
     background-size: cover; }
 
   .collapsible-toc {
