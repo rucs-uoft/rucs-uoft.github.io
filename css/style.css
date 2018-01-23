@@ -8340,6 +8340,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 /**
  * The picker box.
  */
+
+/*START OF ACTUAL HUMAN-WRITTEN CSS */
 .picker--time .picker__box {
   font-size: 1em;
   background: #f2f2f2;
