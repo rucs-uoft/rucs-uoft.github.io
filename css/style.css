@@ -8447,7 +8447,12 @@ figcaption {
     height: 100vh; }
 
   .full-width {
-    width: 100%; } }
+    width: 95%;
+    /*padding-left: 20%;*/
+    margin: auto;
+    /*float: right;*/
+    /*display: inline;*/
+  } }
 @media only screen and (min-width: 651px) and (max-width: 992px) {
   .background {
     height: 100vh;
