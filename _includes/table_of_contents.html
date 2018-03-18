@@ -28,6 +28,10 @@
           <div class="toc-title">Our Team</div>
         </a>
 
+        <a href="#submissions" class="waves-light collection-item">
+          <div class="toc-title">Submissions</div>
+        </a>
+
       </div>
     </div>
 
@@ -51,7 +55,10 @@
         {% include meet-the-team.html %}
         </div>
 
+        <div class="toc-chapter-content" id="submissions">
+          {% include submissions.html %}
 
+        </div>
       </div>
     </div>
 
@@ -63,7 +70,7 @@
         <li id="announcements-mini">
           <div class="collapsible-header toc-title">Announcements</div>
           <div class="collapsible-body">
-            <!--content-->
+            <!--content; just display the content directly-->
             <div id="news-mini">
               {% include news.html %}
             </div>
@@ -86,6 +93,13 @@
           </div>
         </li>
 
+        <li id="submissions-mini">
+          <div class="collapsible-header toc-title">Submissions</div>
+          <div class="collapsible-body">
+            <!--content-->
+            {% include submissions.html %}
+          </div>
+        </li>
 
 
 
