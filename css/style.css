@@ -8712,3 +8712,8 @@ figcaption {
 #submit-button {
   padding-bottom: 100px;
 }
+
+.row-center-fix {
+
+  width: 80%;
+}
