@@ -1,0 +1,113 @@
+---
+layout: post
+title: "A Feed-Forward Algorithm for Arithmetic Circuits"
+author: "Andrew Jemin Choi"
+supervisors: "Professor Guy Van den Broeck"
+category: "Category 1"
+permalink: /a-feed-forward-algorithm-for-arithmetic-circuits
+year: "2017"
+
+---
+
+Introduction
+============
+
+Probabilistic queries are a foundation to many machine learning problems. We often query probabilistic models, such as Bayesian networks, to gain information about the variables in a system and make inferences about them. However, even the simplest queries in these networks, such as finding marginal probabilities of the input, come at an exponential cost. In fact, the problem of exact inference and making such queries in these probabilistic models is NP-hard [1].
+
+An effective approach for making exact inferences in networks is to construct an Arithmetic Circuit (AC) from the network polynomial. The network polynomial is a linear function that outputs the probability of an event given the input parameters of the network. Although building the AC from a network takes exponential time and space, queries can be executed linearly, i.e. O(n), where n is the size of the circuit [2]. Therefore, compiling or learning ACs from networks provides an efficient alternative to making exact inferences [3].
+
+The state-of-the-art method uses a software algorithm to backpropagate the marginal probabilities of the network using bit-encoding[4]. We propose a new algorithm that will calculate marginal probabilities by using feed-forward ACs. The advantage of using strictly feed-forward ACs is that the entire circuit can be built in hardware, which can drastically reduce inference time and consume significantly less power compared to software implementations.
+
+Background
+==========
+
+An arithmetic circuit is a directed acyclic graph (DAG) with leaves that are variables or constants and interior nodes that are addition or multiplication operations. An arithmetic circuit can calculate the output value of a polynomial in linear size, where size is defined as the number of edges in the circuit.
+
+
+<p style="text-align: center;">
+	<img align="middle" style="margin:50" src="{{ site.baseurl }}/assets/2017/A.Choi/ac_example.png"/>
+</p>
+
+<p style="text-align:center;font-size:0.95rem"><b>Figure 1:</b> A binary arithmetic circuit that expresses the linear polynomial: $f = (y) + (0.5(x) + 1$) </p>
+
+By using ACs, we can calculate the partial derivatives and find the marginal
+probabilities in linear size, i.e. $O(n)$ edges [2]. This process is called backpropagation
+because we start calculating derivatives from the root (output) node and work our
+way backwards to the leaf (input) nodes to find the partial derivatives. The state-of-
+the-art uses bit-encoding backpropagation and a series of divisions in order to find
+partial derivatives in one pass. We began this project in hopes of finding a way to
+calculate the partial derivatives in a feed-forward network, in linear size.
+
+Approach
+========
+
+We can fundamentally calculate partial derivatives by calculating the products of
+all sibling nodes of a child node, where the derivative of a child node is defined as:
+
+$dr(c) = dr(p) \times  \pi_{c \neq c\prime} vr(c\prime) [4]$
+
+This “naive” method requires $O(n^2)$ number of edges in the circuit.
+
+Our approach to finding marginal probabilities involves only using product nodes
+in a feed-forward circuit. We achieve this by applying memoization to cache previously
+computed products. By caching the products into a register to calculate partial
+derivatives, backpropagation can be done in $O(n)$ edges.
+This cache-based algorithm has two apparent advantages:
+
+1. The partial derivatives can be calculated linearly, i.e. $O(n)$ edges, regardless of
+the DAG structure. The algorithm works correctly for non-alternating trees,
+which is a feature absent from bit-encoded backpropagation.
+2. The algorithm can be implemented into a feed-forward arithmetic circuit using
+hardware.
+
+Figure 2 and 3 below outlines the forward pass and backward pass of the algorithm, respectively. In the forward pass, the number of child node accesses is bound by a constant (number of parent nodes). Similarly, in the backward pass, the edges needed to evaluate the derivative of a multiplication node is bounded by a constant number of operations (two products and one sum). Since every node operation is bound by a constant, we can see that the algorithm is $O(n)$.
+
+
+<p style="text-align: center;">
+	<img align="middle" style="margin:50" src="{{ site.baseurl }}/assets/2017/A.Choi/alg1.png"/>
+</p>
+
+<p style="text-align:center;font-size:0.95rem"><b>Figure 2:</b>Algorithm for computing circuit output and initializing the product caches</p>
+
+
+<p style="text-align: center;">
+	<img align="middle" style="margin:50" src="{{ site.baseurl }}/assets/2017/A.Choi/alg2.png"/>
+</p>
+
+<p style="text-align:center;font-size:0.95rem"><b>Figure 3:</b>Feed-forward algorithm to calculate marginals</p>
+
+
+Analysis
+========
+
+We compared the performance of three algorithms, written in C, on three different data sets. For the cache-based algorithm, we generated a feed-forward arithmetic circuit and compiled the circuit into C code. Then, we measured the CPU time needed to find the marginal probability of one variable from the initialized circuit structures.
+
+
+Test Set (nodes) | Bit-encoded (s) | Compiled-Cache (s) | Naive (s) |
+|:---------------:|:--------:|:--------:|:--------:|:--------:|
+**Verysimple.ac** (20) | 0.01994 | **0.00504** | 0.01921 | 
+**Voting.ac** (12468) [5] | 2.29930 | **0.34500** | 6.85860
+**Movie.ac** (21714) [5] | 0.84004 | **0.18353** | 1.31189
+
+Table 1: CPU times (in seconds) of 10000 iterations of bit-encoded, cache, and naive algorithms. The values were averaged from 3 trials.
+
+The CPU times show that the compiled cache-based method is 4 to 5 times faster on simple circuit structures (verysimple.ac and movie.ac) and about 8 times faster for more complex structures (voting.ac) compared to bit-encoded backpropagation. We can attribute the improvement in performance to the simpler output circuit structure of the compiled code, and better performance in the forward pass compared to backpropagation. The cache-based algorithm was found to give correct results even for non-alternating circuits, which makes this algorithm suitable for a wider range of applications. In addition, it can be used into a hardware circuit, leading to faster and energy efficient inferences. We hope to compare the differences between a software and hardware implementation in future work.
+
+Conclusion
+==========
+
+We proposed a new algorithm to find the marginal probabilities in an arithmetic circuit in linear size using a cache-based feed-forward algorithm. We found that finding the marginal probabilities by compiling the feed-forward circuit significantly reduces inference time. The algorithm can also be used for a wider range of circuits, and it can be implemented in hardware, potentially using much less resources.
+
+
+### Acknowledgement
+
+I would like to thank Prof. Guy Van den Broeck for his brilliant insight and mentorship during this project. I am also grateful to his students in the StarAI Lab for their enlightening discussions during my stay at UCLA.
+
+### References
+
+1. Cooper, G. F., 1990. The computational complexity of probabilistic inference using Bayesian belief networks. Artif. Intell. 42, pp. 393-405.
+2. Darwiche, A., 2003. A Differential Approach to Inference in Bayesian Networks. J. ACM 50, pp. 280-305.
+3. Chavira, M. and Darwiche, A., 2005. Compiling Bayesian networks with local structure. In Proceedings of the 19th International Joint Conference on Artificial Intelligence (IJCAI), pp. 13061312.
+4. Darwiche, A., 2009. Modeling and Reasoning with Bayesian Networks. Cambridge University Press, Chapter 12.
+5. Bekker, J., Davis, J., Choi, A., Darwiche, A., and Van den Broeck, G., 2015. Tractable Learning for Complex Probability Queries. Advances in Neural Information Processing Systems 28 (NIPS).
+
