@@ -3,7 +3,7 @@ layout: post
 title: "A Feed-Forward Algorithm for Arithmetic Circuits"
 author: "Andrew Jemin Choi"
 supervisors: "Professor Guy Van den Broeck"
-category: "Category 1"
+category: "Artificial Intelligence"
 permalink: /a-feed-forward-algorithm-for-arithmetic-circuits
 year: "2017"
 
@@ -13,9 +13,7 @@ Introduction
 ============
 
 Probabilistic queries are a foundation to many machine learning problems. We often query probabilistic models, such as Bayesian networks, to gain information about the variables in a system and make inferences about them. However, even the simplest queries in these networks, such as finding marginal probabilities of the input, come at an exponential cost. In fact, the problem of exact inference and making such queries in these probabilistic models is NP-hard [1].
-
-An effective approach for making exact inferences in networks is to construct an Arithmetic Circuit (AC) from the network polynomial. The network polynomial is a linear function that outputs the probability of an event given the input parameters of the network. Although building the AC from a network takes exponential time and space, queries can be executed linearly, i.e. O(n), where n is the size of the circuit [2]. Therefore, compiling or learning ACs from networks provides an efficient alternative to making exact inferences [3].
-
+An effective approach for making exact inferences in networks is to construct an Arithmetic Circuit (AC) from the network polynomial. The network polynomial is a linear function that outputs the probability of an event given the input parameters of the network. Although building the AC from a network takes exponential time and space, queries can be executed linearly, i.e. $O(n)$, where n is the size of the circuit [2]. Therefore, compiling or learning ACs from networks provides an efficient alternative to making exact inferences [3].
 The state-of-the-art method uses a software algorithm to backpropagate the marginal probabilities of the network using bit-encoding[4]. We propose a new algorithm that will calculate marginal probabilities by using feed-forward ACs. The advantage of using strictly feed-forward ACs is that the entire circuit can be built in hardware, which can drastically reduce inference time and consume significantly less power compared to software implementations.
 
 Background
@@ -23,20 +21,13 @@ Background
 
 An arithmetic circuit is a directed acyclic graph (DAG) with leaves that are variables or constants and interior nodes that are addition or multiplication operations. An arithmetic circuit can calculate the output value of a polynomial in linear size, where size is defined as the number of edges in the circuit.
 
-
 <p style="text-align: center;">
 	<img align="middle" style="margin:50" src="{{ site.baseurl }}/assets/2017/A.Choi/ac_example.png"/>
 </p>
 
 <p style="text-align:center;font-size:0.95rem"><b>Figure 1:</b> A binary arithmetic circuit that expresses the linear polynomial: $f = (y) + (0.5(x) + 1$) </p>
 
-By using ACs, we can calculate the partial derivatives and find the marginal
-probabilities in linear size, i.e. $O(n)$ edges [2]. This process is called backpropagation
-because we start calculating derivatives from the root (output) node and work our
-way backwards to the leaf (input) nodes to find the partial derivatives. The state-of-
-the-art uses bit-encoding backpropagation and a series of divisions in order to find
-partial derivatives in one pass. We began this project in hopes of finding a way to
-calculate the partial derivatives in a feed-forward network, in linear size.
+By using ACs, we can calculate the partial derivatives and find the marginal probabilities in linear size, i.e. $O(n)$ edges [2]. This process is called backpropagation because we start calculating derivatives from the root (output) node and work our way backwards to the leaf (input) nodes to find the partial derivatives. The state-of- the-art uses bit-encoding backpropagation and a series of divisions in order to find partial derivatives in one pass. We began this project in hopes of finding a way to calculate the partial derivatives in a feed-forward network, in linear size.
 
 Approach
 ========
@@ -48,20 +39,16 @@ $dr(c) = dr(p) \times  \pi_{c \neq c\prime} vr(c\prime) [4]$
 
 This “naive” method requires $O(n^2)$ number of edges in the circuit.
 
-Our approach to finding marginal probabilities involves only using product nodes
-in a feed-forward circuit. We achieve this by applying memoization to cache previously
-computed products. By caching the products into a register to calculate partial
-derivatives, backpropagation can be done in $O(n)$ edges.
+Our approach to finding marginal probabilities involves only using product nodes in a feed-forward circuit. We achieve this by applying memoization to cache previously computed products. By caching the products into a register to calculate partial derivatives, backpropagation can be done in $O(n)$ edges.
+
 This cache-based algorithm has two apparent advantages:
 
-1. The partial derivatives can be calculated linearly, i.e. $O(n)$ edges, regardless of
-the DAG structure. The algorithm works correctly for non-alternating trees,
-which is a feature absent from bit-encoded backpropagation.
+1. The partial derivatives can be calculated linearly, i.e. $O(n)$ edges, regardless of the DAG structure. The algorithm works correctly for non-alternating trees, which is a feature absent from bit-encoded backpropagation.
+
 2. The algorithm can be implemented into a feed-forward arithmetic circuit using
 hardware.
 
 Figure 2 and 3 below outlines the forward pass and backward pass of the algorithm, respectively. In the forward pass, the number of child node accesses is bound by a constant (number of parent nodes). Similarly, in the backward pass, the edges needed to evaluate the derivative of a multiplication node is bounded by a constant number of operations (two products and one sum). Since every node operation is bound by a constant, we can see that the algorithm is $O(n)$.
-
 
 <p style="text-align: center;">
 	<img align="middle" style="margin:50" src="{{ site.baseurl }}/assets/2017/A.Choi/alg1.png"/>
@@ -97,7 +84,6 @@ Conclusion
 ==========
 
 We proposed a new algorithm to find the marginal probabilities in an arithmetic circuit in linear size using a cache-based feed-forward algorithm. We found that finding the marginal probabilities by compiling the feed-forward circuit significantly reduces inference time. The algorithm can also be used for a wider range of circuits, and it can be implemented in hardware, potentially using much less resources.
-
 
 ### Acknowledgement
 
