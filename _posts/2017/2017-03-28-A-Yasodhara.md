@@ -9,7 +9,7 @@ year: "2017"
 
 ---
 
-Introduction
+1 Introduction
 ===
 
 Chronic Obstructive Pulmonary Disease (COPD) is a term used to describe various lung diseases characterized by airflow limitation, including emphysema, chronic bronchitis, refractory (non-reversible) asthma, and certain forms of bronchiectasis. COPD is one of the leading causes of death worldwide, causing an estimate of 3 million deaths in 2015, and is hypothesized to be associated with heritable genetic factors as well as environmental exposures (e.g., smoking).
@@ -20,7 +20,7 @@ Through GWAS, 836 loci have been discovered to be associated with COPD [1],[2]. 
 
 In this project, we explored different association tests to find genes associated with COPD. We used a novel statistical test, developed by Aziz Mezlini, one of the co-authors of this paper.
 
-Approach
+2 Approach
 ===
 
 We were provided with transcriptome and genotype datasets from populations of two ethnicities: African-American and Non-Hispanic White.
@@ -83,13 +83,12 @@ Through this project, we have shown that Mezlini’s test is able to detect asso
 
 This project also shows that GWAS is insufficient in providing insight on the genetics behind COPD; inspecting predicted expression provides such insight on how these genes influence certain traits. 
 
-Acknowledgements
-===
+### Acknowledgements
 Thank you to Dr. Anna Goldenberg and Aziz Mezlini for the continuous guidance and support! Special thanks to our collaborators from Brigham and Women’s Hospital, Harvard Medical School who have provided us with the COPD datasets: Michael Cho and Craig Hersh.
 
 Shoutout to all the lab members for all the help, discussions, and brainstorming sessions: Ben, Lauren, Daniel H., Ladislav, Shems, Mingjie, Kingsley, Daniel C., Lebo, Jaryd, Mohamed, and Walter.
 
-Citations
+### Citations
 ===
 
 1. K. Probert et al., “Developmental genetics of the COPD lung,” COPD Research and Practice, vol. 1, no. 1, pp. 10, Nov. 2015. doi: 10.1186/s40749-015-0014-x
