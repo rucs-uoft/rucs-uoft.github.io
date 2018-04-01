@@ -25,21 +25,21 @@ In this project, we explored different association tests to find genes associate
 
 We were provided with transcriptome and genotype datasets from populations of two ethnicities: African-American and Non-Hispanic White.
 
-<!-- 
+
 <p style="text-align: center;">
-	<img align="middle" style="margin:50" src="{{ site.baseurl }}/assets/2017/PATH-TO-ASSET"/>
+	<img align="middle" style="margin:50" src="{{ site.baseurl }}/assets/2017/A.Yasodhara/image1.png"/>
 </p>
 
-<p style="text-align:center;font-size:0.95rem"><b>Figure 1:</b>SUBTEXT</p> -->
+<p style="text-align:center;font-size:0.95rem"><b>Figure 1:</b>Number of individuals in given dataset. <b>A</b> Comparison between the total number of individuals with genotype and transcriptome data. <b>B</b> The exact numbers of individuals in dataset grouped by ethnicity and status</p>
 
 The core of the approach was to apply machine learning methodologies to predict the genetically-regulated component of the gene expression; this was achieved by incorporating regions of the genome which have been known to influence the expression level of one or more genes, regions known as expression quantitative trait loci (eQTL). These eQTL regions serve as our predictor variables in the predictive model. There have been two new tools that attempt to predict gene expression using eQTL, namely PrediXcan [3] and fQTL [4]. These two tools approach the problem from a slightly different angle; while PrediXcan adopts an elastic net model, training on different tissue type datasets separately, fQTL takes a multi-tissue, multivariate approach, in which the eQTL effects are decomposed into tissue-specific and loci-specific components. For this project, we predicted gene expression using PrediXcan and fQTL for whole-blood and lung tissues.
 
-<!-- 
+
 <p style="text-align: center;">
-	<img align="middle" style="margin:50" src="{{ site.baseurl }}/assets/2017/PATH-TO-ASSET"/>
+	<img align="middle" style="margin:50" src="{{ site.baseurl }}/assets/2017/A.Yasodhara/image2.png"/>
 </p>
 
-<p style="text-align:center;font-size:0.95rem"><b>Figure 2:</b>SUBTEXT</p> -->
+<p style="text-align:center;font-size:0.95rem"><b>Figure 2: </b> The number of genes predicted by fQTL and PrediXcan models.</p>
 
 After predicting gene expression using PrediXcan and fQTL, we performed association tests through different hypothesis-driven approaches, integrating transcriptome information with predicted expression.
 
@@ -52,32 +52,32 @@ We used the following statistical tests during association analysis:
 Mezlini’s test is a new statistical test developed by Aziz Mezlini to analyze if two populations are different by looking for enrichment close to the end of a distribution, as depicted by Figure 3.
 
 
-<!-- <p style="text-align: center;">
-	<img align="middle" style="margin:50" src="{{ site.baseurl }}/assets/2017/PATH-TO-ASSET"/>
+
+<p style="text-align: center;">
+	<img align="middle" style="margin:50" src="{{ site.baseurl }}/assets/2017/A.Yasodhara/image3.png"/>
 </p>
 
-<p style="text-align:center;font-size:0.95rem"><b>Figure 3:</b>SUBTEXT</p> -->
+<p style="text-align:center;font-size:0.95rem"><b>Figure 3: </b>Mezlini’s test looks for enrichment at the tail of a distribution. This figure depicts distribution of cases (target phenotype) and controls, where it is deemed as not associated by t-test but deemed as associated by Mezlini’s test.</p>
+
 
 We identified 15 statistically-significant genes, 2 of which were previously discovered by GWAS. These genes genetically interacted and are located in the vicinity of previously GWAS-discovered loci.
 
 
 
-<!-- <p style="text-align: center;">
-	<img align="middle" style="margin:50" src="{{ site.baseurl }}/assets/2017/PATH-TO-ASSET"/>
+
+<p style="text-align: center;">
+	<img align="middle" style="margin:50" src="{{ site.baseurl }}/assets/2017/A.Yasodhara/image4.png"/>
 </p>
 
-<p style="text-align:center;font-size:0.95rem"><b>Figure 4:</b>SUBTEXT</p> -->
+<p style="text-align:center;font-size:0.95rem"><b>Figure 4: </b>List of genes discovered to be associated with COPD with its function and ethnicity. HYKK and PSMA4 were previously reported (by GWAS) to be associated with COPD.</p>
 
-
-<!-- <p style="text-align: center;">
-	<img align="middle" style="margin:50" src="{{ site.baseurl }}/assets/2017/PATH-TO-ASSET"/>
+<p style="text-align: center;">
+	<img align="middle" style="margin:50" src="{{ site.baseurl }}/assets/2017/A.Yasodhara/image5.png"/>
 </p>
 
-<!-- <p style="text-align: center;">
-	<img align="middle" style="margin:50" src="{{ site.baseurl }}/assets/2017/PATH-TO-ASSET"/>
-</p>
+<p style="text-align:center;font-size:0.95rem"><b>Figure 5: </b>Locations of previously published loci (in grey) and discovered genes (in black). As can be seen from the figure, the discovered genes are located near previously published loci. We can also observe that Mezlini’s test discover genes overlooked by T-test and logistic regression.
+Conclusion.</p>
 
-<p style="text-align:center;font-size:0.95rem"><b>Figure 5:</b>SUBTEXT</p> -->
 
 Through this project, we have shown that Mezlini’s test is able to detect associations overlooked by other statistical tests, as shown in Fig. 5. Notably,, we have also found different genes associated with COPD in African-American and Non-Hispanic White datasets. This may be due partly to the difference in the numbers of individuals (AA:NHW = 2801 :5982). Additionally, it suggests that genes have varying degrees of predisposition (to COPD) among ethnicities.
 
