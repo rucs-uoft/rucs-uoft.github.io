@@ -1,9 +1,36 @@
-<div class="container">
+<!-- <div class="container">
     <h3>Papers</h3>
     {% for post in site.posts %}
     {% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
             {% if post.year == "2017" %}
                 <p>{{post.author}} in {{post.category}} : <a href="{{ post.permalink }}">{{post.title}}</a></p>
             {% endif %}
-    {% endfor %}
+    {% endfor %} -->
+
+      <ul class="collection with-header">
+            <li class="collection-header"><h3>Artificial Intelligence</h3></li>
+            <a href="/a-feed-forward-algorithm-for-arithmetic-circuits" class="collection-item">Andrew Jemin Choi: A Feed-Forward Algorithm for Arithmetic Circuits</a>
+            <a href="/parallel-approach-to-single-source-shortest-path-problem-on-large-complete-graphs" class="collection-item">Zehui (Joyce) Zhou: User Customization of Caregiving Robots that Support Older Adults with Dementia</a>
+
+            <li class="collection-header"><h3>Computational Biology</h3></li>
+            <a href="/uncovering-predisposition-to-copd-with-predicted-gene-expression" class="collection-item">Angeline Yasodhara: Uncovering predisposition to COPD with predicted gene expression</a>
+
+            <li class="collection-header"><h3>Computer Graphics</h3></li>
+            <a href="/geodesicness-for-meshfree-simulation-methods" class="collection-item">Darren Moore: Geodesicness for Meshfree Simulation Methods</a>
+
+            <li class="collection-header"><h3>Computer Systems/Software Engineering</h3></li>
+            <a href="/parallel-approach-to-single-source-shortest-path-problem-on-large-complete-graphs" class="collection-item">Ruijian An: Parallel approach to single-source shortest path problem on large complete graphs</a>
+            
+            <li class="collection-header"><h3>HCI</h3></li>
+            <a href="/web-valuecharts-analyzing-individual-and-group-preferences-with-interactive-web-based-visualizations" class="collection-item">Aaron Mishkin: Web ValueCharts: Analyzing Individual and Group Preferences with Interactive, Web-based Visualizations</a>
+
+            <li class="collection-header"><h3>Scientific Computing/Numerical Analysis</h3></li>
+            <a href="/solving-pdes-on-deconstructed-domains-for-geometry-processing" class="collection-item">Herng Yi Cheng: Solving PDEs on Deconstructed Domains for Geometry Processing</a>
+            <a href="/numerical-pde-methods-for-discontinuous-coefficient-problem" class="collection-item">Jienan Yao: Numerical PDE Methods for Discontinuous Coefficient Problem</a>
+            
+            <li class="collection-header"><h3>Software Engineering</h3></li>
+            <a href="/history-slicing-as-a-service" class="collection-item">Shayan Kousha: History Slicing as a Service</a>
+          </ul>
+
+
 </div>

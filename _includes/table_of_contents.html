@@ -103,28 +103,3 @@
           </div>
         </li>
 
-
-        {% assign i = 1 %}
-        {% for chapter in chapter_titles %}
-          {% if chapter[0] == 'profiles and interviews' %}
-              {% assign i = i | minus: 1 %}
-          {% else %}
-            <li id="{{ chapter[0] | downcase | replace: ' ', '-' }}-mini">
-              <div class="collapsible-header toc-title">{{ chapter[0] }}</div>
-                {% for abstracts in chapter %}
-                  {% if forloop.first == false %}
-                   {% for abstract in abstracts %}
-                    <div class="collapsible-body">
-                        {% include marginless_card_panel.html %}
-                    </div>
-                    {% endfor %}
-                  {% endif %}
-                {% endfor %}
-            </li>
-          {% endif %}
-          {% assign i = i | plus: i %}
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-</div>
