@@ -8718,3 +8718,72 @@ figcaption {
 
   width: 80%;
 }
+
+/** submissions list **/
+
+.submissions-list {
+   padding: 0 5px 20px 0;
+   border: none;
+}
+
+.submissions-list .submission:first-child {
+ margin-top: 0;
+}
+
+.submission {
+ color: inherit;
+ border: 1px solid rgba(0,0,0,0.1);
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+ margin: 30px auto;
+ transition: box-shadow 0.3s ease;
+}
+
+.submission-number {
+ font-family: "Code Pro Demo";
+ color: #418D77;
+ font-size: 70px;
+ padding: 30px;
+ line-height: 1;
+ height: 50px;
+ box-sizing: content-box;
+ padding: 30px 45px;
+ transition: color 0.3s ease;
+}
+
+.submission-info {
+ padding: 25px 25px 25px 0;
+}
+
+.submission-category {
+ font-family: sans-serif;
+ font-weight: bold;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ font-size: 12px;
+ margin: 5px 0;
+}
+
+.submission-title {
+ font-size: 22px;
+ line-height: 1.2;
+}
+
+.submission-author {
+ font-family: sans-serif;
+ font-weight: bold;
+ letter-spacing: 1px;
+ font-size: 14px;
+ margin: 5px 0;
+}
+
+/* hover styles */
+.submission:hover {
+ box-shadow: 2px 2px 5px rgba(0,0,0,0);
+}
+
+.submission:hover .submission-number {
+ color: #6ABF95;
+}
