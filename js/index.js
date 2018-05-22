@@ -12,6 +12,7 @@
 
 	$(".collection-item").click(function(e) {
 		element_id = $(this).attr('href');
+		window.location.hash = element_id;
 		$(".collection").children().removeClass('chapter-active');
 		$(".collection").children().removeClass('disabled');
 		$(this).addClass('chapter-active');
@@ -40,13 +41,13 @@
 			$("#down-arrow-row").hide();
 		} else {
 			$("#down-arrow-row").show();
-		}	
+		}
 
 		if ($("#main-background").width() < 650) {
 			$("#issue-title").hide();
 		} else {
 			$("#issue-title").show();
-		}	
+		}
 
 
 	});
