@@ -32,6 +32,10 @@
           <div class="toc-title">Submissions</div>
         </a>
 
+        <a href="#letter" class="waves-light collection-item">
+          <div class="toc-title">Letter From the Editor</div>
+        </a>
+
       </div>
     </div>
 
@@ -59,7 +63,9 @@
           {% include submissions.html %}
         </div>
 
-
+          <div class="toc-chapter-content" id="letter">
+              {% include foreword.html %}
+          </div>
       </div>
     </div>
 
@@ -98,8 +104,20 @@
         <li id="submissions-mini">
           <div class="collapsible-header toc-title">Submissions</div>
           <div class="collapsible-body">
+              <!--content-->
+              {% include submissions.html %}
+          </div>
+      </li>
+
+        <li id="letter-mini">
+          <div class="collapsible-header toc-title">Letter From the Editor</div>
+          <div class="collapsible-body">
             <!--content-->
-            {% include submissions.html %}
+            {% include foreword.html %}
           </div>
         </li>
 
+      </ul>
+    </div>
+  </div>
+</div>
