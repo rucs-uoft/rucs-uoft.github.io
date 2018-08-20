@@ -18,7 +18,7 @@ It is an opportunity for your work to get published and would look great on your
 
 ###What criteria do submissions need to meet? 
 
-Your submission should be a LaTeX source file (.tex with accompanying references in a .bib file) and a PDF generated from the LaTeX source. Your submission should contain an extended abstract that is 650 – 1050 words in length (excluding the title, section headings, and citations). The extended abstract should summarize the work you have done and should be accessible to students unfamiliar with your specific field of research. Please read the exemplar, the best practices guide, and the instructions below to gain a better understanding of what is expected. 
+Your submission should be a LaTeX source file (.tex with accompanying references in a .bib file) and a PDF generated from the LaTeX source. Your submission should contain an extended abstract that is 650 – 1050 words in length (excluding the title, section headings, and citations). The extended abstract should summarize the work you have done and should be accessible to students unfamiliar with your specific field of research. Please read the [exemplar](http://rucs.ca/assets/info/Extended-Abstract-Exemplar.pdf), the [best practices guide](http://rucs.ca/assets/info/RUCS-Best-Practices-Guide.pdf), and the instructions below to gain a better understanding of what is expected. 
 
 ###What is the submission process? 
 
