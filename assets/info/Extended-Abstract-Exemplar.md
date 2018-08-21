@@ -40,6 +40,8 @@ By building off the work of Cosley et al.’s SuggestBot, we have identified a m
 
 ##References 
 
-1. Cosley D, Frankowski D, Terveen L, et al, “SuggestBot: Using Intelligent Task Routing to Help People Find Work in Wikipedia” in Proc. 12th Int. Conf. in Intelligent User Interfaces., Honolulu, HI, 2007. 
-2. Klein D, Manning C, “Accurate Unlexicalized Parsing” in Proc. 41st Meeting Association for Computational Linguistics., 2003. 
-3. Pennacchiotti M, Popescu A, “Republicans and Starbucks Afficionados: User Classification in Twitter” in Proc. 17th ACM SIGKDD Int. Conf. Knowledge Discovery and Data Mining, New York, NY, 2011. 
+[1] Cosley D, Frankowski D, Terveen L, et al, “SuggestBot: Using Intelligent Task Routing to Help People Find Work in Wikipedia” in Proc. 12th Int. Conf. in Intelligent User Interfaces., Honolulu, HI, 2007. 
+
+[2] Klein D, Manning C, “Accurate Unlexicalized Parsing” in Proc. 41st Meeting Association for Computational Linguistics., 2003. 
+
+[3] Pennacchiotti M, Popescu A, “Republicans and Starbucks Afficionados: User Classification in Twitter” in Proc. 17th ACM SIGKDD Int. Conf. Knowledge Discovery and Data Mining, New York, NY, 2011. 
