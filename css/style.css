@@ -5069,7 +5069,7 @@ nav ul a span.badge {
     width: 85%; } }
 @media only screen and (min-width: 993px) {
   .container {
-    width: 70%; } }
+    width: 80%; } }
 .container .row {
   margin-left: -0.75rem;
   margin-right: -0.75rem; }
@@ -6159,7 +6159,8 @@ a.waves-effect .waves-ripple {
   box-sizing: border-box; }
   .collapsible-body p {
     margin: 0;
-    padding: 2rem; }
+    padding: 20px;
+  }
 
 .side-nav .collapsible {
   border: none;
@@ -8480,7 +8481,7 @@ figcaption {
 
   h4 {
     font-size: 1.4rem;
-    margin-top: 4.5rem !important; }
+     }
 
   h5 {
     font-size: 1rem; }
@@ -8816,4 +8817,29 @@ figcaption {
 
 .current-issue li:hover {
  box-shadow: 2px 2px 5px rgba(0,0,0,0);
+}
+
+/* team page */
+
+.team-member h4, .team-member h6 {
+  text-transform: uppercase;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.team-member h4 {
+  color: #418D77;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.team-member h6 {
+  color: #6ABF95;
+  font-size: 12px;
+}
+
+.team-member p {
+  font-size: 13px;
+  padding: 0;
 }
