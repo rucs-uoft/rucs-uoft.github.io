@@ -23,13 +23,6 @@
         <a href="#about-us" class="waves-light collection-item">
           <span class="toc-title">About Us</span>
         </a>
-        <a href="#letter" class="waves-light collection-item">
-          <div class="toc-title">Letter From the Editor</div>
-        </a>
-        <a href="#meet-the-team" class="waves-light collection-item">
-          <div class="toc-title">Our Team</div>
-        </a>
-
         <a href="#submissions" class="waves-light collection-item">
           <div class="toc-title">Current Issue</div>
         </a>
@@ -61,10 +54,6 @@
         </div>
 
 
-        <div class="toc-chapter-content" id="meet-the-team">
-        {% include meet-the-team.html %}
-        </div>
-
         <div class="toc-chapter-content" id="submissions">
           {% include submissions.html %}
         </div>
@@ -76,10 +65,6 @@
         <div class="toc-chapter-content" id="cfp">
           {% include cfp.html %}
         </div>
-
-          <div class="toc-chapter-content" id="letter">
-              {% include foreword.html %}
-          </div>
       </div>
     </div>
 
@@ -105,23 +90,6 @@
             {% include about-us.html %}
           </div>
         </li>
-
-        <li id="meet-the-team-mini">
-          <div class="collapsible-header toc-title">Our Team</div>
-          <div class="collapsible-body">
-            <!--content-->
-            {% include meet-the-team.html %}
-          </div>
-        </li>
-
-        <li id="letter-mini">
-          <div class="collapsible-header toc-title">Letter From the Editor</div>
-          <div class="collapsible-body">
-            <!--content-->
-            {% include foreword.html %}
-          </div>
-        </li>
-
 
         <li id="submissions-mini">
           <div class="collapsible-header toc-title">Current Issue</div>
