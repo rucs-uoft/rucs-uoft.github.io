@@ -16,12 +16,12 @@ if ((pathArray.length > 3) && (pathArray[plast].indexOf("#") == 0) && (pathArray
 
 	if (pathArray[plast] == "#table-of-contents") {
 		pathArray[plast] = "#announcements";
-	} 
+	}
 
 	$(pathArray[plast]).show();
-	$('a[href=' + pathArray[plast] + ']').addClass("chapter-active");
-	$('a[href=' + pathArray[plast] + ']').addClass("disabled");
-	
+	$('.toc a[href=' + pathArray[plast] + ']').addClass("chapter-active");
+	$('.toc a[href=' + pathArray[plast] + ']').addClass("disabled");
+
 	if(pathArray[plast] != "#announcements") {
 		var mini_name = pathArray[plast] + "-mini";
 		$(mini_name).addClass("active");
@@ -33,10 +33,10 @@ if ((pathArray.length > 3) && (pathArray[plast].indexOf("#") == 0) && (pathArray
 	}
 } else {
 	$("#announcements").show();
-	$('a[href=' + "#announcements" + ']').addClass("chapter-active");
-        $('a[href=' + "#announcements" + ']').addClass("disabled");
+	$('.toc a[href=' + "#announcements" + ']').addClass("chapter-active");
+        $('.toc a[href=' + "#announcements" + ']').addClass("disabled");
 	// if mobile, no need to expand letter from the editor
-} 
+}
 
 $(function(){
 

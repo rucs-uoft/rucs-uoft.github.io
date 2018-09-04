@@ -15,8 +15,8 @@
 		window.location.hash = element_id;
 		$(".collection").children().removeClass('chapter-active');
 		$(".collection").children().removeClass('disabled');
-		$(this).addClass('chapter-active');
-		$(this).addClass('disabled');
+		$(".toc .collection-item[href='" + element_id + "']").addClass('chapter-active');
+		$(".toc .collection-item[href='" + element_id + "']").addClass('disabled');
 		$(".toc-content").children().hide();
 		$(element_id).show();
 		e.preventDefault();
