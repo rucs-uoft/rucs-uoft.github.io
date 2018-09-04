@@ -69,6 +69,14 @@
           {% include submissions.html %}
         </div>
 
+        <div class="toc-chapter-content" id="archive">
+          {% include archive.html %}
+        </div>
+
+        <div class="toc-chapter-content" id="cfp">
+          {% include cfp.html %}
+        </div>
+
           <div class="toc-chapter-content" id="letter">
               {% include foreword.html %}
           </div>
@@ -106,15 +114,6 @@
           </div>
         </li>
 
-
-        <li id="submissions-mini">
-          <div class="collapsible-header toc-title">Submissions</div>
-          <div class="collapsible-body">
-              <!--content-->
-              {% include submissions.html %}
-          </div>
-      </li>
-
         <li id="letter-mini">
           <div class="collapsible-header toc-title">Letter From the Editor</div>
           <div class="collapsible-body">
@@ -122,6 +121,33 @@
             {% include foreword.html %}
           </div>
         </li>
+
+
+        <li id="submissions-mini">
+          <div class="collapsible-header toc-title">Current Issue</div>
+          <div class="collapsible-body">
+              <!--content-->
+              {% include submissions.html %}
+          </div>
+      </li>
+
+
+        <li id="archive-mini">
+          <div class="collapsible-header toc-title">Archive</div>
+          <div class="collapsible-body">
+              <!--content-->
+              {% include archive.html %}
+          </div>
+        </li>
+
+
+        <li id="cfp-mini">
+          <div class="collapsible-header toc-title">Submit to RUCS</div>
+          <div class="collapsible-body">
+              <!--content-->
+              {% include cfp.html %}
+          </div>
+      </li>
 
       </ul>
     </div>
