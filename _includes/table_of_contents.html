@@ -33,8 +33,9 @@
           <span class="toc-title">Submit to RUCS</span>
         </a>
 
-
-
+        <a href="#openings" target="_blank" class="waves-light collection-item">
+          <span class="toc-title">Open Positions</span>
+        </a>
       </div>
     </div>
 
@@ -64,6 +65,10 @@
 
         <div class="toc-chapter-content" id="cfp">
           {% include cfp.html %}
+        </div>
+
+        <div class="toc-chapter-content" id="openings">
+          {% include openings.html %}
         </div>
       </div>
     </div>
@@ -115,7 +120,15 @@
               <!--content-->
               {% include cfp.html %}
           </div>
-      </li>
+        </li>
+
+        <li id="openings-mini">
+          <div class="collapsible-header toc-title">Open Positions</div>
+          <div class="collapsible-body">
+              <!--content-->
+              {% include openings.html %}
+          </div>
+        </li>
 
       </ul>
     </div>

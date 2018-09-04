@@ -1,4 +1,4 @@
-#Join Us! 
+#Open Positions
 
 The Review of Undergraduate Computer Science (RUCS) is the first publication from a top 20 university dedicated solely to undergraduate computer science. We feature the best of undergraduate computer science research at home and abroad. 
 
@@ -8,7 +8,7 @@ We are currently building our 2018/2019 team. Please consider applying if you wo
 - add meaningful academic experience to your CV
 - improve your understanding of how research is conducted, reviewed, and published
 
-The deadline to apply is **November 5th, 2018**. 
+The deadline to apply is **October 16th, 2018**. 
 
 
 
@@ -39,7 +39,7 @@ We are looking for students who:
 
 - have excellent language skills
 - are highly proficient at reading and writing in English
-- are passionate about academia and science
+- are passionate about academia and science 
 
 ##### Assets
 
@@ -76,7 +76,7 @@ to rucsuoft@gmail.com by November 5th.
 We are looking for students who:
 
 - are knowledgable about computer science
-- have excellent writing skills 
+- have excellent language skills and enjoy writing
 - are passionate about computer science research and education
 
 ##### Assets
@@ -113,33 +113,25 @@ to rucsuoft@gmail.com by November 5th.
 
 We are looking for students who:
 
-- have excellent language skills
-- are highly proficient at reading and writing in English
-- are passionate about academia and science
-
-##### Assets
-
-We will give preference to candidates who:
-
-- are proficient at LaTeX
-- are enrolled in a computer science program
+- have experience designing layouts for the web
+- have a good eye for colour and typography
+- know how to use industry-standard design software such as Illustrator or Sketch 
 
 ##### Responsibilities
 
-As a RUCS graphic designer, you will:
+As a RUCS graphic designer/web designer, you will:
 
-- read and edit 5-10 extended abstracts (650–1050 words each)
-- coordinate with authors throughout the process of revising their submissions
-- coordinate with RUCS designers and developers throughout the publication of the next issue
+- refresh the look of the website in preparation for the new issue
+- coordinate with the web developers in implementing your designs on the website
+- design layouts for more complex submissions (such as submissions that include graphics or illustrations)
 
 ##### Application
 
 To apply for this role, please fill out the [application form](https://docs.google.com/forms/d/e/1FAIpQLSfe9FgzRTT-s_5mRIssjUmHrHQrTy-6yV5v50N_z8PIr08ztA/viewform?usp=sf_link) and send
 
 - a CV/resume,
-- a cover letter, 
-- an unofficial transcript, and
-- one or two writing samples 
+- a cover letter,  and 
+- two or three sample design projects (please provide links or images and a short write-up for each)
 
 to rucsuoft@gmail.com by November 5th. 
 
@@ -173,7 +165,7 @@ To apply for this role, please fill out the [application form](https://docs.goog
 
 - a CV/resume,
 - a cover letter, and
-- two or three sample projects (provide links and a short write-up for each)
+- two or three sample web projects (please provide links and a short write-up for each)
 
 to rucsuoft@gmail.com by November 5th.
 

@@ -8819,7 +8819,9 @@ figcaption {
  box-shadow: 2px 2px 5px rgba(0,0,0,0);
 }
 
+/*-----------*/
 /* team page */
+/*-----------*/
 
 .team-member h4, .team-member h6 {
   text-transform: uppercase;
@@ -8842,4 +8844,16 @@ figcaption {
 .team-member p {
   font-size: 13px;
   padding: 0;
+}
+
+/*---------------*/
+/* openings page */
+/*---------------*/
+
+.openings ul {
+  padding-left: 20px;
+}
+
+.openings li {
+  list-style-type: disc;
 }
