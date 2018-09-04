@@ -3,7 +3,7 @@
 
 {% for item in site.posts %}
     {% if item.year != "2015" %}
-        {% unless goodCats contains item.category %} 
+        {% unless goodCats contains item.category %}
             {% assign goodCats = goodCats | push: item.category %}
         {% endunless %}
     {% endif %}
@@ -31,7 +31,13 @@
         </a>
 
         <a href="#submissions" class="waves-light collection-item">
-          <div class="toc-title">Submissions</div>
+          <div class="toc-title">Current Issue</div>
+        </a>
+        <a href="#archive" class="waves-light collection-item">
+          <div class="toc-title">Archive</div>
+        </a>
+        <a href="#cfp" target="_blank" class="waves-light collection-item">
+          <span class="toc-title">Submit to RUCS</span>
         </a>
 
 
@@ -41,7 +47,7 @@
 
     <div class="col s12 m9 l9 height-fix hide-on-small-and-down" id="toc-content-wrapper">
       <div class="toc-content height-fix" id="toc-content">
-       
+
 
         <div class="toc-chapter-content" id="announcements">
           <div id="news">
@@ -53,8 +59,8 @@
         <div class="toc-chapter-content" id="about-us">
         {% include about-us.html %}
         </div>
-          
-        
+
+
         <div class="toc-chapter-content" id="meet-the-team">
         {% include meet-the-team.html %}
         </div>
