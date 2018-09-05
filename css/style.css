@@ -8825,6 +8825,29 @@ figcaption {
  box-shadow: 2px 2px 5px rgba(0,0,0,0);
 }
 
+@media only screen and (max-width: 600px) {
+    .current-issue .collapsible-header {
+      line-height: 1.1;
+      font-size: 10px;
+      padding: 15px;
+      text-align: center;
+    }
+    .current-issue .submission, .current-issue li {
+      margin: 10px auto;
+    }
+    .submission-number {
+      display: none;
+    }
+
+    .submission-info {
+      padding: 15px;
+    }
+
+    .submission-title {
+      font-size: 17px;
+    }
+}
+
 /*-----------*/
 /* team page */
 /*-----------*/
@@ -8901,4 +8924,10 @@ hr {
 .toc .collection-item.chapter-active {
   border-left: 4px solid #6ABF95;
   background-color: #CDECB9;
+}
+
+@media only screen and (max-width: 600px) {
+    .toc-container {
+      width: 100%;
+    }
 }
