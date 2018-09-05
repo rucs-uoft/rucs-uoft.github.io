@@ -1817,6 +1817,7 @@ figure {
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+  border-color: #418D77;
   height: 0; }
 
 /**
@@ -2071,7 +2072,7 @@ ul {
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
-  border-left: 5px solid #be4e5a; }
+  border-left: 5px solid #6ABF95; }
 
 i {
   line-height: inherit; }
@@ -2107,7 +2108,7 @@ video.responsive-video {
   .pagination li.active a {
     color: #fff; }
   .pagination li.active {
-    background-color: #be4e5a; }
+    background-color: #6ABF95; }
   .pagination li.disabled a {
     cursor: default;
     color: #999; }
@@ -2216,7 +2217,7 @@ ul.staggered-list li {
 footer.page-footer {
   margin-top: 20px;
   padding-top: 20px;
-  background-color: #be4e5a; }
+  background-color: #6ABF95; }
   footer.page-footer .footer-copyright {
     overflow: hidden;
     height: 50px;
@@ -5283,7 +5284,7 @@ nav ul a span.badge {
 
 nav {
   color: #fff;
-  background-color: #be4e5a;
+  background-color: #6ABF95;
   width: 100%;
   height: 56px;
   line-height: 56px; }
@@ -5428,7 +5429,9 @@ nav {
   src: url("../font/roboto/Roboto-Bold.woff2") format("woff2"), url("../font/roboto/Roboto-Bold.woff") format("woff"), url("../font/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 700; }
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #6ABF95;
+}
 
 html {
   line-height: 1.5;
@@ -5445,9 +5448,13 @@ html {
     html {
       font-size: 15px; } }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .archive-title {
   font-weight: 400;
-  line-height: 1.1; }
+  font-family: "Code Pro Demo";
+  color: #6ABF95;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-weight: inherit; }
@@ -5756,7 +5763,7 @@ small {
     letter-spacing: .8px;
     width: 15%; }
     .tabs .tab a {
-      color: #be4e5a;
+      color: #6ABF95;
       display: block;
       width: 100%;
       height: 100%;
@@ -7265,7 +7272,7 @@ select {
       left: auto; } }
 .side-nav .collapsible-body li.active,
 .side-nav.fixed .collapsible-body li.active {
-  background-color: #be4e5a; }
+  background-color: #6ABF95; }
   .side-nav .collapsible-body li.active a,
   .side-nav.fixed .collapsible-body li.active a {
     color: #fff; }
@@ -8374,7 +8381,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   src: url("../font/cmu-serif/cmunbi.ttf");
   font-weight: bold;
   font-style: italic; }
-html * {
+html {
   font-family: "CMU Serif"; }
 
 img, figure {
@@ -8395,9 +8402,6 @@ figcaption {
   margin-right: 2px;
   padding-top: 20px;
   padding-bottom: 20px; }
-
-.chapter-active {
-  border-left: 4px solid #8c333d !important; }
 
 .header-background {
   background: url("../resources/backgroundweb2017.png");
@@ -8507,7 +8511,7 @@ figcaption {
     width: 45%;
     height: 250px;
     margin: 0.5rem !important;
-    background-color: #be4e5a; } }
+    background-color: #6ABF95; } }
 @media only screen and (max-width: 650px) {
   .background {
     height: 100vh;
@@ -8569,10 +8573,10 @@ figcaption {
     width: inherit;
     min-height: 200px;
     margin: 0.5rem !important;
-    background-color: #be4e5a; } }
+    background-color: #6ABF95; } }
 .marginless-card-panel {
   padding: 20px;
-  background-color: #be4e5a;
+  background-color: #6ABF95;
   border-radius: 0; }
 
 .card-content {
@@ -8605,14 +8609,16 @@ figcaption {
   font-family: "Code Pro Demo"; }
 
 .toc-title {
-  color: #8c333d;
+  color: #418D77;
   text-transform: none;
-  font-weight: bold;
   word-wrap: break-word;
+  font-family: "Code Pro Demo";
+  letter-spacing: 2px;
+  font-size: 13px;
 }
 
 .toc-enum {
-  color: #8c333d;
+  color: #418D77;
   font-weight: 300; }
 
 .toc-chapter-content {
@@ -8682,7 +8688,7 @@ figcaption {
   margin-top: 225px; }
 
 .cyan-hover:hover {
-  text-shadow: 0 0 10px #be4e5a; }
+  text-shadow: 0 0 10px #6ABF95; }
 
 .footer-row {
   display: flex;
@@ -8701,7 +8707,7 @@ figcaption {
   transition: background 0.15s linear;
   transition-property: background-color; }
 .navbar-fixed .header-background .nav-wrapper div:hover {
-  background-color: #be4e5a; }
+  background-color: #6ABF95; }
 .navbar-fixed .header-background .nav-wrapper .brand-logo {
   left: 50%;
   top: 7%;
@@ -8737,7 +8743,7 @@ figcaption {
  display: flex;
  flex-direction: row;
  align-items: center;
- box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+ box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
  margin: 30px auto;
  transition: box-shadow 0.3s ease;
 }
@@ -8810,7 +8816,7 @@ figcaption {
 
 .current-issue li {
   border: 1px solid rgba(0,0,0,0.1);
-  box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   margin: 30px auto;
   transition: box-shadow 0.3s ease;
 }
@@ -8834,6 +8840,10 @@ figcaption {
   color: #418D77;
   font-size: 20px;
   font-weight: 200;
+  font-family: "Code Pro Demo";
+  letter-spacing: 2px;
+  line-height: 1;
+  margin: 5px 0;
 }
 
 .team-member h6 {
@@ -8856,4 +8866,39 @@ figcaption {
 
 .openings li {
   list-style-type: disc;
+}
+
+
+/*------*/
+/* news */
+/*------*/
+
+hr {
+  border-style: inherit;
+  border-top: 1px solid #BCE6BE;
+}
+
+/*-----*/
+/* toc */
+/*-----*/
+
+.toc .collection .collection-item {
+  padding: 20px 20px 15px 20px;
+}
+
+.toc .collection a.collection-item:not(.active):hover {
+  background: #B5E3BF;
+}
+
+.toc .collection a.collection-item:not(.active) .toc-title {
+  transition: color 0.1s ease;
+}
+
+.toc .collection a.collection-item:not(.active):hover .toc-title {
+  color: #fff;
+}
+
+.toc .collection-item.chapter-active {
+  border-left: 4px solid #6ABF95;
+  background-color: #CDECB9;
 }

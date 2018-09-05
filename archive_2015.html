@@ -1,25 +1,24 @@
 ---
 layout: default
-css: masthead.css
-title: "Masthead"
+title: "Fall 2015"
 permalink: /archive_2015
 ---
 <div style="padding: 0% 20% 5% 21%;font-size: 1rem;">
     <br><br>
     <h1 class='archive-title'>Fall 2015</h1>
-    
+
     <!-- Foreword -->
     <p>Within these pages, we lay bare the best of undergraduate computer science research at the University of Toronto. For the budding researcher, we hope this will inspire and impel you to pursue the path of those published here; for the curious reader, we seek to clarify and distill, to further your interest in this varied and dynamic discipline.</p>
-    
+
     <p>This inaugural issue was made possible by dint of a tremendous effort from faculty and students alike. It was completed with great haste - its release coming barely four months after its humble beginnings - and its success is a testament to the quality of its contributors' work and its fastidious staff.</p>
-    
+
     <p>In particular, this review would not have materialized if not for these following individuals. They have my deepest thanks and eternal gratitude. Leanne Dawkins: for answering my incessant questions with indefatigable enthusiasm. Paul Gries and Marsha Chechik: for breathing life into a fledgling idea. Diane Horton: for bolstering this project during its tremulous start. Nina Haikara: for promoting this review like none other could have. Courtney Mogavero: for the amazing event at Google Toronto.</p>
-    
+
     <p>Sam Toueg: for your sage advice, your unwavering support, and your humor - I could not have asked for more. Jaren, Julia, Muhammad, and Sara: for the passion you brought during even the most difficult of times, and for your brilliance and infinite patience, of which I am in awe. It has been a pleasure.</p>
 
     <p id="signature">Kawin Ethayarajh<br/><em>Editor-in-Chief</em>, RUCS</p>
 
-    <h3 style="font-family: Calibri">Papers</h3>
+    <h3 >Papers</h3>
     {% for post in site.posts %}
     {% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
             {% if post.year == "2015" %}
@@ -27,7 +26,7 @@ permalink: /archive_2015
             {% endif %}
     {% endfor %}
 
-    <h3 style="font-family: Calibri">Masthead</h3>
+    <h3 >Masthead</h3>
 
 <table>
     <tr>
@@ -53,6 +52,6 @@ permalink: /archive_2015
         <th><em>Webmaster</em></th>
         <th>Muhammad Osama</th>
     </tr>
-			
+
 </table>
 </div>

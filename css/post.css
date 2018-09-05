@@ -8478,7 +8478,7 @@ figcaption {
 
   h4 {
     font-size: 1.4rem;
-    margin-top: 4.5rem !important; }
+   }
 
   h5 {
     font-size: 1rem; }
@@ -8711,59 +8711,59 @@ figcaption {
   margin-bottom: 40px; }
   @media only screen and (max-width: 650px) {
     .post-container .post-content h1 {
-      font-family: "Calibri" !important;
-      font-size: 2.5em !important;
+      font-family: sans-serif;
+      font-size: 25px;
       font-weight: 300 !important;
       margin-top: 4.5rem !important; }
     .post-container .post-content h2 {
-      font-family: "Calibri" !important;
-      font-size: 2.28rem;
+      font-family: sans-serif;
+      font-size: 22px;
       font-weight: 300; }
     .post-container .post-content h3 {
-      font-family: "Calibri" !important;
-      font-size: 1.625em;
+      font-family: sans-serif;
+      font-size: 20px;
       font-weight: 300;
       margin-top: 3rem !important; }
     .post-container .post-content h4 {
-      font-family: "Calibri" !important;
-      font-size: 1.4rem;
+      font-family: sans-serif;
+      font-size: 18px;
       font-weight: 300;
       margin-top: 4.5rem !important; }
     .post-container .post-content h5 {
-      font-family: "Calibri" !important;
-      font-size: 1rem;
+      font-family: sans-serif;
+      font-size: 16px;
       font-weight: 300; }
     .post-container .post-content h6 {
-      font-family: "Calibri" !important;
-      font-size: 1rem;
+      font-family: sans-serif;
+      font-size: 16px;
       font-weight: 300; } }
   @media only screen and (min-width: 651px) {
     .post-container .post-content h1 {
-      font-family: "Calibri" !important;
-      font-size: 2.5em !important;
+      font-family: sans-serif;
+      font-size: 25px;
       font-weight: 300 !important;
       margin-top: 4.5rem !important; }
     .post-container .post-content h2 {
-      font-family: "Calibri" !important;
-      font-size: 2.28rem;
+      font-family: sans-serif;
+      font-size: 22px;
       font-weight: 300; }
     .post-container .post-content h3 {
-      font-family: "Calibri" !important;
-      font-size: 1.625em;
+      font-family: sans-serif;
+      font-size: 20px;
       font-weight: 300;
       margin-top: 3rem !important; }
     .post-container .post-content h4 {
-      font-family: "Calibri" !important;
-      font-size: 1.4rem;
+      font-family: sans-serif;
+      font-size: 18px;
       font-weight: 300;
       margin-top: 4.5rem !important; }
     .post-container .post-content h5 {
-      font-family: "Calibri" !important;
-      font-size: 1rem;
+      font-family: sans-serif;
+      font-size: 16px;
       font-weight: 300; }
     .post-container .post-content h6 {
-      font-family: "Calibri" !important;
-      font-size: 1rem;
+      font-family: sans-serif;
+      font-size: 16px;
       font-weight: 300; } }
   .post-container .post-content table {
     margin-bottom: 8px !important; }
@@ -8782,9 +8782,9 @@ figcaption {
   text-align: center; }
   @media only screen and (min-width: 651px) {
     .post-header .post-title {
-      font-family: "Calibri";
+      font-family: sans-serif;
       font-weight: 300;
-      font-size: 3.56rem;
+      font-size: 35px;
       text-align: center;
       line-height: 1.35; }
     .post-header .post-author {
@@ -8798,9 +8798,9 @@ figcaption {
       margin: 10px 0 0 0 !important; } }
   @media only screen and (max-width: 650px) {
     .post-header .post-title {
-      font-family: "Calibri";
+      font-family: sans-serif;
       font-weight: 300;
-      font-size: 3rem;
+      font-size: 30px;
       text-align: center;
       line-height: 1.35; }
     .post-header .post-author {
