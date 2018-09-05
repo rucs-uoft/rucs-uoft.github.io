@@ -8474,14 +8474,14 @@ figcaption {
 
   h1 {
     font-size: 2.92rem;
-    margin-top: 4.5rem !important; }
+    margin-top: 4.5rem; }
 
   h2 {
     font-size: 2.28rem; }
 
   h3 {
     font-size: 1.64rem;
-    margin-top: 3rem !important; }
+    margin-top: 3rem; }
 
   h4 {
     font-size: 1.4rem;
@@ -8536,18 +8536,18 @@ figcaption {
 
   h1 {
     font-size: 2.28rem;
-    margin-top: 4.5rem !important; }
+    margin-top: 4.5rem; }
 
   h2 {
     font-size: 1.64rem; }
 
   h3 {
     font-size: 1.5rem;
-    margin-top: 3rem !important; }
+    margin-top: 3rem; }
 
   h4 {
     font-size: 1.4rem;
-    margin-top: 4.5rem !important; }
+    margin-top: 4.5rem; }
 
   h5 {
     font-size: 1rem; }
@@ -8852,6 +8852,16 @@ figcaption {
 /* team page */
 /*-----------*/
 
+.team-member {
+  width: 50%;
+  padding: 5px;
+}
+
+.team-member-row {
+  display: flex;
+  flex-direction: row;
+}
+
 .team-member h4, .team-member h6 {
   text-transform: uppercase;
   font-family: sans-serif;
@@ -8877,6 +8887,19 @@ figcaption {
 .team-member p {
   font-size: 13px;
   padding: 0;
+}
+
+@media only screen and (max-width: 900px) {
+    .team-member-row {
+      display: block;
+    }
+    .team-member {
+      width: 100%;
+      text-align: center;
+    }
+    .team-member h4, .team-member h6 {
+      margin: 10px;
+    }
 }
 
 /*---------------*/
