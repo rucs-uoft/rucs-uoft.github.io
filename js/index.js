@@ -20,6 +20,7 @@
 		$(".toc-content").children().hide();
 		$(element_id).show();
 		e.preventDefault();
+		return false;
 	});
 
 	$(".card").hover(

@@ -27,9 +27,6 @@ if ((pathArray.length > 3) && (pathArray[plast].indexOf("#") == 0) && (pathArray
 		$(mini_name).addClass("active");
 		$(mini_name).children().first().addClass("active");
 
-		if($(mini_name).is(':visible')) {
-			window.location.href = "#table-of-contents";
-		}
 	}
 } else {
 	$("#announcements").show();

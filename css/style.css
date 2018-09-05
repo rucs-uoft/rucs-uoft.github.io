@@ -8891,6 +8891,15 @@ figcaption {
   list-style-type: disc;
 }
 
+/*-------*/
+/* about */
+/*-------*/
+
+@media only screen and (max-width: 600px) {
+  .collapsible-body p {
+    padding: 10px;
+  }
+}
 
 /*------*/
 /* news */
