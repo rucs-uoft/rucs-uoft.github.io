@@ -1,6 +1,6 @@
 #Open Positions
 
-The Review of Undergraduate Computer Science (RUCS) is the first publication from a top 20 university dedicated solely to undergraduate computer science. We feature the best of undergraduate computer science research at home and abroad. 
+The Review of Undergraduate Computer Science (RUCS) is the first publication from a top 20 university dedicated solely to undergraduate computer science. We feature the best of undergraduate computer science research at home and abroad.
 
 We are currently building our 2018/2019 team. Please consider applying if you would like to:
 - get a taste of professional academia
@@ -8,13 +8,13 @@ We are currently building our 2018/2019 team. Please consider applying if you wo
 - add meaningful academic experience to your CV
 - improve your understanding of how research is conducted, reviewed, and published
 
-The deadline to apply is **October 16th, 2018**. 
+The deadline to apply is **October 16th, 2018**.
 
 
 
 # Who Can Apply
 
-All applicants must currently be undergraduate students enrolled at a university. Preference will be given to students who are located in Toronto. 
+All applicants must currently be undergraduate students enrolled at a university. Preference will be given to students who are located in Toronto.
 
 
 
@@ -25,7 +25,7 @@ We are looking for talented and passionate students to fill the following roles:
 - [Editor](#Editor) (x3)
 - [Writer](#Writer) (x2)
 - [Graphic Designer/Web Designer](#Graphic Designer/Web Designer) (x1)
-- [Web Developer](#Web Developer) (x2) 
+- [Web Developer](#Web Developer) (x2)
 - [Graphic Artist/Illustrator](#Graphic Artist/Illustrator) (x2)
 - [Coordinator](#Coordinator) (x1)
 
@@ -39,7 +39,7 @@ We are looking for students who:
 
 - have excellent language skills
 - are highly proficient at reading and writing in English
-- are passionate about academia and science 
+- are passionate about academia and science
 
 ##### Assets
 
@@ -61,11 +61,11 @@ As a RUCS editor, you will:
 To apply for this role, please fill out the [application form](https://docs.google.com/forms/d/e/1FAIpQLSfe9FgzRTT-s_5mRIssjUmHrHQrTy-6yV5v50N_z8PIr08ztA/viewform?usp=sf_link) and send
 
 - a CV/resume,
-- a cover letter, 
+- a cover letter,
 - an unofficial transcript, and
-- one or two writing samples 
+- one or two writing samples
 
-to rucsuoft@gmail.com by November 5th. 
+to rucsuoft@gmail.com by October 16th.
 
 
 
@@ -91,7 +91,7 @@ We will give preference to candidates who:
 As a RUCS writer, you will:
 
 - conduct interviews with established computer science researchers
-- write 1-2 interview-based articles 
+- write 1-2 interview-based articles
 - write 1-2 articles on another topic (not yet determined)
 - coordinate with RUCS designers and developers throughout the publication of your articles in the next issue
 
@@ -101,9 +101,9 @@ To apply for this role, please fill out the [application form](https://docs.goog
 
 - a CV/resume
 - a cover letter  
-- two or three writing samples 
+- two or three writing samples
 
-to rucsuoft@gmail.com by November 5th.
+to rucsuoft@gmail.com by October 16th.
 
 
 
@@ -115,7 +115,7 @@ We are looking for students who:
 
 - have experience designing layouts for the web
 - have a good eye for colour and typography
-- know how to use industry-standard design software such as Illustrator or Sketch 
+- know how to use industry-standard design software such as Illustrator or Sketch
 
 ##### Responsibilities
 
@@ -130,10 +130,10 @@ As a RUCS graphic designer/web designer, you will:
 To apply for this role, please fill out the [application form](https://docs.google.com/forms/d/e/1FAIpQLSfe9FgzRTT-s_5mRIssjUmHrHQrTy-6yV5v50N_z8PIr08ztA/viewform?usp=sf_link) and send
 
 - a CV/resume,
-- a cover letter,  and 
+- a cover letter,  and
 - two or three sample design projects (please provide links or images and a short write-up for each)
 
-to rucsuoft@gmail.com by November 5th. 
+to rucsuoft@gmail.com by October 16th.
 
 
 
@@ -141,13 +141,13 @@ to rucsuoft@gmail.com by November 5th.
 
 ##### Requirements
 
-We are looking for students who have experience making websites using HTML, CSS, Javascript, and Git. 
+We are looking for students who have experience making websites using HTML, CSS, Javascript, and Git.
 
 ##### Assets
 
 We will give preference to candidates who:
 
-- have used Jekyll and GitHub Pages before 
+- have used Jekyll and GitHub Pages before
 - have had a job or internship as a web developer  
 
 ##### Responsibilities
@@ -155,7 +155,7 @@ We will give preference to candidates who:
 As a RUCS web developer, you will:
 
 - update content on the website
-- coordinate with designers to implement design updates on the website 
+- coordinate with designers to implement design updates on the website
 - make improvements to the website's code
 - coordinate with RUCS designers, writers, and editors throughout the publication of the next issue
 
@@ -167,7 +167,7 @@ To apply for this role, please fill out the [application form](https://docs.goog
 - a cover letter, and
 - two or three sample web projects (please provide links and a short write-up for each)
 
-to rucsuoft@gmail.com by November 5th.
+to rucsuoft@gmail.com by October 16th.
 
 
 
@@ -177,7 +177,7 @@ to rucsuoft@gmail.com by November 5th.
 
 We are looking for students who:
 
-- are fascinated by science and technology 
+- are fascinated by science and technology
 - are skilled at creating visual interpretations of abstract concepts
 
 ##### Responsibilities
@@ -196,17 +196,17 @@ To apply for this role, please send
 - a cover letter, and
 - a portfolio or a few work samples
 
-to rucsuoft@gmail.com by November 5th.
+to rucsuoft@gmail.com by October 16th.
 
 
 
-## Coordinator 
+## Coordinator
 
 ##### Requirements
 
 We are looking for students who:
 
-- have good communication skills 
+- have good communication skills
 - are enthusiastic, organized, and punctual
 - are interested in computer science   
 
@@ -216,18 +216,13 @@ As a RUCS coordinator, you will:
 
 - liaise with other organizations to communicate the RUCS mission, obtain funding, coordinate events with other students groups, etc
 - set meetings and establish timelines
-- help keep RUCS documentation up-to-date and communicate important updates and deadlines to RUCS stakeholders 
+- help keep RUCS documentation up-to-date and communicate important updates and deadlines to RUCS stakeholders
 
 ##### Application
 
 To apply for this role, please fill out the [application form](https://docs.google.com/forms/d/e/1FAIpQLSfe9FgzRTT-s_5mRIssjUmHrHQrTy-6yV5v50N_z8PIr08ztA/viewform?usp=sf_link) and send
 
-- a CV/resume, and 
+- a CV/resume, and
 - a cover letter
 
-to rucsuoft@gmail.com by November 5th. 
-
-
-
-
-
+to rucsuoft@gmail.com by October 16th.
