@@ -36,6 +36,10 @@
         <a href="#openings" target="_blank" class="waves-light collection-item">
           <span class="toc-title">Open Positions</span>
         </a>
+
+        <a href="#get_involved" target="_blank" class="waves-light collection-item">
+          <span class="toc-title">Get Involved</span>
+        </a>
       </div>
     </div>
 
@@ -69,6 +73,10 @@
 
         <div class="toc-chapter-content" id="openings">
           {% include openings.html %}
+        </div>
+
+        <div class="toc-chapter-content" id="get_involved">
+          {% include get_involved.html %}
         </div>
       </div>
     </div>
@@ -127,6 +135,14 @@
           <div class="collapsible-body">
               <!--content-->
               {% include openings.html %}
+          </div>
+        </li>
+
+        <li id="get_involved-mini">
+          <div class="collapsible-header toc-title">Get Involved</div>
+          <div class="collapsible-body">
+              <!--content-->
+              {% include get_involved.html %}
           </div>
         </li>
 
