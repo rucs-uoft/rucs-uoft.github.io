@@ -6,6 +6,7 @@ The RUCS website.
 - Install Bundler: ```gem install bundler```
 - Install project dependencies: ```bundle install```
 - Run the server locally: ```bundle exec jekyll serve```
+- Build for deployment: ```bundle exec jekyll build```
 
 #### Troubleshooting
 If you are on Mac OS and encounter errors during installation, try:
