@@ -8674,7 +8674,7 @@ figcaption {
   text-shadow: 0 0 10px white; }
 
 #down-arrow-row {
-  margin-top: 225px; }
+  margin-top: 10%; }
 
 .cyan-hover:hover {
   text-shadow: 0 0 10px #be4e5a; }
