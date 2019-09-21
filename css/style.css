@@ -8657,13 +8657,18 @@ figcaption {
   left: 0; }
 
 .review-title-container {
-  position: absolute;
+  position: relative;
   bottom: 40%;
   width: inherit;
-  margin: auto; }
+  margin: auto; 
+}
+
+.review-title-container .responsive-img {
+  width: 60%;
+}
 
 .review-subtitle-container {
-  position: absolute;
+  position: relative;
   top: 55%;
   width: inherit;
   margin: auto; }
@@ -8685,7 +8690,7 @@ figcaption {
   text-shadow: 0 0 10px white; }
 
 #down-arrow-row {
-  margin-top: 225px; }
+  margin-top: 10%; }
 
 .cyan-hover:hover {
   text-shadow: 0 0 10px #6ABF95; }
@@ -8846,6 +8851,15 @@ figcaption {
     .submission-title {
       font-size: 17px;
     }
+
+    .review-title-container > .responsive-img {
+      width: 80%;
+    }
+    
+    .review-subtitle-container .review-subtitle {
+      font-size: 16px;
+      margin-top: 10px
+    } 
 }
 
 /*-----------*/
