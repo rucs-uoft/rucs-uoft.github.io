@@ -8657,18 +8657,13 @@ figcaption {
   left: 0; }
 
 .review-title-container {
-  position: relative;
+  position: absolute;
   bottom: 40%;
   width: inherit;
-  margin: auto; 
-}
-
-.review-title-container .responsive-img {
-  width: 60%;
-}
+  margin: auto; }
 
 .review-subtitle-container {
-  position: relative;
+  position: absolute;
   top: 55%;
   width: inherit;
   margin: auto; }
@@ -8690,7 +8685,7 @@ figcaption {
   text-shadow: 0 0 10px white; }
 
 #down-arrow-row {
-  margin-top: 10%; }
+  margin-top: 225px; }
 
 .cyan-hover:hover {
   text-shadow: 0 0 10px #6ABF95; }
@@ -8851,15 +8846,6 @@ figcaption {
     .submission-title {
       font-size: 17px;
     }
-
-    .review-title-container > .responsive-img {
-      width: 80%;
-    }
-    
-    .review-subtitle-container .review-subtitle {
-      font-size: 16px;
-      margin-top: 10px
-    } 
 }
 
 /*-----------*/
