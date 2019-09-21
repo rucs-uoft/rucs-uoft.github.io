@@ -8852,7 +8852,7 @@ figcaption {
       font-size: 17px;
     }
 
-    .review-title-container > .responsive-img {
+    .review-title-container .responsive-img {
       width: 80%;
     }
     
