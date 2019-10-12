@@ -8401,7 +8401,7 @@ figcaption {
   background-position: center; }
 
 .review-subtitle {
-  font-family: "Code Pro Demo";
+  font-family: "Archive";
   letter-spacing: 0.2em;
   line-height: 2em; }
 
@@ -8488,7 +8488,7 @@ figcaption {
 
   .review-title {
     font-size: 10em;
-    font-family: "Code Pro Demo"; }
+    font-family: "Archive"; }
 
   #masthead-link {
     padding-left: 6%;
@@ -8553,7 +8553,7 @@ figcaption {
 
   .review-title {
     font-size: 8em;
-    font-family: "Code Pro Demo"; }
+    font-family: "Archive"; }
 
   .full-width {
     width: 100%; }
@@ -8599,7 +8599,7 @@ figcaption {
   box-shadow: 0 !important; }
 
 .brand-logo {
-  font-family: "Code Pro Demo"; }
+  font-family: "Archive"; }
 
 .toc-title {
   color: #8c333d;
