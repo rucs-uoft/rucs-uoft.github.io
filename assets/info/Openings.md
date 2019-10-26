@@ -1,14 +1,14 @@
-#Open Positions
+# Open Positions
 
 The Review of Undergraduate Computer Science (RUCS) is the first publication from a top 20 university dedicated solely to undergraduate computer science. We feature the best of undergraduate computer science research at home and abroad.
 
-We are currently building our 2018/2019 team. Please consider applying if you would like to:
+We are currently building our 2019/2020 team. Please consider applying if you would like to:
 - get a taste of professional academia
 - forge connections with your peers in CS
 - add meaningful academic experience to your CV
 - improve your understanding of how research is conducted, reviewed, and published
 
-The deadline to apply is **October 16th, 2018**.
+The deadline to apply is **November 15, 2019**.
 
 
 
@@ -18,20 +18,20 @@ All applicants must currently be undergraduate students enrolled at a university
 
 
 
-#Openings
+# Openings
 
 We are looking for talented and passionate students to fill the following roles:
 
 - [Editor](#Editor) (x3)
 - [Writer](#Writer) (x2)
-- [Graphic Designer/Web Designer](#Graphic Designer/Web Designer) (x1)
-- [Web Developer](#Web Developer) (x2)
-- [Graphic Artist/Illustrator](#Graphic Artist/Illustrator) (x2)
-- [Coordinator](#Coordinator) (x1)
+- [Frontend Developer](#Frontend Developer) (x1)
+- [Graphic Designer/Illustrator](#Graphic Designer/Illustrator) (x2)
+- [Social Media Coordinator](#Social Media Coordinator) (x2)
+- [Director of Communications](#Director of Communications) (x1)
 
 
 
-##Editor
+## Editor
 
 ##### Requirements
 
@@ -52,20 +52,19 @@ We will give preference to candidates who:
 
 As a RUCS editor, you will:
 
-- proofread and edit 5-10 extended abstracts (650–1050 words each) for grammar, style, clarity, and accuracy
+- proofread and edit 3-4 extended abstracts (650–1050 words each) for grammar, style, clarity, and accuracy
 - coordinate with abstract authors throughout the process of revising their submissions
 - coordinate with RUCS designers and developers throughout the publication of the next issue
 
 ##### Application
 
-To apply for this role, please fill out the [application form](https://docs.google.com/forms/d/e/1FAIpQLSfe9FgzRTT-s_5mRIssjUmHrHQrTy-6yV5v50N_z8PIr08ztA/viewform?usp=sf_link) and send
+To apply for this role, please fill out the [application form](https://forms.gle/572FHFS9hBG7diB27) and send
 
 - a CV/resume,
-- a cover letter,
 - an unofficial transcript, and
-- one or two writing samples
+- one or two writing samples (preferably on an academic topic)
 
-to rucsuoft@gmail.com by October 16th.
+to rucsuoft@gmail.com by November 16th.
 
 
 
@@ -91,23 +90,21 @@ We will give preference to candidates who:
 As a RUCS writer, you will:
 
 - conduct interviews with established computer science researchers
-- write 1-2 interview-based articles
-- write 1-2 articles on another topic (not yet determined)
+- write 1-2 interview-based articles OR 1-2 articles on another computer-science related topic
 - coordinate with RUCS designers and developers throughout the publication of your articles in the next issue
 
 ##### Application
 
-To apply for this role, please fill out the [application form](https://docs.google.com/forms/d/e/1FAIpQLSfe9FgzRTT-s_5mRIssjUmHrHQrTy-6yV5v50N_z8PIr08ztA/viewform?usp=sf_link) and send
+To apply for this role, please fill out the [application form](https://forms.gle/572FHFS9hBG7diB27) and send
 
 - a CV/resume
-- a cover letter  
-- two or three writing samples
+- one or two writing samples
 
-to rucsuoft@gmail.com by October 16th.
-
+to rucsuoft@gmail.com by November 16th.
 
 
-## Graphic Designer/Web Designer
+
+## Graphic Designer/Illustrator
 
 ##### Requirements
 
@@ -119,25 +116,25 @@ We are looking for students who:
 
 ##### Responsibilities
 
-As a RUCS graphic designer/web designer, you will:
+As a RUCS graphic designer/illustrator, you will:
 
 - refresh the look of the website in preparation for the new issue
 - coordinate with the web developers in implementing your designs on the website
 - design layouts for more complex submissions (such as submissions that include graphics or illustrations)
+- create posters and graphics to promote RUCS events 
 
 ##### Application
 
-To apply for this role, please fill out the [application form](https://docs.google.com/forms/d/e/1FAIpQLSfe9FgzRTT-s_5mRIssjUmHrHQrTy-6yV5v50N_z8PIr08ztA/viewform?usp=sf_link) and send
+To apply for this role, please fill out the [application form](https://forms.gle/572FHFS9hBG7diB27) and send
 
-- a CV/resume,
-- a cover letter,  and
+- a CV/resume, and 
 - two or three sample design projects (please provide links or images and a short write-up for each)
 
-to rucsuoft@gmail.com by October 16th.
+to rucsuoft@gmail.com by November 16th.
 
 
 
-## Web Developer
+## Frontend Developer
 
 ##### Requirements
 
@@ -152,41 +149,22 @@ We will give preference to candidates who:
 
 ##### Responsibilities
 
-As a RUCS web developer, you will:
+As a RUCS frontend developer, you will:
 
-- update content on the website
+- update content on the website in a timely manner
 - coordinate with designers to implement design updates on the website
 - make improvements to the website's code
 - coordinate with RUCS designers, writers, and editors throughout the publication of the next issue
 
 ##### Application
 
-To apply for this role, please fill out the [application form](https://docs.google.com/forms/d/e/1FAIpQLSfe9FgzRTT-s_5mRIssjUmHrHQrTy-6yV5v50N_z8PIr08ztA/viewform?usp=sf_link) and send
+To apply for this role, please fill out the [application form](https://forms.gle/572FHFS9hBG7diB27) and send
 
-- a CV/resume,
-- a cover letter, and
+- a CV/resume, and
 - two or three sample web projects (please provide links and a short write-up for each)
 
-to rucsuoft@gmail.com by October 16th.
+to rucsuoft@gmail.com by November 16th.
 
-
-
-## Graphic Artist/Illustrator
-
-##### Requirements
-
-We are looking for students who:
-
-- are fascinated by science and technology
-- are skilled at creating visual interpretations of abstract concepts
-
-##### Responsibilities
-
-As a RUCS graphic artist/illustrator, you will:
-
-- read or skim the accepted submissions  (extended abstracts, 650–1050 words each) and select 1-3 submissions
-- create 1-2 graphics or illustrations for each chosen submission
-- create 1-2 graphics or illustrations for an interview-based article with an established computer science researcher
 
 ##### Application
 
@@ -196,11 +174,11 @@ To apply for this role, please send
 - a cover letter, and
 - a portfolio or a few work samples
 
-to rucsuoft@gmail.com by October 16th.
+to rucsuoft@gmail.com by November 16th.
 
 
 
-## Coordinator
+## Social Media Coordinator
 
 ##### Requirements
 
@@ -210,9 +188,43 @@ We are looking for students who:
 - are enthusiastic, organized, and punctual
 - are interested in computer science   
 
+##### Assets
+
+We will give preference to candidates who:
+
+- Have marketing experience from other clubs or work experiences
+
 ##### Responsibilities
 
-As a RUCS coordinator, you will:
+As a RUCS social media coordinator, you will:
+
+- Make posts on social media (facebook, reddit, etc) promoting RUCS events and initiatives 
+- Email other research-oriented student groups and arrange for cross-promotion
+- Send out promotional emails to the RUCS mailing list 
+
+
+##### Application
+
+To apply for this role, please fill out the [application form](https://forms.gle/572FHFS9hBG7diB27) and send
+
+- a CV/resume
+
+to rucsuoft@gmail.com by November 16th.
+
+
+## Director of Communications
+
+##### Requirements
+
+We are looking for students who 
+
+- have excellent written and oral communication skills
+- are professional, organized, and prompt
+- can act as a liason and representative of RUCS to other organizations
+
+##### Responsibilities
+
+As the RUCS director of communications, you will:
 
 - liaise with other organizations to communicate the RUCS mission, obtain funding, coordinate events with other students groups, etc
 - set meetings and establish timelines
@@ -220,9 +232,9 @@ As a RUCS coordinator, you will:
 
 ##### Application
 
-To apply for this role, please fill out the [application form](https://docs.google.com/forms/d/e/1FAIpQLSfe9FgzRTT-s_5mRIssjUmHrHQrTy-6yV5v50N_z8PIr08ztA/viewform?usp=sf_link) and send
+To apply for this role, please fill out the [application form](https://forms.gle/572FHFS9hBG7diB27) and send
 
-- a CV/resume, and
+- a CV/resume, and 
 - a cover letter
 
-to rucsuoft@gmail.com by October 16th.
+to rucsuoft@gmail.com by November 16th.

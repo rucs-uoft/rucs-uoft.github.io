@@ -1,10 +1,10 @@
-#Submitting to RUCS 
+# Submitting to RUCS 
 
 The Review of Undergraduate Computer Science (RUCS) is a non-archival publication based at the University of Toronto that features the best of research work conducted by undergraduate students. RUCS only publishes extended abstracts (650 – 1050 words). 
 
-If you are interested in submitting, please read the following and send any questions to [rucsuoft@gmail.com](mailto:rucsuoft@gmail.com). The deadline for submissions is **Oct 5, 2018**. 
+If you are interested in submitting, please read the following and send any questions to [rucsuoft@gmail.com](mailto:rucsuoft@gmail.com). The deadline for submissions is **December 15, 2018**. 
 
-##Who can make a submission? 
+## Who can make a submission? 
 
 If you have done an undergraduate research project in computer science or an adjacent discipline, we encourage you to submit an extended abstract to RUCS. Adjacent disciplines include but are not limited to: cognitive science, computational biology, applied math, and software engineering. We only have a couple of requirements. Please consider submitting your extended abstract to RUCS if:
 
@@ -12,11 +12,11 @@ If you have done an undergraduate research project in computer science or an adj
 - the research was completed less than 2 years ago, and 
  - you did your research in a supervised academic setting, e.g. for course credit or as part of a program such as UGSRP or UROP.
 
-##Why should you submit? 
+## Why should you submit? 
 
 It is an opportunity for your work to get published and would look great on your resume! We are also hoping to offer some additional perks. In previous years, we have partnered with Google to organize an exclusive networking event for the students selected to be published in RUCS; we hope to organize a similar event this year. 
 
-##What should you submit? 
+## What should you submit? 
 
 Your submission should be a LaTeX source file (.tex with accompanying references in a .bib file) and a PDF generated from the LaTeX source. Your submission should contain an extended abstract that is 650 – 1050 words in length (excluding the title, section headings, and citations). You must also include a signed copy of the [supervisor approval form](http://rucs.ca/assets/info/Supervisor-Approval.pdf). 
 
@@ -34,17 +34,17 @@ While the structure of your extended abstract will strongly depend on the nature
 4. **Conclusion**: What can you conclude? How does this fit into the ‘big picture’? Make sure your introduction provides enough background for your reader to understand the rest of the abstract.
 5. **References**: Please use the IEEE Style for references. 
 
-##What is the submission process? 
+## What is the submission process? 
 
 It is expected that your supervising professor and graduate mentor (if applicable) will review your extended abstract for correctness and accuracy.  Please follow these steps carefully:
 
 1. Approach your supervisor and graduate mentor (if applicable) and express your interest in submitting to RUCS.  Only proceed if they agree.
 2. After reading all of the provided documents, prepare a first draft.  Ask your graduate mentor or supervisor to help edit the initial drafts. Your supervising professor should review the final draft of your extended abstract.  
-3. Email your submission and a signed copy of the [supervisor approval form](http://rucs.ca/assets/info/Supervisor-Approval.pdf) to  [rucsuoft@gmail.com](mailto:rucsuoft@gmail.com) with the subject line “RUCS Extended Abstract Submission”.  **Both should be submitted by Oct 5, 2018.**
+3. Fill in the [online submission form](https://forms.gle/k2R6oMkwvVefuuTEA) and attach a signed copy of the [supervisor approval form](http://rucs.ca/assets/info/Supervisor-Approval.pdf).  **The form should be submitted by December 15, 2018.**
 
-You can expect a response from RUCS by mid-November. Your submission may be rejected, accepted, accepted with minor revision, or accepted with major revision.
+You can expect a response from RUCS by mid-November. If your submission is accepted, editors will keep in touch throughout the revision process.
 
-##FAQs 
+## FAQs 
 
 ##### What if my research is being published or has been published in a professional journal?
 
