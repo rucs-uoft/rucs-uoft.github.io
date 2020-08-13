@@ -9,3 +9,4 @@ github_username:  rucs-uoft
 # Build settings
 markdown: kramdown
 permalink: /:title
+highlighter: rouge
