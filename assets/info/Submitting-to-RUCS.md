@@ -40,7 +40,7 @@ It is expected that your supervising professor and graduate mentor (if applicabl
 
 1. Approach your supervisor and graduate mentor (if applicable) and express your interest in submitting to RUCS.  Only proceed if they agree.
 2. After reading all of the provided documents, prepare a first draft.  Ask your graduate mentor or supervisor to help edit the initial drafts. Your supervising professor should review the final draft of your extended abstract.  
-3. Fill in the [online submission form](https://forms.gle/ABq8jcMdEH65H65K8) and attach a signed copy of the [supervisor approval form](http://rucs.ca/assets/info/Supervisor-Approval.pdf).  **The form should be submitted by January 1, 2021.**
+3. Fill in the [online submission form](https://forms.gle/NYi6JYg3C1YZLEdt5) and attach a signed copy of the [supervisor approval form](http://rucs.ca/assets/info/Supervisor-Approval.pdf).  **The form should be submitted by January 1, 2021.**
 
 You can expect a response from RUCS by mid-November. If your submission is accepted, editors will keep in touch throughout the revision process.
 
