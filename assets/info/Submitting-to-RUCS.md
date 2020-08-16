@@ -2,7 +2,7 @@
 
 The Review of Undergraduate Computer Science (RUCS) is a non-archival publication based at the University of Toronto that features the best of research work conducted by undergraduate students. RUCS only publishes extended abstracts (650 – 1050 words). 
 
-If you are interested in submitting, please read the following and send any questions to [rucsuoft@gmail.com](mailto:rucsuoft@gmail.com). The deadline for submissions is **December 15, 2018**. 
+If you are interested in submitting, please read the following and send any questions to [rucsuoft@gmail.com](mailto:rucsuoft@gmail.com). The deadline for submissions is **January 1, 2021**. However, if your manuscript is nearly complete already it may be included in the 2020 issue instead.  
 
 ## Who can make a submission? 
 
@@ -10,7 +10,7 @@ If you have done an undergraduate research project in computer science or an adj
 
 - you were an undergraduate student at the time the research project was completed,
 - the research was completed less than 2 years ago, and 
- - you did your research in a supervised academic setting, e.g. for course credit or as part of a program such as UGSRP or UROP.
+- you did your research in a supervised academic setting, e.g. for course credit or as part of a program such as UGSRP or UROP.
 
 ## Why should you submit? 
 
@@ -40,7 +40,7 @@ It is expected that your supervising professor and graduate mentor (if applicabl
 
 1. Approach your supervisor and graduate mentor (if applicable) and express your interest in submitting to RUCS.  Only proceed if they agree.
 2. After reading all of the provided documents, prepare a first draft.  Ask your graduate mentor or supervisor to help edit the initial drafts. Your supervising professor should review the final draft of your extended abstract.  
-3. Fill in the [online submission form](https://forms.gle/ABq8jcMdEH65H65K8) and attach a signed copy of the [supervisor approval form](http://rucs.ca/assets/info/Supervisor-Approval.pdf).  **The form should be submitted by December 15, 2018.**
+3. Fill in the [online submission form](https://forms.gle/ABq8jcMdEH65H65K8) and attach a signed copy of the [supervisor approval form](http://rucs.ca/assets/info/Supervisor-Approval.pdf).  **The form should be submitted by January 1, 2021.**
 
 You can expect a response from RUCS by mid-November. If your submission is accepted, editors will keep in touch throughout the revision process.
 
