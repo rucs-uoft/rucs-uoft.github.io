@@ -126,3 +126,5 @@ Loops with high or arbitrary bounds are very common in programs, and it can ofte
 5. George C Necula, Scott McPeak, Shree P Rahul, and Westley Weimer. Cil: Intermediate language and tools for analysis and transformation of C programs. In International Conference on Compiler Construction, pages 213–228. Springer, 2002.
 
 6. Robert Tarjan. Depth-first search and linear graph algorithms. SIAM journal on computing, 1(2):146–160, 1972.
+
+{% include partials/download-button.html link="/assets/2019/pdf/Akhundov_2020.pdf"%}
