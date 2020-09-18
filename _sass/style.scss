@@ -48,9 +48,9 @@ $background: url("../resources/backgroundweb2017.svg");
 $toc-height: 570px;
 $toc-width: 896px;
 
-//html * {
-	//font-family: $post-font;
-//}
+html * {
+	font-family: $post-font;
+}
 
 img, figure {
 	max-width: 100%;
