@@ -5,6 +5,24 @@
  *
  * Made By MaterializeCSS.com
  */
+
+.btn-link {
+	display: flex;
+	justify-content: center;
+	padding: 2em;
+}
+.btn-link button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: black;
+  width: 30%;
+  border-radius: 10px;
+  background-color: transparent;
+  height: 75px;
+}
+
+
 .materialize-red.lighten-5 {
   background-color: #fdeaeb !important; }
 
