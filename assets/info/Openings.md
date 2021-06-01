@@ -2,13 +2,17 @@
 
 The Review of Undergraduate Computer Science (RUCS) is the first publication from a top 20 university dedicated solely to undergraduate computer science. We feature the best of undergraduate computer science research at home and abroad.
 
-We are currently building our 2019/2020 team. Please consider applying if you would like to:
+We are currently building our 2021/2022 team. Please consider applying if you would like to:
 - get a taste of professional academia
 - forge connections with your peers in CS
 - add meaningful academic experience to your CV
 - improve your understanding of how research is conducted, reviewed, and published
 
-The deadline to apply is **November 15, 2019**.
+There is no application deadline. Please submit your application as soon as possible.
+
+
+
+Apply [here](https://docs.google.com/forms/d/e/1FAIpQLSdGpppUym2Z21FBHJfhNcC6cJCwQeS8ZcNigtnCsGoi_EETAA/viewform). 
 
 
 
@@ -23,11 +27,12 @@ All applicants must currently be undergraduate students enrolled at a university
 We are looking for talented and passionate students to fill the following roles:
 
 - [Editor](#Editor) (x3)
-- [Writer](#Writer) (x2)
-- [Frontend Developer](#Frontend Developer) (x1)
-- [Graphic Designer/Illustrator](#Graphic Designer/Illustrator) (x2)
-- [Social Media Coordinator](#Social Media Coordinator) (x2)
-- [Director of Communications](#Director of Communications) (x1)
+- [Writer](#Writer)
+- [Frontend Developer](#Frontend Developer)
+- [Graphic Designer/Illustrator](#Graphic Designer/Illustrator)
+- [Social Media Coordinator](#Social Media Coordinator)
+- [Director of Communications](#Director of Communications)
+
 
 
 
@@ -56,16 +61,6 @@ As a RUCS editor, you will:
 - coordinate with abstract authors throughout the process of revising their submissions
 - coordinate with RUCS designers and developers throughout the publication of the next issue
 
-##### Application
-
-To apply for this role, please fill out the [application form](https://forms.gle/572FHFS9hBG7diB27) and send
-
-- a CV/resume,
-- an unofficial transcript, and
-- one or two writing samples (preferably on an academic topic)
-
-to rucsuoft@gmail.com by November 16th.
-
 
 
 ## Writer
@@ -93,15 +88,6 @@ As a RUCS writer, you will:
 - write 1-2 interview-based articles OR 1-2 articles on another computer-science related topic
 - coordinate with RUCS designers and developers throughout the publication of your articles in the next issue
 
-##### Application
-
-To apply for this role, please fill out the [application form](https://forms.gle/572FHFS9hBG7diB27) and send
-
-- a CV/resume
-- one or two writing samples
-
-to rucsuoft@gmail.com by November 16th.
-
 
 
 ## Graphic Designer/Illustrator
@@ -121,16 +107,7 @@ As a RUCS graphic designer/illustrator, you will:
 - refresh the look of the website in preparation for the new issue
 - coordinate with the web developers in implementing your designs on the website
 - design layouts for more complex submissions (such as submissions that include graphics or illustrations)
-- create posters and graphics to promote RUCS events 
-
-##### Application
-
-To apply for this role, please fill out the [application form](https://forms.gle/572FHFS9hBG7diB27) and send
-
-- a CV/resume, and 
-- two or three sample design projects (please provide links or images and a short write-up for each)
-
-to rucsuoft@gmail.com by November 16th.
+- create posters and graphics to promote RUCS events
 
 
 
@@ -156,26 +133,6 @@ As a RUCS frontend developer, you will:
 - make improvements to the website's code
 - coordinate with RUCS designers, writers, and editors throughout the publication of the next issue
 
-##### Application
-
-To apply for this role, please fill out the [application form](https://forms.gle/572FHFS9hBG7diB27) and send
-
-- a CV/resume, and
-- two or three sample web projects (please provide links and a short write-up for each)
-
-to rucsuoft@gmail.com by November 16th.
-
-
-##### Application
-
-To apply for this role, please send
-
-- a CV/resume,
-- a cover letter, and
-- a portfolio or a few work samples
-
-to rucsuoft@gmail.com by November 16th.
-
 
 
 ## Social Media Coordinator
@@ -198,25 +155,18 @@ We will give preference to candidates who:
 
 As a RUCS social media coordinator, you will:
 
-- Make posts on social media (facebook, reddit, etc) promoting RUCS events and initiatives 
+- Make posts on social media (facebook, reddit, etc) promoting RUCS events and initiatives
 - Email other research-oriented student groups and arrange for cross-promotion
-- Send out promotional emails to the RUCS mailing list 
+- Send out promotional emails to the RUCS mailing list
 
 
-##### Application
-
-To apply for this role, please fill out the [application form](https://forms.gle/572FHFS9hBG7diB27) and send
-
-- a CV/resume
-
-to rucsuoft@gmail.com by November 16th.
 
 
 ## Director of Communications
 
 ##### Requirements
 
-We are looking for students who 
+We are looking for students who
 
 - have excellent written and oral communication skills
 - are professional, organized, and prompt
@@ -229,12 +179,3 @@ As the RUCS director of communications, you will:
 - liaise with other organizations to communicate the RUCS mission, obtain funding, coordinate events with other students groups, etc
 - set meetings and establish timelines
 - help keep RUCS documentation up-to-date and communicate important updates and deadlines to RUCS stakeholders
-
-##### Application
-
-To apply for this role, please fill out the [application form](https://forms.gle/572FHFS9hBG7diB27) and send
-
-- a CV/resume, and 
-- a cover letter
-
-to rucsuoft@gmail.com by November 16th.
